@@ -1,0 +1,12 @@
+services:
+  hitzak:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hitzak_app
+    ports:
+      - "8039:8039"
+    environment:
+      - PORT=8039
+      - NODE_ENV=production
+    restart: unless-stopped

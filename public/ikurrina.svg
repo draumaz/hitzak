@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <!-- Basque Flag (Ikurriña): Red field, green saltire, white cross -->
+  <!-- Red Field -->
+  <rect width="500" height="300" fill="#d52b1e" rx="16"/>
+  <!-- Green Saltire (diagonal cross) -->
+  <path d="M0 0 L500 300 M500 0 L0 300" stroke="#009245" stroke-width="50"/>
+  <!-- White Cross (horizontal and vertical) -->
+  <path d="M250 0 L250 300 M0 150 L500 150" stroke="#ffffff" stroke-width="50"/>
+</svg>

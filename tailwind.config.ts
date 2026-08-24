@@ -1,0 +1,90 @@
+import type { Config } from "tailwindcss";
+
+export default {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        duo: {
+          green: "#58cc02",
+          "green-dark": "#46a302",
+          "green-light": "#d7ffb8",
+          blue: "#1cb0f6",
+          "blue-dark": "#1899d6",
+          "blue-light": "#ddf4ff",
+          red: "#ff4b4b",
+          "red-dark": "#d33131",
+          "red-light": "#ffdfe0",
+          orange: "#ff9600",
+          "orange-dark": "#e07e00",
+          "orange-light": "#ffeed6",
+          yellow: "#ffc800",
+          "yellow-dark": "#e5a400",
+          purple: "#ce82ff",
+          "purple-dark": "#b05ce6",
+          gray: "#e5e5e5",
+          "gray-dark": "#afafaf",
+          "gray-border": "#e5e5e5",
+          charcoal: "#3c3c3c",
+          dark: "#131f24",
+          "dark-card": "#182c34",
+          "dark-border": "#37464f",
+          ikurrina: {
+            red: "#d52b1e",
+            green: "#009245",
+            white: "#ffffff",
+          },
+        },
+      },
+      boxShadow: {
+        "3d-green": "0 4px 0 #46a302",
+        "3d-green-pressed": "0 1px 0 #46a302",
+        "3d-blue": "0 4px 0 #1899d6",
+        "3d-blue-pressed": "0 1px 0 #1899d6",
+        "3d-red": "0 4px 0 #d33131",
+        "3d-red-pressed": "0 1px 0 #d33131",
+        "3d-orange": "0 4px 0 #e07e00",
+        "3d-orange-pressed": "0 1px 0 #e07e00",
+        "3d-yellow": "0 4px 0 #e5a400",
+        "3d-yellow-pressed": "0 1px 0 #e5a400",
+        "3d-purple": "0 4px 0 #b05ce6",
+        "3d-purple-pressed": "0 1px 0 #b05ce6",
+        "3d-gray": "0 4px 0 #afafaf",
+        "3d-gray-pressed": "0 1px 0 #afafaf",
+        "3d-dark": "0 4px 0 #28373e",
+        "3d-dark-pressed": "0 1px 0 #28373e",
+      },
+      borderRadius: {
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        bounceShort: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-6px)" },
+        },
+        pulseGlow: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.6" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 0.5s ease-in-out infinite",
+        bounceShort: "bounceShort 1s ease-in-out infinite",
+        pulseGlow: "pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+    },
+  },
+  plugins: [],
+} satisfies Config;
