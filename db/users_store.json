@@ -50,25 +50,6 @@
       },
       "challengeProgressMap": {},
       "completedLessonIds": []
-    },
-    "emma": {
-      "id": "181a7432-0dde-4860-b5af-b0668b346e95",
-      "username": "emma",
-      "passwordHash": "74c59b22c052f419127f77ee51692476c3eec8d3b743c10345b2379f30d6ed1ddf32d7bf0306668f8b8bf11610a7f27ee6cc9c78fe85a20cac831ee797f87281",
-      "salt": "17fa43a344df3d6b6f703cadd6575753",
-      "progress": {
-        "userId": "181a7432-0dde-4860-b5af-b0668b346e95",
-        "userName": "emma",
-        "userImageSrc": "/mascot.svg",
-        "activeCourseId": 1,
-        "hearts": 5,
-        "points": 0,
-        "streak": 0,
-        "gems": 100,
-        "hasActiveSubscription": false
-      },
-      "challengeProgressMap": {},
-      "completedLessonIds": []
     }
   }
 }
