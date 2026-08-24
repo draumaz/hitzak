@@ -1,0 +1,74 @@
+{
+  "users": {
+    "user_57553": {
+      "id": "a6310086-d3ff-42e1-bf06-026c51a79c57",
+      "username": "user_57553",
+      "passwordHash": "0da120936c0f0dd60fad363d3baed1304ec8726299b14957cfad6f97cc489a99debc1b6e81bca50dd7ad10df026f24ebdeb938fb55bc6a44bb82d8e668759f60",
+      "salt": "4bf2fa363dcbc0c1c9a1d598bccb5d6f",
+      "progress": {
+        "userId": "a6310086-d3ff-42e1-bf06-026c51a79c57",
+        "userName": "user_57553",
+        "userImageSrc": "/mascot.svg",
+        "activeCourseId": 1,
+        "hearts": 5,
+        "points": 20,
+        "streak": 1,
+        "gems": 115,
+        "hasActiveSubscription": false
+      },
+      "challengeProgressMap": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true,
+        "9": true,
+        "10": true
+      },
+      "completedLessonIds": [
+        1
+      ]
+    },
+    "user_57553_alt": {
+      "id": "9fd6b30f-4637-42ac-ae3a-c42991ca78c8",
+      "username": "user_57553_alt",
+      "passwordHash": "0f7b13be0c26eabc634fe21f85eacebfe605f045142b862fdb1b2cba874b3aa89f4ad6ce76e95c3f6d21941dbd5a9743cc8baea0929fc11fce9108d675932160",
+      "salt": "7bc793f28cbbb8d927ff5f55578f07a0",
+      "progress": {
+        "userId": "9fd6b30f-4637-42ac-ae3a-c42991ca78c8",
+        "userName": "user_57553_alt",
+        "userImageSrc": "/mascot.svg",
+        "activeCourseId": 1,
+        "hearts": 5,
+        "points": 0,
+        "streak": 0,
+        "gems": 100,
+        "hasActiveSubscription": false
+      },
+      "challengeProgressMap": {},
+      "completedLessonIds": []
+    },
+    "emma": {
+      "id": "181a7432-0dde-4860-b5af-b0668b346e95",
+      "username": "emma",
+      "passwordHash": "74c59b22c052f419127f77ee51692476c3eec8d3b743c10345b2379f30d6ed1ddf32d7bf0306668f8b8bf11610a7f27ee6cc9c78fe85a20cac831ee797f87281",
+      "salt": "17fa43a344df3d6b6f703cadd6575753",
+      "progress": {
+        "userId": "181a7432-0dde-4860-b5af-b0668b346e95",
+        "userName": "emma",
+        "userImageSrc": "/mascot.svg",
+        "activeCourseId": 1,
+        "hearts": 5,
+        "points": 0,
+        "streak": 0,
+        "gems": 100,
+        "hasActiveSubscription": false
+      },
+      "challengeProgressMap": {},
+      "completedLessonIds": []
+    }
+  }
+}

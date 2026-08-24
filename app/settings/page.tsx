@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Sidebar } from "@/components/Sidebar";
 import { TopHeader } from "@/components/TopHeader";
 import { useTheme } from "@/components/ThemeProvider";
@@ -24,6 +25,7 @@ import {
   HelpCircle,
   Database,
   ArrowRight,
+  LogOut,
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -36,8 +38,22 @@ const DAILY_GOALS = [
 ];
 
 export default function SettingsPage() {
+  const router = useRouter();
   const { theme, resolvedTheme, setTheme } = useTheme();
   const [userProgress, setUserProgress] = useState<any>(null);
+
+  const handleLogout = async () => {
+    try {
+      sound.playClick();
+      const res = await fetch("/api/auth/logout", { method: "POST" });
+      if (res.ok) {
+        router.push("/login");
+        router.refresh();
+      }
+    } catch (e) {
+      console.error("Logout failed:", e);
+    }
+  };
   const [selectedGoal, setSelectedGoal] = useState("regular");
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [speechSpeed, setSpeechSpeed] = useState<"slow" | "normal" | "fast">("normal");
@@ -316,7 +332,28 @@ export default function SettingsPage() {
                 </div>
               </section>
 
-              {/* 4. Danger Zone / Reset Progress */}
+              {/* 4. Account Session */}
+              <section className="rounded-3xl border-2 border-duo-gray-border bg-white p-6 shadow-sm transition dark:border-[#37464f] dark:bg-[#182c34]">
+                <div className="mb-4 flex items-center gap-2.5">
+                  <LogOut className="h-5 w-5 text-duo-gray dark:text-gray-400" />
+                  <h2 className="text-lg font-black text-[#3c3c3c] dark:text-white">
+                    Account Session
+                  </h2>
+                </div>
+                <p className="mb-4 text-xs text-[#777777] dark:text-[#afafaf]">
+                  You are currently logged in as <span className="font-extrabold text-duo-blue">{userProgress?.userName || "User"}</span>.
+                </p>
+                <button
+                  type="button"
+                  onClick={handleLogout}
+                  className="flex items-center gap-2 rounded-2xl border-2 border-duo-gray-border bg-white px-5 py-3 text-xs font-black uppercase tracking-wider text-red-500 hover:bg-red-50 hover:border-red-200 transition active:scale-95 dark:border-[#37464f] dark:bg-[#131f24] dark:hover:bg-red-950/10"
+                >
+                  <LogOut className="h-4 w-4" />
+                  <span>Log Out</span>
+                </button>
+              </section>
+
+              {/* 5. Danger Zone / Reset Progress */}
               <section className="rounded-3xl border-2 border-red-200 bg-red-50/40 p-6 shadow-sm transition dark:border-red-900/50 dark:bg-red-950/20">
                 <div className="flex items-center gap-2.5 text-duo-red">
                   <ShieldAlert className="h-5 w-5" />

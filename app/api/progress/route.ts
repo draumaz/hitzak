@@ -1,38 +1,49 @@
 import { NextRequest, NextResponse } from "next/server";
 import { dbManager } from "@/db/db";
+import { getCurrentUser } from "@/lib/auth";
 
-export async function GET() {
-  const progress = dbManager.getUserProgress();
+export async function GET(req: NextRequest) {
+  const user = await getCurrentUser(req);
+  if (!user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const progress = dbManager.getUserProgress(user.userId);
   return NextResponse.json(progress);
 }
 
 export async function POST(req: NextRequest) {
   try {
+    const user = await getCurrentUser(req);
+    if (!user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     const body = await req.json();
-    const { action, lessonId, xp, cost } = body;
+    const { action, lessonId, xp } = body;
 
     if (action === "reduce_heart") {
-      const result = dbManager.reduceHeart();
+      const result = dbManager.reduceHeart(user.userId);
       return NextResponse.json(result);
     }
 
     if (action === "complete_lesson") {
-      const result = dbManager.completeLesson(lessonId, xp || 15);
+      const result = dbManager.completeLesson(lessonId, xp || 15, user.userId);
       return NextResponse.json(result);
     }
 
     if (action === "refill_hearts") {
-      const result = dbManager.refillHearts();
+      const result = dbManager.refillHearts(user.userId);
       return NextResponse.json(result);
     }
 
     if (action === "toggle_super") {
-      const result = dbManager.toggleSuperSubscription();
+      const result = dbManager.toggleSuperSubscription(user.userId);
       return NextResponse.json(result);
     }
 
     if (action === "reset_progress" || action === "reset") {
-      const result = dbManager.resetProgress();
+      const result = dbManager.resetProgress(user.userId);
       return NextResponse.json(result);
     }
 

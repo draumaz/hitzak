@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+import crypto from "crypto";
 import * as schema from "./schema";
 import {
   SEED_DATA,
@@ -8,16 +11,161 @@ import {
   type SeedRing,
 } from "./seed-data";
 
+const STORE_PATH = path.join(process.cwd(), "db", "users_store.json");
+
+interface UserState {
+  id: string;
+  username: string;
+  passwordHash: string;
+  salt: string;
+  progress: {
+    userId: string;
+    userName: string;
+    userImageSrc: string;
+    activeCourseId: number;
+    hearts: number;
+    points: number;
+    streak: number;
+    gems: number;
+    hasActiveSubscription: boolean;
+  };
+  challengeProgressMap: Record<string, boolean>; // challengeId -> boolean
+  completedLessonIds: number[];
+}
+
+interface StoreData {
+  users: Record<string, UserState>; // key is lowercase username
+}
+
 /**
- * Universal Database & State Provider for Hitzak
+ * Universal Database & State Provider for Hitzak (Multi-user Persistent JSON file database)
  */
 class StateManager {
   private data: SeedData;
-  private challengeProgressMap: Map<string, boolean> = new Map();
-  private completedLessonIds: Set<number> = new Set();
+  private store: StoreData = { users: {} };
 
   constructor() {
     this.data = JSON.parse(JSON.stringify(SEED_DATA));
+    this.loadStore();
+  }
+
+  private loadStore() {
+    try {
+      if (fs.existsSync(STORE_PATH)) {
+        const fileContent = fs.readFileSync(STORE_PATH, "utf-8");
+        this.store = JSON.parse(fileContent);
+      } else {
+        const dir = path.dirname(STORE_PATH);
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+        this.store = { users: {} };
+        this.saveStore();
+      }
+    } catch (e) {
+      console.error("Failed to load users store:", e);
+      this.store = { users: {} };
+    }
+  }
+
+  private saveStore() {
+    try {
+      const dir = path.dirname(STORE_PATH);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      fs.writeFileSync(STORE_PATH, JSON.stringify(this.store, null, 2), "utf-8");
+    } catch (e) {
+      console.error("Failed to save users store:", e);
+    }
+  }
+
+  private hashPassword(password: string, salt: string): string {
+    return crypto.pbkdf2Sync(password, salt, 1000, 64, "sha512").toString("hex");
+  }
+
+  private generateSalt(): string {
+    return crypto.randomBytes(16).toString("hex");
+  }
+
+  // --- USER AUTHENTICATION & MANAGEMENT ---
+  
+  createUser(username: string, password: string): UserState | null {
+    const normalized = username.trim().toLowerCase();
+    if (!normalized || password.length < 4) return null;
+    if (this.store.users[normalized]) return null;
+
+    const salt = this.generateSalt();
+    const passwordHash = this.hashPassword(password, salt);
+    const userId = crypto.randomUUID();
+
+    const newUserState: UserState = {
+      id: userId,
+      username: username.trim(),
+      passwordHash,
+      salt,
+      progress: {
+        userId: userId,
+        userName: username.trim(),
+        userImageSrc: "/mascot.svg",
+        activeCourseId: 1,
+        hearts: 5,
+        points: 0,
+        streak: 0,
+        gems: 100,
+        hasActiveSubscription: false,
+      },
+      challengeProgressMap: {},
+      completedLessonIds: [],
+    };
+
+    this.store.users[normalized] = newUserState;
+    this.saveStore();
+    return newUserState;
+  }
+
+  verifyUser(username: string, password: string): UserState | null {
+    const normalized = username.trim().toLowerCase();
+    const userState = this.store.users[normalized];
+    if (!userState) return null;
+
+    const computedHash = this.hashPassword(password, userState.salt);
+    if (computedHash === userState.passwordHash) {
+      return userState;
+    }
+    return null;
+  }
+
+  private getOrCreateUserState(userId: string): UserState {
+    const user = Object.values(this.store.users).find((u) => u.id === userId);
+    if (user) return user;
+
+    // Fallback template for user_euskaldun or debug sessions
+    const defaultUser: UserState = {
+      id: userId,
+      username: userId === "user_euskaldun" ? "Euskaldun Learner" : userId,
+      passwordHash: "",
+      salt: "",
+      progress: {
+        userId: userId,
+        userName: userId === "user_euskaldun" ? "Euskaldun Learner" : userId,
+        userImageSrc: "/mascot.svg",
+        activeCourseId: 1,
+        hearts: 5,
+        points: 0,
+        streak: 0,
+        gems: 100,
+        hasActiveSubscription: false,
+      },
+      challengeProgressMap: {},
+      completedLessonIds: [],
+    };
+
+    if (userId === "user_euskaldun") {
+      this.store.users["user_euskaldun"] = defaultUser;
+      this.saveStore();
+    }
+    return defaultUser;
   }
 
   // --- COURSES ---
@@ -46,9 +194,12 @@ class StateManager {
   }
 
   // --- SECTIONS ---
-  getSections(courseId = 1, userId = this.data.initialUser.userId) {
+  getSections(courseId = 1, userId = "user_euskaldun") {
     const activeCourse = this.data.courses.find((c) => c.id === courseId);
     if (!activeCourse) return [];
+
+    const userState = this.getOrCreateUserState(userId);
+    const completedSet = new Set(userState.completedLessonIds);
 
     return this.data.sections
       .filter((s) => s.courseId === courseId)
@@ -69,7 +220,7 @@ class StateManager {
         sectionRings.forEach((ring) => {
           const ringLessons = this.data.lessons.filter((l) => l.ringId === ring.id);
           const completedCount = ringLessons.filter((l) =>
-            this.completedLessonIds.has(l.id)
+            completedSet.has(l.id)
           ).length;
 
           totalCompletedLevels += completedCount;
@@ -88,11 +239,14 @@ class StateManager {
   }
 
   // --- UNITS & RINGS ---
-  getUnitsWithRings(sectionId?: number, courseId = 1, userId = this.data.initialUser.userId) {
+  getUnitsWithRings(sectionId?: number, courseId = 1, userId = "user_euskaldun") {
     let courseUnits = this.data.units.filter((u) => u.courseId === courseId);
     if (sectionId) {
       courseUnits = courseUnits.filter((u) => u.sectionId === sectionId);
     }
+
+    const userState = this.getOrCreateUserState(userId);
+    const completedSet = new Set(userState.completedLessonIds);
 
     return courseUnits
       .sort((a, b) => a.order - b.order)
@@ -107,14 +261,14 @@ class StateManager {
             .sort((a, b) => a.level - b.level);
 
           const completedLevels = ringLessons.filter((l) =>
-            this.completedLessonIds.has(l.id)
+            completedSet.has(l.id)
           ).length;
 
           const totalLevels = ring.totalLevels || ringLessons.length || 1;
           const isMastered = completedLevels >= totalLevels;
 
           const nextLesson =
-            ringLessons.find((l) => !this.completedLessonIds.has(l.id)) || ringLessons[0];
+            ringLessons.find((l) => !completedSet.has(l.id)) || ringLessons[0];
 
           return {
             ...ring,
@@ -123,7 +277,7 @@ class StateManager {
             isMastered,
             lessons: ringLessons.map((l) => ({
               ...l,
-              isCompleted: this.completedLessonIds.has(l.id),
+              isCompleted: completedSet.has(l.id),
             })),
             nextLessonId: nextLesson?.id || 1,
             nextLessonLevel: nextLesson?.level || 1,
@@ -147,18 +301,18 @@ class StateManager {
             .filter((l) => l.unitId === unit.id)
             .map((l) => ({
               ...l,
-              isCompleted: this.completedLessonIds.has(l.id),
+              isCompleted: completedSet.has(l.id),
             })),
         };
       });
   }
 
-  getUnitsWithLessons(courseId = 1, userId = this.data.initialUser.userId) {
+  getUnitsWithLessons(courseId = 1, userId = "user_euskaldun") {
     return this.getUnitsWithRings(undefined, courseId, userId);
   }
 
   // --- LESSON DETAILS & CHALLENGES ---
-  getLessonWithChallenges(lessonId: number, userId = this.data.initialUser.userId) {
+  getLessonWithChallenges(lessonId: number, userId = "user_euskaldun") {
     const lesson = this.data.lessons.find((l) => l.id === lessonId);
     if (!lesson) return null;
 
@@ -173,9 +327,11 @@ class StateManager {
       rawChallenges = this.generateFallbackChallenges(lesson, unit, ring);
     }
 
+    const userState = this.getOrCreateUserState(userId);
+
     const challengesWithState = rawChallenges.map((c) => ({
       ...c,
-      completed: !!this.challengeProgressMap.get(userId + ":" + c.id),
+      completed: !!userState.challengeProgressMap[c.id],
       options: c.options.map((opt) => ({ ...opt })),
     }));
 
@@ -187,9 +343,6 @@ class StateManager {
     };
   }
 
-  /**
-   * Safe fallback challenge generator
-   */
   private generateFallbackChallenges(
     lesson: SeedLesson,
     unit?: SeedUnit,
@@ -214,63 +367,80 @@ class StateManager {
   }
 
   // --- USER PROGRESS & GAMIFICATION ---
-  getUserProgress(userId = this.data.initialUser.userId) {
-    return { ...this.data.initialUser };
+  getUserProgress(userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    return { ...userState.progress };
   }
 
-  reduceHeart(userId = this.data.initialUser.userId) {
-    if (this.data.initialUser.hasActiveSubscription) {
+  reduceHeart(userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    if (userState.progress.hasActiveSubscription) {
       return { hearts: 5, unlimited: true };
     }
-    if (this.data.initialUser.hearts > 0) {
-      this.data.initialUser.hearts -= 1;
+    if (userState.progress.hearts > 0) {
+      userState.progress.hearts -= 1;
+      this.saveStore();
     }
-    return { hearts: this.data.initialUser.hearts, unlimited: false };
+    return { hearts: userState.progress.hearts, unlimited: false };
   }
 
-  refillHearts(userId = this.data.initialUser.userId) {
-    this.data.initialUser.hearts = 5;
+  refillHearts(userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    userState.progress.hearts = 5;
+    this.saveStore();
     return { success: true, hearts: 5 };
   }
 
-  toggleSuperSubscription(userId = this.data.initialUser.userId) {
-    this.data.initialUser.hasActiveSubscription = !this.data.initialUser.hasActiveSubscription;
-    if (this.data.initialUser.hasActiveSubscription) {
-      this.data.initialUser.hearts = 5;
+  toggleSuperSubscription(userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    userState.progress.hasActiveSubscription = !userState.progress.hasActiveSubscription;
+    if (userState.progress.hasActiveSubscription) {
+      userState.progress.hearts = 5;
     }
-    return { hasActiveSubscription: this.data.initialUser.hasActiveSubscription };
+    this.saveStore();
+    return { hasActiveSubscription: userState.progress.hasActiveSubscription };
   }
 
-  completeLesson(lessonId: number, xp = 15, userId = this.data.initialUser.userId) {
-    this.completedLessonIds.add(lessonId);
-    this.data.initialUser.points += xp;
-    this.data.initialUser.gems += 15;
-    this.data.initialUser.streak = Math.max(this.data.initialUser.streak, 1);
+  completeLesson(lessonId: number, xp = 15, userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    
+    if (!userState.completedLessonIds.includes(lessonId)) {
+      userState.completedLessonIds.push(lessonId);
+    }
+    
+    userState.progress.points += xp;
+    userState.progress.gems += 15;
+    userState.progress.streak = Math.max(userState.progress.streak, 1);
 
     const lessonChallenges = this.data.challenges.filter((c) => c.lessonId === lessonId);
     lessonChallenges.forEach((c) => {
-      this.challengeProgressMap.set(userId + ":" + c.id, true);
+      userState.challengeProgressMap[c.id] = true;
     });
 
+    this.saveStore();
+
     return {
-      points: this.data.initialUser.points,
-      gems: this.data.initialUser.gems,
-      streak: this.data.initialUser.streak,
+      points: userState.progress.points,
+      gems: userState.progress.gems,
+      streak: userState.progress.streak,
     };
   }
 
-  resetProgress(userId = this.data.initialUser.userId) {
-    this.completedLessonIds.clear();
-    this.challengeProgressMap.clear();
-    this.data.initialUser.hearts = 5;
-    this.data.initialUser.points = 0;
-    this.data.initialUser.streak = 0;
-    this.data.initialUser.gems = 100;
-    this.data.initialUser.hasActiveSubscription = false;
+  resetProgress(userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    userState.completedLessonIds = [];
+    userState.challengeProgressMap = {};
+    userState.progress.hearts = 5;
+    userState.progress.points = 0;
+    userState.progress.streak = 0;
+    userState.progress.gems = 100;
+    userState.progress.hasActiveSubscription = false;
+
+    this.saveStore();
 
     return {
       success: true,
-      userProgress: { ...this.data.initialUser },
+      userProgress: { ...userState.progress },
     };
   }
 

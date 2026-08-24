@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import {
   Compass,
@@ -14,6 +14,7 @@ import {
   Settings,
   Sun,
   Moon,
+  LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/components/ThemeProvider";
@@ -27,7 +28,21 @@ const NAV_ITEMS = [
 
 export function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
   const { theme, resolvedTheme, toggleTheme } = useTheme();
+
+  const handleLogout = async () => {
+    try {
+      sound.playClick();
+      const res = await fetch("/api/auth/logout", { method: "POST" });
+      if (res.ok) {
+        router.push("/login");
+        router.refresh();
+      }
+    } catch (e) {
+      console.error("Logout failed:", e);
+    }
+  };
 
   return (
     <aside className="fixed left-0 top-0 hidden h-screen w-64 flex-col border-r-2 border-duo-gray-border bg-white px-4 py-6 md:flex z-30 transition-colors duration-200 dark:border-[#37464f] dark:bg-[#131f24]">
@@ -81,9 +96,10 @@ export function Sidebar() {
       </nav>
 
       {/* Footer Controls: Quick Theme Toggle & Course Card */}
-      <div className="mt-auto flex flex-col gap-2 pt-4">
+      <div className="mt-auto flex flex-col gap-2 pt-4 border-t-2 border-duo-gray-border dark:border-[#37464f]">
         {/* Quick Dark/Light Mode Pill Button */}
         <button
+          type="button"
           onClick={() => {
             sound.playClick();
             toggleTheme();
@@ -101,6 +117,18 @@ export function Sidebar() {
           <span className="rounded-full bg-white/60 px-2 py-0.5 text-[10px] font-black uppercase dark:bg-black/20">
             {resolvedTheme === "dark" ? "ON" : "OFF"}
           </span>
+        </button>
+
+        {/* Log Out Button */}
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="flex items-center justify-between rounded-2xl border-2 border-transparent bg-white px-4 py-2.5 text-xs font-black text-red-500 transition hover:bg-red-50 hover:border-red-200 dark:bg-transparent dark:hover:bg-red-950/20"
+        >
+          <div className="flex items-center gap-2">
+            <LogOut className="h-4 w-4" />
+            <span>Log Out</span>
+          </div>
         </button>
       </div>
     </aside>
