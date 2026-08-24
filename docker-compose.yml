@@ -1,7 +1,7 @@
 services:
   hitzak:
     build:
-      context: .
+      context: https://github.com/draumaz/hitzak.git
       dockerfile: Dockerfile
     container_name: hitzak_app
     ports:
@@ -9,4 +9,9 @@ services:
     environment:
       - PORT=8039
       - NODE_ENV=production
+    volumes:
+      - hitzak_data:/app/db
     restart: unless-stopped
+
+volumes:
+  hitzak_data:
