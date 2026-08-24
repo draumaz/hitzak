@@ -3,7 +3,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { Sidebar } from "@/components/Sidebar";
 import { TopHeader } from "@/components/TopHeader";
-import { RightSidebar } from "@/components/RightSidebar";
 import { UnitSection } from "@/components/tree/UnitSection";
 import { Compass, Map, Shield, Hammer, Trophy, Sparkles, Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -103,9 +102,9 @@ export default function LearnPage() {
           onRefresh={handleRefresh}
         />
 
-        {/* Content Body + Right Sidebar */}
+        {/* Content Body */}
         <div className="flex justify-center px-4 py-8">
-          <div className="flex w-full max-w-5xl justify-between gap-8">
+          <div className="flex w-full max-w-5xl justify-center gap-8">
             {/* Learning Tree Center Path */}
             <main className="w-full flex-1 max-w-xl">
 
@@ -195,8 +194,6 @@ export default function LearnPage() {
               )}
             </main>
 
-            {/* Right Sidebar */}
-            <RightSidebar />
           </div>
         </div>
       </div>
