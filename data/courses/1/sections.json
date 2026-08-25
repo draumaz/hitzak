@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "courseId": 1,
+    "title": "Section 1: Hasiberria (Rookie - A1 Foundations)",
+    "description": "Modules 1-15: Learn the absolute basics, greetings, simple pronouns, numbers, food & drinks, family, and basic verbs.",
+    "order": 1,
+    "color": "#58cc02",
+    "icon": "compass"
+  },
+  {
+    "id": 2,
+    "courseId": 1,
+    "title": "Section 2: Esploratzailea (Explorer - A2/B1 Intermediate)",
+    "description": "Modules 16-30: Build your skills with spatial postpositions, telling time, command forms, calendar terms, and basic movement verbs.",
+    "order": 2,
+    "color": "#1cb0f6",
+    "icon": "map"
+  },
+  {
+    "id": 3,
+    "courseId": 1,
+    "title": "Section 3: Txapelduna (Champion - B2/C1 Advanced Syntax & Mastery)",
+    "description": "Modules 31-46: Master advanced verbs (ukan, egin, eduki, jakin), transitive sentence structure, dative commands, past tense, and complex grammar.",
+    "order": 3,
+    "color": "#ff9600",
+    "icon": "trophy"
+  }
+]

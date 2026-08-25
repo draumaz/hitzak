@@ -3,13 +3,12 @@ import path from "path";
 import crypto from "crypto";
 import * as schema from "./schema";
 import {
-  SEED_DATA,
   type SeedData,
   type SeedLesson,
   type SeedChallenge,
   type SeedUnit,
   type SeedRing,
-} from "./seed-data";
+} from "./types";
 
 const STORE_PATH = path.join(process.cwd(), "db", "users_store.json");
 
@@ -45,8 +44,86 @@ class StateManager {
   private store: StoreData = { users: {} };
 
   constructor() {
-    this.data = JSON.parse(JSON.stringify(SEED_DATA));
+    this.data = this.loadSeedData();
     this.loadStore();
+  }
+
+  private loadSeedData(): SeedData {
+    const dataDir = path.join(process.cwd(), "data");
+    const languagesPath = path.join(dataDir, "languages.json");
+    
+    let languages: SeedData["languages"] = [];
+    if (fs.existsSync(languagesPath)) {
+      languages = JSON.parse(fs.readFileSync(languagesPath, "utf-8"));
+    }
+
+    const coursesDir = path.join(dataDir, "courses");
+    const courses: SeedData["courses"] = [];
+    const sections: SeedData["sections"] = [];
+    const units: SeedData["units"] = [];
+    const rings: SeedData["rings"] = [];
+    const lessons: SeedData["lessons"] = [];
+    const challenges: SeedData["challenges"] = [];
+
+    if (fs.existsSync(coursesDir)) {
+      const courseDirs = fs.readdirSync(coursesDir);
+      for (const dirName of courseDirs) {
+        const coursePath = path.join(coursesDir, dirName);
+        if (fs.statSync(coursePath).isDirectory()) {
+          const courseJsonPath = path.join(coursePath, "course.json");
+          if (fs.existsSync(courseJsonPath)) {
+            const courseData = JSON.parse(fs.readFileSync(courseJsonPath, "utf-8"));
+            courses.push(courseData);
+
+            const sectionsJsonPath = path.join(coursePath, "sections.json");
+            if (fs.existsSync(sectionsJsonPath)) {
+              sections.push(...JSON.parse(fs.readFileSync(sectionsJsonPath, "utf-8")));
+            }
+
+            const unitsJsonPath = path.join(coursePath, "units.json");
+            if (fs.existsSync(unitsJsonPath)) {
+              units.push(...JSON.parse(fs.readFileSync(unitsJsonPath, "utf-8")));
+            }
+
+            const ringsJsonPath = path.join(coursePath, "rings.json");
+            if (fs.existsSync(ringsJsonPath)) {
+              rings.push(...JSON.parse(fs.readFileSync(ringsJsonPath, "utf-8")));
+            }
+
+            const lessonsJsonPath = path.join(coursePath, "lessons.json");
+            if (fs.existsSync(lessonsJsonPath)) {
+              lessons.push(...JSON.parse(fs.readFileSync(lessonsJsonPath, "utf-8")));
+            }
+
+            const challengesJsonPath = path.join(coursePath, "challenges.json");
+            if (fs.existsSync(challengesJsonPath)) {
+              challenges.push(...JSON.parse(fs.readFileSync(challengesJsonPath, "utf-8")));
+            }
+          }
+        }
+      }
+    }
+
+    return {
+      languages,
+      courses,
+      sections,
+      units,
+      rings,
+      lessons,
+      challenges,
+      initialUser: {
+        userId: "user_euskaldun",
+        userName: "Euskaldun Learner",
+        userImageSrc: "/mascot.svg",
+        activeCourseId: 1,
+        hearts: 5,
+        points: 0,
+        streak: 0,
+        gems: 100,
+        hasActiveSubscription: false,
+      },
+    };
   }
 
   private loadStore() {

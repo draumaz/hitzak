@@ -1,0 +1,23 @@
+[
+  {
+    "id": "eu",
+    "name": "Basque",
+    "nativeName": "Euskara",
+    "flagEmoji": "🟢",
+    "isSupported": true
+  },
+  {
+    "id": "en",
+    "name": "English",
+    "nativeName": "English",
+    "flagEmoji": "🇬🇧",
+    "isSupported": true
+  },
+  {
+    "id": "es",
+    "name": "Spanish",
+    "nativeName": "Español",
+    "flagEmoji": "🇪🇸",
+    "isSupported": true
+  }
+]

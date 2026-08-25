@@ -1,0 +1,1902 @@
+[
+  {
+    "id": 1,
+    "unitId": 1,
+    "title": "Basics 1",
+    "description": "Learn: gizon, emakume, mutil, neska",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 2,
+    "unitId": 1,
+    "title": "Basics 2",
+    "description": "Learn: gizona, emakumea, mutila, ere",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 3,
+    "unitId": 1,
+    "title": "Basics-3",
+    "description": "Learn: gu gara, zuek zarete, haiek dira, eta",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 4,
+    "unitId": 1,
+    "title": "Basics Review",
+    "description": "Consolidate all concepts and earn the Unit 1 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 5,
+    "unitId": 2,
+    "title": "Greetings 1",
+    "description": "Learn: Arratsalde on, barkatu, Egun on, Eskerrik asko",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 6,
+    "unitId": 2,
+    "title": "Greetings 2",
+    "description": "Learn: agur, bihar, arte, ez da ezer",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 7,
+    "unitId": 2,
+    "title": "Questions",
+    "description": "Learn: zer, nor, nortzuk, autobus",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 8,
+    "unitId": 2,
+    "title": "Questions and Greetings Review",
+    "description": "Consolidate all concepts and earn the Unit 2 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 9,
+    "unitId": 3,
+    "title": "People and Past 1",
+    "description": "Learn: erizain, gidari, mediku, polizia",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 10,
+    "unitId": 3,
+    "title": "People and Past 2",
+    "description": "Learn: ni nintzen, zu zinen, hura zen, gu ginen",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 11,
+    "unitId": 3,
+    "title": "People and Past 3",
+    "description": "Learn: etxekoandre, lagun, camarero, sukaldaria",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 12,
+    "unitId": 3,
+    "title": "People and Past Review",
+    "description": "Consolidate all concepts and earn the Unit 3 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 13,
+    "unitId": 4,
+    "title": "Adj 1",
+    "description": "Learn: beltz, zuri, gorri, laranja",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 14,
+    "unitId": 4,
+    "title": "Adj 2",
+    "description": "Learn: ez, baizik, hotel, eliza",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 15,
+    "unitId": 4,
+    "title": "Adj 3",
+    "description": "Learn: handi, txiki, altu, motz",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 16,
+    "unitId": 4,
+    "title": "Adj 4",
+    "description": "Learn: eder, itsusi, polit, berri",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 17,
+    "unitId": 4,
+    "title": "Adjectives and No Review",
+    "description": "Consolidate all concepts and earn the Unit 4 Mastery Trophy",
+    "order": 5,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 18,
+    "unitId": 5,
+    "title": "Animals 1",
+    "description": "Learn: animalia, dortoka, hontz, katu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 19,
+    "unitId": 5,
+    "title": "Animals 2",
+    "description": "Learn: ahuntz, ardi, arrain, behi",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 20,
+    "unitId": 5,
+    "title": "Animals 3",
+    "description": "Learn: ahul, indartsu, jator, luze",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 21,
+    "unitId": 5,
+    "title": "Animaliak Review",
+    "description": "Consolidate all concepts and earn the Unit 5 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 22,
+    "unitId": 6,
+    "title": "This, That and My 1",
+    "description": "Learn: hau, hauek, hori, hura",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 23,
+    "unitId": 6,
+    "title": "This, That and My 2",
+    "description": "Learn: nire, zure, bere, gure",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 24,
+    "unitId": 6,
+    "title": "This, That and My Review",
+    "description": "Consolidate all concepts and earn the Unit 6 Mastery Trophy",
+    "order": 3,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 25,
+    "unitId": 7,
+    "title": "NOREN 1",
+    "description": "Learn: apaizaren, etxekoandrearen, emakumearen, gidariaren",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 26,
+    "unitId": 7,
+    "title": "NOREN 2",
+    "description": "Learn: lagunen, medikuen, erizainen, arrotzen",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 27,
+    "unitId": 7,
+    "title": "NOREN 3",
+    "description": "Learn: Aitorren, Arantxaren, Josabaren, Jonen",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 28,
+    "unitId": 7,
+    "title": "NOREN 4",
+    "description": "Learn: aterki, alkondara, arropak, berokia",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 29,
+    "unitId": 7,
+    "title": "NOREN (Possessive Genitive) Case Review",
+    "description": "Consolidate all concepts and earn the Unit 7 Mastery Trophy",
+    "order": 5,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 30,
+    "unitId": 8,
+    "title": "Possessive Pronouns 1",
+    "description": "Learn: nirea, zurea, berea, gurea",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 31,
+    "unitId": 8,
+    "title": "Possessive Pronouns 2",
+    "description": "Learn: nireak, zureak, bereak, gureak",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 32,
+    "unitId": 8,
+    "title": "Possessive Pronouns 3",
+    "description": "Learn: gona, jaka, jertse, prakak",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 33,
+    "unitId": 8,
+    "title": "8 Possessive Pronouns Review",
+    "description": "Consolidate all concepts and earn the Unit 8 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 34,
+    "unitId": 9,
+    "title": "Egon 1",
+    "description": "Learn: Ni nago, zu zaude, hura dago, gu gaude",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 35,
+    "unitId": 9,
+    "title": "Egon 2",
+    "description": "Learn: Madril, Espainia, Europa, hemen",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 36,
+    "unitId": 9,
+    "title": "Egon 3",
+    "description": "Learn: mendi, Irun, Donostia, Gasteiz",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 37,
+    "unitId": 9,
+    "title": "To be or not to be  (Egon) Review",
+    "description": "Consolidate all concepts and earn the Unit 9 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 38,
+    "unitId": 10,
+    "title": "Numbers and Math 1",
+    "description": "Learn: bat, bi, hiru, lau",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 39,
+    "unitId": 10,
+    "title": "Numbers and Math 2",
+    "description": "Learn: sei, zazpi, zortzi, bederatzi",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 40,
+    "unitId": 10,
+    "title": "Numbers and Math 3",
+    "description": "Learn: hamaika, hamabi, hamahiru, hamalau",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 41,
+    "unitId": 10,
+    "title": "Numbers and Math Review",
+    "description": "Consolidate all concepts and earn the Unit 10 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 42,
+    "unitId": 11,
+    "title": "Family 1",
+    "description": "Learn: aitona-amonak, aiton, amon, gurasoak",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 43,
+    "unitId": 11,
+    "title": "Family 2",
+    "description": "Learn: biloba, emaztea, senarra, izeba",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 44,
+    "unitId": 11,
+    "title": "Family 3",
+    "description": "Learn: ahizpa, anaia, arreba, neba",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 45,
+    "unitId": 11,
+    "title": "Family Review",
+    "description": "Consolidate all concepts and earn the Unit 11 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 46,
+    "unitId": 12,
+    "title": "Bizi 1",
+    "description": "Learn: Ni bizi naiz, Zu bizi zara, Hura bizi da, Gu bizi gara",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 47,
+    "unitId": 12,
+    "title": "Bizi 2",
+    "description": "Learn: Ni biziko naiz, Zu biziko zara, Hura biziko da, Gu biziko gara",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 48,
+    "unitId": 12,
+    "title": "Bizi 3",
+    "description": "Learn: Ni bizi  nintzen., Zu bizi  zinen., Hura bizi zen., Gu bizi ginen",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 49,
+    "unitId": 12,
+    "title": "Bizi Review",
+    "description": "Consolidate all concepts and earn the Unit 12 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 50,
+    "unitId": 13,
+    "title": "Verbs1 1",
+    "description": "Learn: egon, erori, eseri, esnatu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 51,
+    "unitId": 13,
+    "title": "Verbs1 2",
+    "description": "Learn: gaur, gaur goizean, goiz, garaiz",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 52,
+    "unitId": 13,
+    "title": "Verbs1 3",
+    "description": "Learn: egunero, gauero, hilero, urtero",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 53,
+    "unitId": 13,
+    "title": "Verbs1 4",
+    "description": "Learn: egongo, eroriko, eseriko, esnatuko",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 54,
+    "unitId": 13,
+    "title": "Verbs1 Review",
+    "description": "Consolidate all concepts and earn the Unit 13 Mastery Trophy",
+    "order": 5,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 55,
+    "unitId": 14,
+    "title": "Verbs2 1",
+    "description": "Learn: atera, etorri, joan, etzan",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 56,
+    "unitId": 14,
+    "title": "Verbs2 2",
+    "description": "Learn: ateratzen, etortzen, joaten, etzaten",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 57,
+    "unitId": 14,
+    "title": "Verbs2 3",
+    "description": "Learn: aterako, etorriko, joango, etzango",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 58,
+    "unitId": 14,
+    "title": "Verbs2 Review",
+    "description": "Consolidate all concepts and earn the Unit 14 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 59,
+    "unitId": 15,
+    "title": "Come 1",
+    "description": "Learn: ni nator, zu zatoz, hura dator, gu gatoz",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 60,
+    "unitId": 15,
+    "title": "Come 2",
+    "description": "Learn: banku, aireportua, autobus, tren",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 61,
+    "unitId": 15,
+    "title": "Come 3",
+    "description": "Learn: nentorren, zentozen, zetorren, gentozen",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 62,
+    "unitId": 15,
+    "title": "Come Review",
+    "description": "Consolidate all concepts and earn the Unit 15 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 63,
+    "unitId": 16,
+    "title": "Go 1",
+    "description": "Learn: nora, noa, zoaz, doa",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 64,
+    "unitId": 16,
+    "title": "Go 2",
+    "description": "Learn: nindoan, zindoazen, zihoan, gindoazen",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 65,
+    "unitId": 16,
+    "title": "Go 3",
+    "description": "Learn: Italia, Italiara, Alemania, Alemaniara",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 66,
+    "unitId": 16,
+    "title": "Go Review",
+    "description": "Consolidate all concepts and earn the Unit 16 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 67,
+    "unitId": 17,
+    "title": "Postpostions 1",
+    "description": "Learn: artean, atzean, aurrean, azpian",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 68,
+    "unitId": 17,
+    "title": "Postpostions 2",
+    "description": "Learn: alde, ate, leiho, mahai",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 69,
+    "unitId": 17,
+    "title": "Postpostions 3",
+    "description": "Learn: jatetxe, hondartza, merkatu, plaza",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 70,
+    "unitId": 17,
+    "title": "Postpositions Review",
+    "description": "Consolidate all concepts and earn the Unit 17 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 71,
+    "unitId": 18,
+    "title": "Egon2 1",
+    "description": "Learn: nengoen, zeunden, zegoen, geunden",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 72,
+    "unitId": 18,
+    "title": "Egon2 2",
+    "description": "Learn: dirudun, pobre, bustia, lehorra",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 73,
+    "unitId": 18,
+    "title": "Egon2 3",
+    "description": "Learn: norbait, zerbait, inor, inor ez",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 74,
+    "unitId": 18,
+    "title": "Egon2 Review",
+    "description": "Consolidate all concepts and earn the Unit 18 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 75,
+    "unitId": 19,
+    "title": "Nongo 1",
+    "description": "Learn: Alemaniako, Bilboko, Espainiako, Gasteizeko",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 76,
+    "unitId": 19,
+    "title": "Nongo 2",
+    "description": "Learn: bankuko, dendako, elizako, eskolako",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 77,
+    "unitId": 19,
+    "title": "Nongo 3",
+    "description": "Learn: mendietako, dendetako, elizetako, eskoletako",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 78,
+    "unitId": 19,
+    "title": "Nongo Review",
+    "description": "Consolidate all concepts and earn the Unit 19 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 79,
+    "unitId": 20,
+    "title": "Because 1-1",
+    "description": "Learn: aspertu, beldur, bizirik, galdu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 80,
+    "unitId": 20,
+    "title": "Because 1-2",
+    "description": "Learn: zergatik, eserita, nekatu, zutik",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 81,
+    "unitId": 20,
+    "title": "Because 1-3",
+    "description": "Learn: nagoelako, zaudelako, dagoelako, gaudelako",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 82,
+    "unitId": 20,
+    "title": "Because 1-4",
+    "description": "Learn: irribarre, animatuta, negarrez, barrez",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 83,
+    "unitId": 20,
+    "title": "Because1 Review",
+    "description": "Consolidate all concepts and earn the Unit 20 Mastery Trophy",
+    "order": 5,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 84,
+    "unitId": 21,
+    "title": "Because 2-1",
+    "description": "Learn: nengoelako, zeundelako, zegoelako, geundelako",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 85,
+    "unitId": 21,
+    "title": "Because 2-2",
+    "description": "Learn: naizelako, zarelako, delako, garelako",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 86,
+    "unitId": 21,
+    "title": "Because 2-2",
+    "description": "Learn: nintzelako, zinelako, zelako, ginelako",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 87,
+    "unitId": 21,
+    "title": "Because2 Review",
+    "description": "Consolidate all concepts and earn the Unit 21 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 88,
+    "unitId": 22,
+    "title": "Weather 1",
+    "description": "Learn: eguraldi, zeru, eguzki, eguzkitsu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 89,
+    "unitId": 22,
+    "title": "Weather 2",
+    "description": "Learn: laino, lainotsu, euri, euritsu",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 90,
+    "unitId": 22,
+    "title": "Weather 3",
+    "description": "Learn: beraz, heze, hezetasun, tenperatura",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 91,
+    "unitId": 22,
+    "title": "Weather Review",
+    "description": "Consolidate all concepts and earn the Unit 22 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 92,
+    "unitId": 23,
+    "title": "Numbers 2-1",
+    "description": "Learn: hogei, hogeita hamar, berrogei, berrogeita hamar",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 93,
+    "unitId": 23,
+    "title": "Numbers 2-2",
+    "description": "Learn: ehun, berrehun, hirurehun, laurehun",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 94,
+    "unitId": 23,
+    "title": "Numbers 2-3",
+    "description": "Learn: mila, bi mila, hamar mila, ehun mila",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 95,
+    "unitId": 23,
+    "title": "Numbers2 Review",
+    "description": "Consolidate all concepts and earn the Unit 23 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 96,
+    "unitId": 24,
+    "title": "Spring",
+    "description": "Learn: urtaro, udaberria, Martxoa, Apirila",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 97,
+    "unitId": 24,
+    "title": "Summer",
+    "description": "Learn: uda, Ekaina, Uztaila, Abuztua",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 98,
+    "unitId": 24,
+    "title": "Autumn",
+    "description": "Learn: udazkena, Iraila, Urria, Azaroa",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 99,
+    "unitId": 24,
+    "title": "Winter",
+    "description": "Learn: Negua, Abendua, Urtarrila, Otsaila",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 100,
+    "unitId": 24,
+    "title": "Week",
+    "description": "Learn: aste, astelehena, asteartea, asteazkena",
+    "order": 5,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 101,
+    "unitId": 24,
+    "title": "Calendar Review",
+    "description": "Consolidate all concepts and earn the Unit 24 Mastery Trophy",
+    "order": 6,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 102,
+    "unitId": 25,
+    "title": "Walking 1",
+    "description": "Learn: nabil, zabiltza, dabil, gabiltza",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 103,
+    "unitId": 25,
+    "title": "Walking 2",
+    "description": "Learn: nenbilen, zenbiltzan, zebilen, genbiltzan",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 104,
+    "unitId": 25,
+    "title": "Walking Review",
+    "description": "Consolidate all concepts and earn the Unit 25 Mastery Trophy",
+    "order": 3,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 105,
+    "unitId": 26,
+    "title": "NORTAZ 1",
+    "description": "Learn: autobusez, trenez, ferry, ferryz",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 106,
+    "unitId": 26,
+    "title": "NORTAZ 2",
+    "description": "Learn: egin, egiten, egingo, esku",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 107,
+    "unitId": 26,
+    "title": "NORTAZ 3",
+    "description": "Learn: makina, makinaz, euskara, euskaraz",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 108,
+    "unitId": 26,
+    "title": "NORTAZ Review",
+    "description": "Consolidate all concepts and earn the Unit 26 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 109,
+    "unitId": 27,
+    "title": "Time 1",
+    "description": "Learn: denbora, ordu, ordu, minutu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 110,
+    "unitId": 27,
+    "title": "Time 2",
+    "description": "Learn: ordu bata, ordu biak, hirurak, laurak",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 111,
+    "unitId": 27,
+    "title": "Time 3",
+    "description": "Learn: zazpiak, zortziak, bederatziak, hamarrak",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 112,
+    "unitId": 27,
+    "title": "Time Review",
+    "description": "Consolidate all concepts and earn the Unit 27 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 113,
+    "unitId": 28,
+    "title": "Commands 1",
+    "description": "Learn: egon, ekarri, eseri, etorri",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 114,
+    "unitId": 28,
+    "title": "Commands 2",
+    "description": "Learn: igo, jaitsi, irakurri, isildu",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 115,
+    "unitId": 28,
+    "title": "Commands Review",
+    "description": "Consolidate all concepts and earn the Unit 28 Mastery Trophy",
+    "order": 3,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 116,
+    "unitId": 29,
+    "title": "Directions 1",
+    "description": "Learn: eskuinera, ezkerrera, biratu, zuzen",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 117,
+    "unitId": 29,
+    "title": "Directions 2",
+    "description": "Learn: izkina, gero, pasa, kilometro",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 118,
+    "unitId": 29,
+    "title": "Directions Review",
+    "description": "Consolidate all concepts and earn the Unit 29 Mastery Trophy",
+    "order": 3,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 119,
+    "unitId": 30,
+    "title": "Compound Verbs 1-1",
+    "description": "Learn: ahal izan, behar izan, ezin, azken urtean",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 120,
+    "unitId": 30,
+    "title": "Compound Verbs 1-2",
+    "description": "Learn: ahal, behar, ezin",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 121,
+    "unitId": 30,
+    "title": "Compound Verbs 1-3",
+    "description": "Learn: ahal izango, beharko, ezin",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 122,
+    "unitId": 30,
+    "title": "Compound Verbs 1 Review",
+    "description": "Consolidate all concepts and earn the Unit 30 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 123,
+    "unitId": 31,
+    "title": "Dative Commands 1",
+    "description": "Learn: niri, hari, guri, haiei",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 124,
+    "unitId": 31,
+    "title": "Dative Commands 2",
+    "description": "Learn: Anitzari, Josebari, Mikeli, Mireni",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 125,
+    "unitId": 31,
+    "title": "Dative Commands 3",
+    "description": "Learn: irakasleari, amari, neskari, irakasleei",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 126,
+    "unitId": 31,
+    "title": "Dative Commands Review",
+    "description": "Consolidate all concepts and earn the Unit 31 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 127,
+    "unitId": 32,
+    "title": "Reflective Verbs 1",
+    "description": "Learn: zuri, zuei, zait, zaizu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 128,
+    "unitId": 32,
+    "title": "Reflective Verbs 2",
+    "description": "Learn: zaizkit, zaizkizu, zaizkio, zaizkigu",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 129,
+    "unitId": 32,
+    "title": "Reflective Verbs 3",
+    "description": "Learn: berdin izan, berdin, berdin izango, kostatu",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 130,
+    "unitId": 32,
+    "title": "Reflective Verbs Review",
+    "description": "Consolidate all concepts and earn the Unit 32 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 131,
+    "unitId": 33,
+    "title": "Ukan 1-1",
+    "description": "Learn: dut, duzu, du, dugu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 132,
+    "unitId": 33,
+    "title": "Ukan 1-2",
+    "description": "Learn: irekitzen, ixten, jasotzen, garbitzen",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 133,
+    "unitId": 33,
+    "title": "Ukan 1-3",
+    "description": "Learn: irekiko, itxiko, jasoko, garbituko",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 134,
+    "unitId": 33,
+    "title": "Ukan/Edun 1 Review",
+    "description": "Consolidate all concepts and earn the Unit 33 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 135,
+    "unitId": 34,
+    "title": "Ukan 2-1",
+    "description": "Learn: ditut, dituzu, ditu, ditugu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 136,
+    "unitId": 34,
+    "title": "Ukan 2-2",
+    "description": "Learn: irakurtzen, ikusten, egosten, jaten",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 137,
+    "unitId": 34,
+    "title": "Ukan 2-3",
+    "description": "Learn: irakurriko, ikusiko, egostiko, jango",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 138,
+    "unitId": 34,
+    "title": "Ukan/Edun 2 Review",
+    "description": "Consolidate all concepts and earn the Unit 34 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 139,
+    "unitId": 35,
+    "title": "Transitive Verbs 1-1",
+    "description": "Learn: abestu, aldatu, ekarri, erabili",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 140,
+    "unitId": 35,
+    "title": "Transitive Verbs 1-2",
+    "description": "Learn: abesten, aldatzen, ekartzen, erabiltzen",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 141,
+    "unitId": 35,
+    "title": "Transitive Verbs 1-3",
+    "description": "Learn: abestuko, aldatuko, ekarriko, erabiliko",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 142,
+    "unitId": 35,
+    "title": "Transitive Verbs 1 Review",
+    "description": "Consolidate all concepts and earn the Unit 35 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 143,
+    "unitId": 36,
+    "title": "Transitive Verbs 2-1",
+    "description": "Learn: irakatsi, eraman, esan, hil",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 144,
+    "unitId": 36,
+    "title": "Transitive Verbs 2-2",
+    "description": "Learn: irakasten, eramaten, esaten, hiltzen",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 145,
+    "unitId": 36,
+    "title": "Transitive Verbs 2-3",
+    "description": "Learn: irakatsiko, eramango, esango, hilko",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 146,
+    "unitId": 36,
+    "title": "Transitive Verbs 2 Review",
+    "description": "Consolidate all concepts and earn the Unit 36 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 147,
+    "unitId": 37,
+    "title": "Ukan/Edun Remote Past (single object)",
+    "description": "Learn: nuen, zenuen, zuen, genuen",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 148,
+    "unitId": 37,
+    "title": "Ukan/Edun Remote Past (plural object)",
+    "description": "Learn: nituen, zenituen, zituen, genituen",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 149,
+    "unitId": 37,
+    "title": "Ukan Past Review",
+    "description": "Consolidate all concepts and earn the Unit 37 Mastery Trophy",
+    "order": 3,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 150,
+    "unitId": 38,
+    "title": "Egin 1",
+    "description": "Learn: barre, bisita, dantza, eztul",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 151,
+    "unitId": 38,
+    "title": "Egin 2",
+    "description": "Learn: hots, irribarre, korri, kosk",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 152,
+    "unitId": 38,
+    "title": "Egin 3",
+    "description": "Learn: negar, oihu, hitz, amets",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 153,
+    "unitId": 38,
+    "title": "Egin Review",
+    "description": "Consolidate all concepts and earn the Unit 38 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 154,
+    "unitId": 39,
+    "title": "Eduki 1 (Transitive Verbs)",
+    "description": "Learn: daukat, daukazu, dauka, daukagu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 155,
+    "unitId": 39,
+    "title": "Eduki 2 (Transitive Verbs)",
+    "description": "Learn: dauzkat, dauzkazu, dauzka, dauzkagu",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 156,
+    "unitId": 39,
+    "title": "Eduki 3 (Transitive Verbs)",
+    "description": "Learn: neukan, zeneukan, zeukan, geneukan",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 157,
+    "unitId": 39,
+    "title": "Eduki 4 (Transitive Verbs)",
+    "description": "Learn: neuzkan, zeneuzkan, zeuzkan, geneuzkan",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 158,
+    "unitId": 39,
+    "title": "Eduki (to have) Review",
+    "description": "Consolidate all concepts and earn the Unit 39 Mastery Trophy",
+    "order": 5,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 159,
+    "unitId": 40,
+    "title": "Jakin 1",
+    "description": "Learn: dakit, dakizu, daki, dakigu",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 160,
+    "unitId": 40,
+    "title": "Jakin 2",
+    "description": "Learn: badakit, badakizu, badaki, badakigu",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "sparkles"
+  },
+  {
+    "id": 161,
+    "unitId": 40,
+    "title": "Jakin 3",
+    "description": "Learn: dakizkit, dakizkizu, dakizki, dakizkigu",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 162,
+    "unitId": 40,
+    "title": "Jakin 4",
+    "description": "Learn: nekien, zenekien, zekien, genekien",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 163,
+    "unitId": 40,
+    "title": "Jakin 5",
+    "description": "Learn: nekizkien, zenekizkien, zekizkien, genekizkien",
+    "order": 5,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 164,
+    "unitId": 40,
+    "title": "Jakin Review",
+    "description": "Consolidate all concepts and earn the Unit 40 Mastery Trophy",
+    "order": 6,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 165,
+    "unitId": 41,
+    "title": "Ari Izan 1",
+    "description": "Learn: erortzen, kantatzen, esnatzen, etortzen",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 166,
+    "unitId": 41,
+    "title": "Ari Izan 2",
+    "description": "Learn: jostatzen, laguntzen, dantzan, hitz",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 167,
+    "unitId": 41,
+    "title": "Ari Izan 3",
+    "description": "Learn: irten, itxaroten, joaten",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 168,
+    "unitId": 41,
+    "title": "Ari Izan Review",
+    "description": "Consolidate all concepts and earn the Unit 41 Mastery Trophy",
+    "order": 4,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 169,
+    "unitId": 42,
+    "title": "Norekin 1",
+    "description": "Learn: norekin, zerekin, Mirenekin, Mikeleking",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 170,
+    "unitId": 42,
+    "title": "Norekin 2",
+    "description": "Learn: lagunarekin, irakaslearekin, ahizparekin, arrebarekin",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 171,
+    "unitId": 42,
+    "title": "Norekin Review",
+    "description": "Consolidate all concepts and earn the Unit 42 Mastery Trophy",
+    "order": 3,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 172,
+    "unitId": 43,
+    "title": "Verbal Nouns 1",
+    "description": "Learn: abeste, egote, erortze, eserte",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 173,
+    "unitId": 43,
+    "title": "Verbal Nouns 2",
+    "description": "Learn: bizitzea, entzutea, musika, garbitzea",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 174,
+    "unitId": 43,
+    "title": "Verbal Nouns 3",
+    "description": "Learn: zitzaidan, zitzaizun, zitzaion, zitzaigun",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 175,
+    "unitId": 43,
+    "title": "Verbal Nouns 4",
+    "description": "Learn: ikastera, ikustera, erostea, ogi",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 176,
+    "unitId": 43,
+    "title": "Verbal Nouns Review",
+    "description": "Consolidate all concepts and earn the Unit 43 Mastery Trophy",
+    "order": 5,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 177,
+    "unitId": 44,
+    "title": "Nahi Izan 1 (Past)",
+    "description": "Learn: nahi izan, banana, laranja, limoi",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 178,
+    "unitId": 44,
+    "title": "Nahi Izan 2 (Present)",
+    "description": "Learn: nahi, tomate, pizza, arraultz",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 179,
+    "unitId": 44,
+    "title": "Nahi Izan 3 (Future)",
+    "description": "Learn: nahiko, patata, sagar, marrubi",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 180,
+    "unitId": 44,
+    "title": "Nahi Izan 4 (in order to do something)",
+    "description": "Learn: egiteko, erosteko, idazteko, ikasteko",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 181,
+    "unitId": 44,
+    "title": "Nahi Izan Review",
+    "description": "Consolidate all concepts and earn the Unit 44 Mastery Trophy",
+    "order": 5,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 182,
+    "unitId": 45,
+    "title": "Edan 1 (Past)",
+    "description": "Learn: edan, baso, botila, garagardo",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "award"
+  },
+  {
+    "id": 183,
+    "unitId": 45,
+    "title": "Edan 2 (Present and Future)",
+    "description": "Learn: edaten, edango, edaten, zuku",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "shield"
+  },
+  {
+    "id": 184,
+    "unitId": 45,
+    "title": "Edan Review",
+    "description": "Consolidate all concepts and earn the Unit 45 Mastery Trophy",
+    "order": 3,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  },
+  {
+    "id": 185,
+    "unitId": 46,
+    "title": "Jan 1",
+    "description": "Learn: jan, jaten, jango, ogi",
+    "order": 1,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "zap"
+  },
+  {
+    "id": 186,
+    "unitId": 46,
+    "title": "Jan 2",
+    "description": "Learn: haragi, txerriki, txuleta, barazkiak",
+    "order": 2,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "smile"
+  },
+  {
+    "id": 187,
+    "unitId": 46,
+    "title": "Jan 3 (Breakfast)",
+    "description": "Learn: gosari, gosaldu, gosaltzen, gosalduko",
+    "order": 3,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "heart"
+  },
+  {
+    "id": 188,
+    "unitId": 46,
+    "title": "Jan 4 (Lunch and Dinner)",
+    "description": "Learn: bazkari, bazkaldu, bazkaltzen, bazkalduko",
+    "order": 4,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "key"
+  },
+  {
+    "id": 189,
+    "unitId": 46,
+    "title": "Jan 5 (Spices)",
+    "description": "Learn: gatz, gatzi, azukre, piper",
+    "order": 5,
+    "totalLevels": 5,
+    "isUnitReview": false,
+    "icon": "star"
+  },
+  {
+    "id": 190,
+    "unitId": 46,
+    "title": "Jan Review",
+    "description": "Consolidate all concepts and earn the Unit 46 Mastery Trophy",
+    "order": 6,
+    "totalLevels": 1,
+    "isUnitReview": true,
+    "icon": "trophy"
+  }
+]
