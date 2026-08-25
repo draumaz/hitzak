@@ -40,10 +40,23 @@ class SoundEngine {
     return this.ctx;
   }
 
+  private isSoundEnabled(): boolean {
+    if (typeof window === "undefined") return true;
+    try {
+      const savedSound = localStorage.getItem("hitzak_sound_enabled") !== null
+        ? localStorage.getItem("hitzak_sound_enabled")
+        : localStorage.getItem("euskarolingo_sound_enabled");
+      return savedSound !== "false";
+    } catch (_) {
+      return true;
+    }
+  }
+
   /**
    * Duolingo-style crisp high chime for correct answers
    */
   playCorrect() {
+    if (!this.isSoundEnabled()) return;
     const ctx = this.getContext();
     if (!ctx) return;
 
@@ -80,6 +93,7 @@ class SoundEngine {
    * Duolingo-style dull double thud for incorrect answers
    */
   playIncorrect() {
+    if (!this.isSoundEnabled()) return;
     const ctx = this.getContext();
     if (!ctx) return;
 
@@ -105,6 +119,7 @@ class SoundEngine {
    * Tile click pop sound
    */
   playClick() {
+    if (!this.isSoundEnabled()) return;
     const ctx = this.getContext();
     if (!ctx) return;
 
@@ -130,6 +145,7 @@ class SoundEngine {
    * Matching pair sparkle sound
    */
   playMatch() {
+    if (!this.isSoundEnabled()) return;
     const ctx = this.getContext();
     if (!ctx) return;
 
@@ -156,6 +172,7 @@ class SoundEngine {
    * Fanfare victory chime for lesson completion
    */
   playVictory() {
+    if (!this.isSoundEnabled()) return;
     const ctx = this.getContext();
     if (!ctx) return;
 

@@ -1,7 +1,7 @@
 services:
   hitzak:
     build:
-      context: https://github.com/draumaz/hitzak.git
+      context: . # https://github.com/draumaz/hitzak.git
       dockerfile: Dockerfile
     container_name: hitzak_app
     ports:

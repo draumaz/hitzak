@@ -153,11 +153,8 @@ export default function SettingsPage() {
                 </div>
                 <div>
                   <h1 className="text-2xl font-black text-[#3c3c3c] dark:text-white md:text-3xl">
-                    Settings & Preferences
+                    Settings
                   </h1>
-                  <p className="text-xs font-bold text-[#777777] dark:text-[#afafaf]">
-                    Personalize your learning environment, theme, audio, and daily goals.
-                  </p>
                 </div>
               </div>
             </div>
@@ -173,84 +170,7 @@ export default function SettingsPage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {/* Left 2 Columns: Settings Options */}
             <div className="flex flex-col gap-8 md:col-span-2">
-              {/* 1. Theme & Appearance */}
-              <section className="rounded-3xl border-2 border-duo-gray-border bg-white p-6 shadow-sm transition dark:border-[#37464f] dark:bg-[#182c34]">
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <Sun className="h-5 w-5 text-duo-yellow-dark" />
-                    <h2 className="text-lg font-black text-[#3c3c3c] dark:text-white">
-                      Appearance & Theme
-                    </h2>
-                  </div>
-                  <span className="text-xs font-bold text-[#777777] dark:text-[#afafaf] uppercase tracking-wider">
-                    {resolvedTheme === "dark" ? "Dark Mode Active" : "Light Mode Active"}
-                  </span>
-                </div>
-                <p className="mb-4 text-xs text-[#777777] dark:text-[#afafaf]">
-                  Choose your preferred color theme. Dark mode provides a sleek, high-contrast palette tailored for evening study.
-                </p>
-
-                <div className="grid grid-cols-3 gap-3">
-                  {/* Light Theme Button */}
-                  <button
-                    onClick={() => {
-                      sound.playClick();
-                      setTheme("light");
-                      showSaveFeedback();
-                    }}
-                    className={cn(
-                      "flex flex-col items-center gap-2 rounded-2xl border-2 p-3.5 text-xs font-extrabold transition active:scale-95",
-                      theme === "light"
-                        ? "border-[#1cb0f6] bg-[#ddf4ff] text-[#1899d6] shadow-sm dark:bg-[#1899d6]/20"
-                        : "border-duo-gray-border bg-gray-50 text-[#4b4b4b] hover:bg-gray-100 dark:border-[#37464f] dark:bg-[#131f24] dark:text-[#afafaf] dark:hover:bg-[#1c2e36]"
-                    )}
-                  >
-                    <Sun className="h-5 w-5" />
-                    <span>Light</span>
-                    {theme === "light" && <Check className="h-4 w-4" />}
-                  </button>
-
-                  {/* Dark Theme Button */}
-                  <button
-                    onClick={() => {
-                      sound.playClick();
-                      setTheme("dark");
-                      showSaveFeedback();
-                    }}
-                    className={cn(
-                      "flex flex-col items-center gap-2 rounded-2xl border-2 p-3.5 text-xs font-extrabold transition active:scale-95",
-                      theme === "dark"
-                        ? "border-[#58cc02] bg-[#d7ffb8]/30 text-duo-green-dark shadow-sm dark:border-duo-green dark:bg-duo-green/20 dark:text-duo-green"
-                        : "border-duo-gray-border bg-gray-50 text-[#4b4b4b] hover:bg-gray-100 dark:border-[#37464f] dark:bg-[#131f24] dark:text-[#afafaf] dark:hover:bg-[#1c2e36]"
-                    )}
-                  >
-                    <Moon className="h-5 w-5" />
-                    <span>Dark</span>
-                    {theme === "dark" && <Check className="h-4 w-4" />}
-                  </button>
-
-                  {/* System Theme Button */}
-                  <button
-                    onClick={() => {
-                      sound.playClick();
-                      setTheme("system");
-                      showSaveFeedback();
-                    }}
-                    className={cn(
-                      "flex flex-col items-center gap-2 rounded-2xl border-2 p-3.5 text-xs font-extrabold transition active:scale-95",
-                      theme === "system"
-                        ? "border-[#ce82ff] bg-[#f5e8ff] text-[#b05ce6] shadow-sm dark:bg-[#b05ce6]/20"
-                        : "border-duo-gray-border bg-gray-50 text-[#4b4b4b] hover:bg-gray-100 dark:border-[#37464f] dark:bg-[#131f24] dark:text-[#afafaf] dark:hover:bg-[#1c2e36]"
-                    )}
-                  >
-                    <Laptop className="h-5 w-5" />
-                    <span>Auto / System</span>
-                    {theme === "system" && <Check className="h-4 w-4" />}
-                  </button>
-                </div>
-              </section>
-
-              {/* 2. Audio & Speech Settings */}
+              {/* 1. Audio & Speech Settings */}
               <section className="rounded-3xl border-2 border-duo-gray-border bg-white p-6 shadow-sm transition dark:border-[#37464f] dark:bg-[#182c34]">
                 <div className="mb-4 flex items-center gap-2.5">
                   <Volume2 className="h-5 w-5 text-duo-blue" />
@@ -286,53 +206,7 @@ export default function SettingsPage() {
                 </div>
               </section>
 
-              {/* 3. Daily Learning Goal */}
-              <section className="rounded-3xl border-2 border-duo-gray-border bg-white p-6 shadow-sm transition dark:border-[#37464f] dark:bg-[#182c34]">
-                <div className="mb-4 flex items-center gap-2.5">
-                  <Zap className="h-5 w-5 text-duo-orange" />
-                  <h2 className="text-lg font-black text-[#3c3c3c] dark:text-white">
-                    Daily XP Learning Goal
-                  </h2>
-                </div>
-                <p className="mb-4 text-xs text-[#777777] dark:text-[#afafaf]">
-                  Set a daily target to maintain your streak and pace your progression through the 46 modules.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {DAILY_GOALS.map((goal) => {
-                    const isSelected = selectedGoal === goal.id;
-                    return (
-                      <button
-                        key={goal.id}
-                        onClick={() => handleGoalChange(goal.id)}
-                        className={cn(
-                          "flex items-center justify-between rounded-2xl border-2 p-4 text-left transition active:scale-[0.98]",
-                          isSelected
-                            ? "border-duo-orange bg-duo-orange-light text-duo-orange-dark shadow-sm dark:bg-duo-orange/20 dark:text-duo-orange"
-                            : "border-duo-gray-border bg-gray-50/50 hover:bg-gray-100 dark:border-[#37464f] dark:bg-[#131f24] dark:hover:bg-[#1c2e36]"
-                        )}
-                      >
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <span className="font-black text-sm text-[#3c3c3c] dark:text-white">
-                              {goal.label}
-                            </span>
-                            <span className="rounded-full bg-white/70 px-2 py-0.5 text-[10px] font-black text-duo-orange-dark dark:bg-white/10 dark:text-duo-orange">
-                              {goal.xp} XP / day
-                            </span>
-                          </div>
-                          <p className="mt-0.5 text-xs text-[#777777] dark:text-[#afafaf]">
-                            {goal.desc}
-                          </p>
-                        </div>
-                        {isSelected && <Check className="h-5 w-5 text-duo-orange shrink-0" />}
-                      </button>
-                    );
-                  })}
-                </div>
-              </section>
-
-              {/* 4. Account Session */}
+              {/* 2. Account Session */}
               <section className="rounded-3xl border-2 border-duo-gray-border bg-white p-6 shadow-sm transition dark:border-[#37464f] dark:bg-[#182c34]">
                 <div className="mb-4 flex items-center gap-2.5">
                   <LogOut className="h-5 w-5 text-duo-gray dark:text-gray-400" />
@@ -353,7 +227,7 @@ export default function SettingsPage() {
                 </button>
               </section>
 
-              {/* 5. Danger Zone / Reset Progress */}
+              {/* 3. Danger Zone / Reset Progress */}
               <section className="rounded-3xl border-2 border-red-200 bg-red-50/40 p-6 shadow-sm transition dark:border-red-900/50 dark:bg-red-950/20">
                 <div className="flex items-center gap-2.5 text-duo-red">
                   <ShieldAlert className="h-5 w-5" />
@@ -384,29 +258,15 @@ export default function SettingsPage() {
               </section>
             </div>
 
-            {/* Right Column: Course Info & Curriculum Stats */}
+            {/* Right Column: Course Info */}
             <div className="flex flex-col gap-6">
-              {/* Course Card */}
-              <div className="rounded-3xl border-2 border-duo-gray-border bg-white p-6 shadow-sm transition dark:border-[#37464f] dark:bg-[#182c34]">
-                <div className="mt-5 flex flex-col gap-2">
-                  <Link
-                    href="/guidebooks"
-                    className="flex items-center justify-between rounded-2xl border-2 border-duo-gray-border bg-gray-50 px-4 py-3 text-xs font-black text-[#4b4b4b] transition hover:border-[#84d8ff] hover:bg-[#ddf4ff] hover:text-[#1899d6] dark:border-[#37464f] dark:bg-[#131f24] dark:text-white"
-                  >
-                    <div className="flex items-center gap-2">
-                      <BookOpen className="h-4 w-4" />
-                      <span>Explore 46 Guidebooks</span>
-                    </div>
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-
-                </div>
-              </div>
-
               {/* Version & Credits */}
               <div className="rounded-3xl border-2 border-duo-gray-border bg-gray-50/70 p-5 text-center dark:border-[#37464f] dark:bg-[#131f24]">
                 <p className="text-xs font-extrabold text-[#3c3c3c] dark:text-white">
-                  Hitzak v2.5.0
+                  Hitzak 1.0.0
+                </p>
+                <p className="text-xs font-extrabold text-[#3c3c3c] dark:text-white">
+                  2026 | draumaz
                 </p>
               </div>
             </div>
