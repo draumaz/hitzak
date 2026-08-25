@@ -20,7 +20,17 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { action, lessonId, xp } = body;
+    const { action, lessonId, xp, challengeId } = body;
+
+    if (action === "record_mistake") {
+      const result = dbManager.recordMistake(challengeId, user.userId);
+      return NextResponse.json(result);
+    }
+
+    if (action === "remove_mistake") {
+      const result = dbManager.removeMistake(challengeId, user.userId);
+      return NextResponse.json(result);
+    }
 
     if (action === "reduce_heart") {
       const result = dbManager.reduceHeart(user.userId);

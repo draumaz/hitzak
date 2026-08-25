@@ -3,11 +3,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { X, Heart, Sparkles, Keyboard } from "lucide-react";
+import { X, Sparkles, Keyboard } from "lucide-react";
 import { SelectChallenge } from "./SelectChallenge";
 import { TranslateChallenge } from "./TranslateChallenge";
 import { MatchChallenge } from "./MatchChallenge";
-import { ListenChallenge } from "./ListenChallenge";
 import { ActionBanner } from "./ActionBanner";
 import { LessonCompleteModal } from "./LessonCompleteModal";
 import { sound } from "@/lib/sound";
@@ -50,7 +49,6 @@ interface LessonPlayerProps {
 export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps) {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [hearts, setHearts] = useState(initialUserProgress.hearts);
   const [hasActiveSubscription] = useState(initialUserProgress.hasActiveSubscription);
   const [streak, setStreak] = useState(initialUserProgress.streak);
   const [correctCount, setCorrectCount] = useState(0);
@@ -58,13 +56,17 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
   const [isFinished, setIsFinished] = useState(false);
   const [isExitModalOpen, setIsExitModalOpen] = useState(false);
 
+  const [challenges, setChallenges] = useState<ChallengeItem[]>(lesson.challenges);
+  const [failedChallengeIds, setFailedChallengeIds] = useState<Set<number>>(new Set());
+  const [initialTotalChallenges] = useState(lesson.challenges.length);
+
   // Exercise input states
   const [selectedOptionId, setSelectedOptionId] = useState<number | null>(null);
   const [selectedTokens, setSelectedTokens] = useState<any[]>([]);
   const [isKeyboardMode, setIsKeyboardMode] = useState(true);
 
-  const currentChallenge = lesson.challenges[currentIndex];
-  const totalChallenges = lesson.challenges.length;
+  const currentChallenge = challenges[currentIndex];
+  const totalChallenges = challenges.length;
 
   if (!currentChallenge && !isFinished) {
     return (
@@ -97,23 +99,49 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
     if (isCorrect) {
       sound.playCorrect();
       setStatus("correct");
-      setCorrectCount((prev) => prev + 1);
+      if (!failedChallengeIds.has(currentChallenge.id)) {
+        setCorrectCount((prev) => prev + 1);
+      }
+      try {
+        fetch("/api/progress", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "remove_mistake",
+            challengeId: currentChallenge.id,
+          }),
+        });
+      } catch (err) {
+        console.error(err);
+      }
     } else {
       sound.playIncorrect();
       setStatus("wrong");
+      
+      setFailedChallengeIds((prev) => {
+        const next = new Set(prev);
+        next.add(currentChallenge.id);
+        return next;
+      });
 
-      // Deduct heart
-      if (!hasActiveSubscription) {
-        setHearts((prev) => Math.max(0, prev - 1));
-        try {
-          await fetch("/api/progress", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ action: "reduce_heart" }),
-          });
-        } catch (err) {
-          console.error(err);
-        }
+      setChallenges((prev) => {
+        const next = [...prev];
+        const insertIndex = Math.min(currentIndex + 3, next.length);
+        next.splice(insertIndex, 0, currentChallenge);
+        return next;
+      });
+
+      try {
+        fetch("/api/progress", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "record_mistake",
+            challengeId: currentChallenge.id,
+          }),
+        });
+      } catch (err) {
+        console.error(err);
       }
     }
   };
@@ -181,6 +209,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
   // Keyboard shortcut: Enter to Check or Continue
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (isFinished) return;
       if (e.key === "Enter") {
         const activeEl = document.activeElement;
         
@@ -218,7 +247,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [status, selectedOptionId, selectedTokens, currentChallenge]);
+  }, [status, selectedOptionId, selectedTokens, currentChallenge, isFinished]);
 
   const progressPercentage = ((currentIndex + (status === "correct" ? 1 : 0)) / totalChallenges) * 100;
 
@@ -242,17 +271,13 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
           />
         </div>
 
-        {/* Hearts Indicator */}
-        <div className="flex items-center gap-1.5 font-black text-sm text-duo-red">
-          <Heart className="h-6 w-6 fill-duo-red" />
-          <span>{hearts}</span>
-        </div>
       </div>
 
       {/* Main Challenge Workspace */}
       <main className="flex flex-1 items-center justify-center px-4 pb-32 pt-6">
         {currentChallenge?.type === "SELECT" && (
           <SelectChallenge
+            key={`${currentChallenge.id}-${currentIndex}`}
             question={currentChallenge.question}
             prompt={currentChallenge.prompt}
             audioText={currentChallenge.audioText}
@@ -266,6 +291,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
 
         {currentChallenge?.type === "TRANSLATE" && (
           <TranslateChallenge
+            key={`${currentChallenge.id}-${currentIndex}`}
             question={currentChallenge.question}
             prompt={currentChallenge.prompt}
             audioText={currentChallenge.audioText}
@@ -284,25 +310,16 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
 
         {currentChallenge?.type === "MATCH" && (
           <MatchChallenge
+            key={`${currentChallenge.id}-${currentIndex}`}
             question={currentChallenge.question}
             options={currentChallenge.options}
             onAllMatched={() => {
               sound.playCorrect();
               setStatus("correct");
-              setCorrectCount((prev) => prev + 1);
+              if (!failedChallengeIds.has(currentChallenge.id)) {
+                setCorrectCount((prev) => prev + 1);
+              }
             }}
-            status={status}
-          />
-        )}
-
-        {currentChallenge?.type === "LISTEN" && (
-          <ListenChallenge
-            question={currentChallenge.question}
-            audioText={currentChallenge.audioText || "Kaixo"}
-            grammarTip={currentChallenge.grammarTip}
-            options={currentChallenge.options}
-            selectedOptionId={selectedOptionId}
-            onSelectOption={(id) => setSelectedOptionId(id)}
             status={status}
           />
         )}
@@ -372,7 +389,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
       {isFinished && (
         <LessonCompleteModal
           xpEarned={lesson.xpReward}
-          accuracy={calculateAccuracy(correctCount, totalChallenges)}
+          accuracy={calculateAccuracy(correctCount, initialTotalChallenges)}
           streak={streak}
         />
       )}

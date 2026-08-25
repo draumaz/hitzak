@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import confetti from "canvas-confetti";
 import { Zap, Target, Flame, Sparkles } from "lucide-react";
 import { sound } from "@/lib/sound";
@@ -17,6 +18,21 @@ export function LessonCompleteModal({
   accuracy,
   streak,
 }: LessonCompleteModalProps) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        router.push("/");
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [router]);
+
   useEffect(() => {
     // Sound & Confetti trigger
     sound.playVictory();

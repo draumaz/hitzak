@@ -22,6 +22,7 @@ import { sound } from "@/lib/sound";
 
 const NAV_ITEMS = [
   { href: "/", label: "Learn", icon: Compass },
+  { href: "/practice", label: "Practice", icon: GraduationCap },
   { href: "/guidebooks", label: "Guidebooks", icon: BookOpen },
   { href: "/settings", label: "Settings", icon: Settings },
 ];

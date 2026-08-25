@@ -30,6 +30,7 @@ interface UserState {
   };
   challengeProgressMap: Record<string, boolean>; // challengeId -> boolean
   completedLessonIds: number[];
+  mistakeChallengeIds?: number[];
 }
 
 interface StoreData {
@@ -97,7 +98,45 @@ class StateManager {
 
             const challengesJsonPath = path.join(coursePath, "challenges.json");
             if (fs.existsSync(challengesJsonPath)) {
-              challenges.push(...JSON.parse(fs.readFileSync(challengesJsonPath, "utf-8")));
+              const loadedChallenges: SeedChallenge[] = JSON.parse(
+                fs.readFileSync(challengesJsonPath, "utf-8")
+              );
+              
+              const filteredAndConverted = loadedChallenges
+                .filter((c) => c.type !== "LISTEN")
+                .map((c) => {
+                  if (c.type === "SELECT") {
+                    let displayPrompt = c.prompt || "";
+                    let displayQuestion = c.question || "";
+                    const quoteMatch = c.question.match(/(?:for|of)\s+["']([^"']+)["']/i);
+                    if (quoteMatch) {
+                      displayPrompt = quoteMatch[1];
+                      displayQuestion = c.question.replace(quoteMatch[0], "").replace(/:\s*$/, "").trim();
+                    }
+
+                    const correctOpt = c.options.find((o) => o.correct);
+                    const correctText = correctOpt ? correctOpt.text : "";
+
+                    const words = correctText.split(/\s+/).filter(Boolean);
+                    const newOptions = words.map((word, idx) => ({
+                      id: (correctOpt?.id || 0) * 1000 + idx,
+                      text: word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim(),
+                      correct: true,
+                      order: idx + 1,
+                    }));
+
+                    return {
+                      ...c,
+                      type: "TRANSLATE" as const,
+                      prompt: displayPrompt,
+                      question: "Write this in English",
+                      options: newOptions,
+                    };
+                  }
+                  return c;
+                });
+
+              challenges.push(...filteredAndConverted);
             }
           }
         }
@@ -215,7 +254,12 @@ class StateManager {
 
   private getOrCreateUserState(userId: string): UserState {
     const user = Object.values(this.store.users).find((u) => u.id === userId);
-    if (user) return user;
+    if (user) {
+      if (!user.mistakeChallengeIds) {
+        user.mistakeChallengeIds = [];
+      }
+      return user;
+    }
 
     // Fallback template for user_euskaldun or debug sessions
     const defaultUser: UserState = {
@@ -236,6 +280,7 @@ class StateManager {
       },
       challengeProgressMap: {},
       completedLessonIds: [],
+      mistakeChallengeIds: [],
     };
 
     if (userId === "user_euskaldun") {
@@ -325,9 +370,11 @@ class StateManager {
     const userState = this.getOrCreateUserState(userId);
     const completedSet = new Set(userState.completedLessonIds);
 
+    let previousUnitCompleted = true;
+
     return courseUnits
       .sort((a, b) => a.order - b.order)
-      .map((unit, unitIdx) => {
+      .map((unit) => {
         const unitRings = this.data.rings
           .filter((r) => r.unitId === unit.id)
           .sort((a, b) => a.order - b.order);
@@ -362,17 +409,21 @@ class StateManager {
         });
 
         const nonReviewRings = ringsWithState.filter((r) => !r.isUnitReview);
-        const allPreRingsStarted =
+        const allPreRingsCompleted =
           nonReviewRings.length === 0 ||
-          nonReviewRings.every((r) => r.completedLevels >= 1);
+          nonReviewRings.every((r) => r.completedLevels >= r.totalLevels);
 
         const reviewRing = ringsWithState.find((r) => r.isUnitReview);
         const isUnitCompleted = reviewRing ? reviewRing.isMastered : false;
 
+        const currentUnitUnlocked = previousUnitCompleted;
+        previousUnitCompleted = isUnitCompleted;
+
         return {
           ...unit,
           isCompleted: isUnitCompleted,
-          isReviewUnlocked: allPreRingsStarted,
+          isUnlocked: currentUnitUnlocked,
+          isReviewUnlocked: allPreRingsCompleted && currentUnitUnlocked,
           rings: ringsWithState,
           lessons: this.data.lessons
             .filter((l) => l.unitId === unit.id)
@@ -430,14 +481,12 @@ class StateManager {
       {
         id: baseId + 1,
         lessonId: lesson.id,
-        type: "SELECT",
-        question: "Select the correct translation for \"Kaixo\":",
+        type: "TRANSLATE",
+        question: "Write this in English",
         prompt: "Kaixo",
         order: 1,
         options: [
-          { id: baseId + 11, text: "Hello", correct: true },
-          { id: baseId + 12, text: "Goodbye", correct: false },
-          { id: baseId + 13, text: "Thank you", correct: false }
+          { id: baseId + 11, text: "Hello", correct: true, order: 1 }
         ]
       }
     ];
@@ -446,7 +495,8 @@ class StateManager {
   // --- USER PROGRESS & GAMIFICATION ---
   getUserProgress(userId = "user_euskaldun") {
     const userState = this.getOrCreateUserState(userId);
-    return { ...userState.progress };
+    const mistakesCount = userState.mistakeChallengeIds ? userState.mistakeChallengeIds.length : 0;
+    return { ...userState.progress, mistakesCount };
   }
 
   reduceHeart(userId = "user_euskaldun") {
@@ -500,6 +550,44 @@ class StateManager {
       points: userState.progress.points,
       gems: userState.progress.gems,
       streak: userState.progress.streak,
+    };
+  }
+
+  recordMistake(challengeId: number, userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    if (!userState.mistakeChallengeIds) {
+      userState.mistakeChallengeIds = [];
+    }
+    if (!userState.mistakeChallengeIds.includes(challengeId)) {
+      userState.mistakeChallengeIds.push(challengeId);
+      this.saveStore();
+    }
+    return { success: true, count: userState.mistakeChallengeIds.length };
+  }
+
+  removeMistake(challengeId: number, userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    if (userState.mistakeChallengeIds && userState.mistakeChallengeIds.includes(challengeId)) {
+      userState.mistakeChallengeIds = userState.mistakeChallengeIds.filter((id) => id !== challengeId);
+      this.saveStore();
+    }
+    const count = userState.mistakeChallengeIds ? userState.mistakeChallengeIds.length : 0;
+    return { success: true, count };
+  }
+
+  getMistakePracticeLesson(userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    const ids = userState.mistakeChallengeIds || [];
+    const challenges = this.data.challenges.filter((c) => ids.includes(c.id));
+    return {
+      id: -1,
+      title: "Mistakes Review",
+      xpReward: 20,
+      challenges: challenges.map((c) => ({
+        ...c,
+        completed: false,
+        options: c.options.map((opt) => ({ ...opt })),
+      })),
     };
   }
 

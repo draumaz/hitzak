@@ -1,14 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { Flame, Zap, Heart, Sun, Moon } from "lucide-react";
-import { HeartRefillModal } from "./tree/HeartRefillModal";
+import { Flame, Zap } from "lucide-react";
 import { sound } from "@/lib/sound";
-import { useTheme } from "@/components/ThemeProvider";
 
 interface TopHeaderProps {
-  hearts: number;
+  hearts?: number;
   streak: number;
   points: number;
   gems?: number;
@@ -16,30 +13,9 @@ interface TopHeaderProps {
 }
 
 export function TopHeader({
-  hearts,
   streak,
   points,
-  onRefresh,
 }: TopHeaderProps) {
-  const [isHeartModalOpen, setIsHeartModalOpen] = useState(false);
-  const { resolvedTheme, toggleTheme } = useTheme();
-
-  const handleRefill = async () => {
-    try {
-      const res = await fetch("/api/progress", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "refill_hearts" }),
-      });
-      if (res.ok) {
-        onRefresh?.();
-        setIsHeartModalOpen(false);
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
   return (
     <>
       <header className="sticky top-0 z-20 flex h-16 w-full items-center justify-between border-b-2 border-duo-gray-border bg-white px-4 md:px-8 transition-colors duration-200 dark:border-[#37464f] dark:bg-[#131f24]">
@@ -78,26 +54,8 @@ export function TopHeader({
             <Zap className="h-5 w-5 fill-duo-yellow text-duo-yellow" />
             <span>{points} XP</span>
           </div>
-
-          {/* Hearts Indicator */}
-          <button
-            onClick={() => setIsHeartModalOpen(true)}
-            className="flex items-center gap-1.5 rounded-xl px-2 py-1 text-duo-red hover:bg-red-50 dark:hover:bg-red-950/30 transition"
-            title="Hearts status"
-          >
-            <Heart className="h-5 w-5 fill-duo-red text-duo-red" />
-            <span>{hearts}</span>
-          </button>
         </div>
       </header>
-
-      {/* Heart Refill Modal */}
-      <HeartRefillModal
-        isOpen={isHeartModalOpen}
-        onClose={() => setIsHeartModalOpen(false)}
-        hearts={hearts}
-        onRefill={handleRefill}
-      />
     </>
   );
 }

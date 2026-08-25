@@ -2072,7 +2072,7 @@ export function TranslateChallenge({
   if (quoteMatch) {
     displayPrompt = quoteMatch[1];
     const basqueWords = ["eta", "on", "kaixo", "agur", "egun", "arratsalde", "gabon", "mesedez", "eskerrik", "asko", "zer", "duzu"];
-    const isTargetBasque = options.some(opt => 
+    const isTargetBasque = options.some(opt =>
       basqueWords.includes(opt.text.toLowerCase().trim())
     );
     displayQuestion = isTargetBasque ? "Write this in Basque" : "Write this in English";
@@ -2225,8 +2225,8 @@ export function TranslateChallenge({
             {displayPrompt && (
               <span className="text-lg font-black text-[#3c3c3c] dark:text-white leading-tight">
                 {displayQuestion === "Write this in English" ||
-                displayQuestion.toLowerCase() === "translate this sentence:" ||
-                displayQuestion.toLowerCase().includes("into english")
+                  displayQuestion.toLowerCase() === "translate this sentence:" ||
+                  displayQuestion.toLowerCase().includes("into english")
                   ? renderPromptWords(displayPrompt)
                   : displayPrompt}
               </span>
@@ -2244,7 +2244,7 @@ export function TranslateChallenge({
             onChange={(e) => {
               const val = e.target.value;
               setKeyboardText(val);
-              const words = val.split(/\s+/).filter(Boolean).map(w => 
+              const words = val.split(/\s+/).filter(Boolean).map(w =>
                 w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim()
               ).filter(Boolean);
               const mockTokens = words.map((word, idx) => ({
@@ -2266,7 +2266,6 @@ export function TranslateChallenge({
           <div className="mt-8 flex min-h-16 w-full flex-wrap items-center gap-2.5 rounded-2xl border-b-2 border-dashed border-duo-gray-dark/40 bg-gray-50/50 p-4 dark:border-[#37464f] dark:bg-[#131f24]/60">
             {selectedTokens.length === 0 ? (
               <span className="text-sm font-bold text-gray-400 dark:text-gray-500">
-                Tap tokens or type letters on your keyboard to construct your translation...
               </span>
             ) : (
               selectedTokens.map((token) => (
@@ -2318,17 +2317,17 @@ export function TranslateChallenge({
                   className={cn(
                     "rounded-xl border-2 px-4 py-2.5 text-base font-black transition-all relative select-none",
                     used &&
-                      "border-transparent bg-gray-200/60 text-transparent shadow-none cursor-default dark:bg-[#182c34]/30",
+                    "border-transparent bg-gray-200/60 text-transparent shadow-none cursor-default dark:bg-[#182c34]/30",
                     !used &&
-                      !isMatchingPrefix &&
-                      !isFilteredOut &&
-                      "border-duo-gray-border bg-white text-[#4b4b4b] shadow-3d-gray hover:bg-gray-50 active:translate-y-1 active:shadow-3d-gray-pressed dark:border-[#37464f] dark:bg-[#182c34] dark:text-[#f7f7f7] dark:hover:bg-[#203a45]",
+                    !isMatchingPrefix &&
+                    !isFilteredOut &&
+                    "border-duo-gray-border bg-white text-[#4b4b4b] shadow-3d-gray hover:bg-gray-50 active:translate-y-1 active:shadow-3d-gray-pressed dark:border-[#37464f] dark:bg-[#182c34] dark:text-[#f7f7f7] dark:hover:bg-[#203a45]",
                     !used &&
-                      isMatchingPrefix &&
-                      "border-[#84d8ff] bg-[#ddf4ff] text-[#1899d6] shadow-3d-blue scale-105 ring-2 ring-duo-blue/30 dark:border-[#1899d6] dark:bg-[#1899d6]/20 dark:text-[#1cb0f6]",
+                    isMatchingPrefix &&
+                    "border-[#84d8ff] bg-[#ddf4ff] text-[#1899d6] shadow-3d-blue scale-105 ring-2 ring-duo-blue/30 dark:border-[#1899d6] dark:bg-[#1899d6]/20 dark:text-[#1cb0f6]",
                     !used &&
-                      isFilteredOut &&
-                      "border-duo-gray-border bg-gray-100/70 text-[#9e9e9e] opacity-40 shadow-none dark:border-[#37464f] dark:bg-[#131f24] dark:text-gray-600"
+                    isFilteredOut &&
+                    "border-duo-gray-border bg-gray-100/70 text-[#9e9e9e] opacity-40 shadow-none dark:border-[#37464f] dark:bg-[#131f24] dark:text-gray-600"
                   )}
                 >
                   {isMatchingPrefix ? renderOptionText(option.text, typedBuffer) : option.text}
@@ -2357,7 +2356,6 @@ export function TranslateChallenge({
               ) : (
                 <div className="flex items-center gap-1.5 text-xs font-extrabold text-gray-400 dark:text-gray-500">
                   <Keyboard className="h-3.5 w-3.5 text-gray-400 dark:text-gray-500" />
-                  <span>Type first letters to auto-select &bull; Space to pick &bull; Backspace to delete</span>
                 </div>
               )}
             </div>

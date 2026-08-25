@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import { Sidebar } from "@/components/Sidebar";
 import { TopHeader } from "@/components/TopHeader";
 import { UnitSection } from "@/components/tree/UnitSection";
@@ -17,6 +18,7 @@ const SECTION_ICONS: Record<string, any> = {
 };
 
 export default function LearnPage() {
+  const router = useRouter();
   const [sections, setSections] = useState<any[]>([]);
   const [activeSectionId, setActiveSectionId] = useState<number>(1);
   const [units, setUnits] = useState<any[]>([]);
@@ -86,6 +88,71 @@ export default function LearnPage() {
     fetchSectionsAndProgress();
     fetchUnitsForSection(activeSectionId);
   };
+
+  const getNewestLessonId = useCallback(() => {
+    if (!units || units.length === 0) return null;
+
+    let targetUnit = units.find((u) => u.isUnlocked && !u.isCompleted);
+    if (!targetUnit) {
+      const unlocked = units.filter((u) => u.isUnlocked);
+      targetUnit = unlocked[unlocked.length - 1];
+    }
+
+    if (!targetUnit || !targetUnit.rings || targetUnit.rings.length === 0) return null;
+
+    const standardRings = targetUnit.rings.filter((r: any) => !r.isUnitReview);
+    const reviewRing = targetUnit.rings.find((r: any) => r.isUnitReview);
+
+    const activeRing = standardRings.find((r: any) => !r.isMastered);
+    if (activeRing) {
+      return activeRing.nextLessonId;
+    }
+
+    if (reviewRing) {
+      return reviewRing.nextLessonId;
+    }
+
+    return targetUnit.rings[0].nextLessonId;
+  }, [units]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
+        const activeEl = document.activeElement;
+        if (activeEl) {
+          const tagName = activeEl.tagName.toLowerCase();
+          if (
+            tagName === "input" ||
+            tagName === "textarea" ||
+            tagName === "button" ||
+            tagName === "a" ||
+            activeEl.getAttribute("contenteditable") === "true"
+          ) {
+            return;
+          }
+        }
+
+        const isModalOpen = document.querySelector(".fixed.inset-0.z-50") !== null;
+        if (isModalOpen) return;
+
+        const newestLessonId = getNewestLessonId();
+        if (newestLessonId) {
+          const activeBtn = document.querySelector(
+            `[data-active-lesson-id="${newestLessonId}"]`
+          ) as HTMLButtonElement | null;
+          if (activeBtn) {
+            activeBtn.click();
+            activeBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [getNewestLessonId, router]);
 
   return (
     <div className="min-h-screen bg-white transition-colors duration-200 dark:bg-[#131f24] dark:text-[#f7f7f7]">

@@ -39,6 +39,7 @@ interface UnitSectionProps {
     guidebook?: string;
     isCompleted?: boolean;
     isReviewUnlocked?: boolean;
+    isUnlocked?: boolean;
     rings?: RingData[];
     lessons?: Array<{
       id: number;
@@ -114,11 +115,14 @@ export function UnitSection({ unit, unitIndex }: UnitSectionProps) {
         {standardRings.map((ring, idx) => {
           const isMastered = ring.isMastered;
           const isActive =
-            (activeRingIndex !== -1 && idx === activeRingIndex) ||
-            (activeRingIndex === -1 && idx === 0 && unitIndex === 0);
+            (unit.isUnlocked ?? true) &&
+            ((activeRingIndex !== -1 && idx === activeRingIndex) ||
+              (activeRingIndex === -1 && idx === 0 && unitIndex === 0));
 
-          // A ring is locked if previous rings haven't been started
-          const isLocked = idx > 0 && standardRings[idx - 1].completedLevels === 0;
+          // A ring is locked if previous rings haven't been completed, or if the unit is locked
+          const isLocked =
+            !(unit.isUnlocked ?? true) ||
+            (idx > 0 && standardRings[idx - 1].completedLevels < standardRings[idx - 1].totalLevels);
 
           const offsetClass = offsets[idx % offsets.length];
 

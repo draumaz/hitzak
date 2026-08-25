@@ -140,6 +140,7 @@ export function SkillRingNode({
         <button
           onClick={handleClick}
           disabled={isLocked}
+          data-active-lesson-id={nextLessonId}
           className={cn(
             "relative flex h-20 w-20 items-center justify-center rounded-full transition-all duration-100",
             isLocked && "bg-[#e5e5e5] text-[#afafaf] shadow-[0_6px_0_#cecece] cursor-not-allowed",
