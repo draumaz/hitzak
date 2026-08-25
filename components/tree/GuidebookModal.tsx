@@ -1,6 +1,7 @@
 "use client";
 
-import { X, BookOpen } from "lucide-react";
+import { X, BookOpen, Volume2, ChevronRight } from "lucide-react";
+import { sound } from "@/lib/sound";
 
 interface GuidebookModalProps {
   isOpen: boolean;
@@ -49,39 +50,104 @@ export function GuidebookModal({
         {/* Content Body */}
         <div className="flex-1 overflow-y-auto p-6 md:p-8 space-y-6 text-[#3c3c3c] dark:text-[#f7f7f7]">
           <div className="prose prose-slate max-w-none dark:prose-invert">
-            {guidebookText.split("\n\n").map((paragraph, index) => {
+            {guidebookText.split("\n\n").map((paragraphBlock, index) => {
+              const paragraph = paragraphBlock.trim();
               if (paragraph.startsWith("# ")) {
                 return (
-                  <h1 key={index} className="text-2xl font-black text-[#2e2e2e] dark:text-white border-b pb-2 mb-4 dark:border-[#37464f]">
-                    {paragraph.replace("# ", "")}
-                  </h1>
+                  <h3 key={index} className="text-2xl font-black text-[#2e2e2e] dark:text-white border-b pb-2 mb-4 dark:border-[#37464f]">
+                    {paragraph.replace("# ", "").trim()}
+                  </h3>
                 );
               }
               if (paragraph.startsWith("## ")) {
                 return (
-                  <h2 key={index} className="text-lg font-black text-[#3c3c3c] dark:text-white mt-4 mb-2">
-                    {paragraph.replace("## ", "")}
-                  </h2>
+                  <h4 key={index} className="font-black text-base text-[#3c3c3c] border-b pb-1.5 flex items-center gap-2 dark:text-white dark:border-[#37464f] mt-4 mb-2">
+                    <ChevronRight className="h-4 w-4 text-duo-blue" />
+                    {paragraph.replace("## ", "").trim()}
+                  </h4>
                 );
               }
-              if (paragraph.startsWith("- ")) {
-                const items = paragraph.split("\n");
+              if (paragraph.startsWith("### ")) {
+                return (
+                  <h5 key={index} className="font-black text-sm text-[#4b4b4b] dark:text-[#f7f7f7] mt-3 mb-1">
+                    {paragraph.replace("### ", "").trim()}
+                  </h5>
+                );
+              }
+              if (paragraph.startsWith("#### ")) {
+                return (
+                  <h6 key={index} className="font-bold text-xs text-[#777777] dark:text-[#afafaf] mt-2 mb-1 italic">
+                    {paragraph.replace("#### ", "").trim()}
+                  </h6>
+                );
+              }
+              
+              const firstChar = paragraph.charAt(0);
+              if (firstChar === "-" || firstChar === "*" || firstChar === "+") {
+                const items = paragraphBlock.split("\n");
+                const validItems = items.filter(item => item.trim() !== "");
+                
+                // If items look like a vocabulary list (word: definition), display in a nice grid
+                const isVocab = validItems.every(item => item.includes(":"));
+                if (isVocab) {
+                  return (
+                    <div key={index} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                      {validItems.map((item, iIdx) => {
+                        const cleanItem = item.replace(/^\s*[\-\*\+]\s*/, "");
+                        const colonIdx = cleanItem.indexOf(":");
+                        if (colonIdx === -1) return null;
+                        const basque = cleanItem.substring(0, colonIdx).trim();
+                        const english = cleanItem.substring(colonIdx + 1).trim();
+                        return (
+                          <div
+                            key={iIdx}
+                            className="group flex items-center justify-between rounded-2xl border-2 border-duo-gray-border bg-gray-50/70 p-3.5 transition hover:border-[#84d8ff] hover:bg-[#f7fbff] dark:border-[#37464f] dark:bg-[#131f24] dark:hover:bg-[#1c2e36]"
+                          >
+                            <div>
+                              <div className="flex items-center gap-2">
+                                <span className="font-black text-sm text-[#2e2e2e] dark:text-white">
+                                  {basque}
+                                </span>
+                                <button
+                                  onClick={() => sound.speak(basque)}
+                                  className="rounded-lg p-1 text-duo-blue transition hover:bg-blue-100 dark:hover:bg-blue-950/40"
+                                  title="Listen pronunciation"
+                                >
+                                  <Volume2 className="h-4 w-4" />
+                                </button>
+                              </div>
+                              <p className="text-xs font-bold text-[#4b4b4b] mt-0.5 dark:text-[#afafaf]">
+                                {english}
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                }
+
                 return (
                   <ul key={index} className="list-disc pl-5 space-y-1.5 text-sm font-medium dark:text-[#cfcfcf]">
-                    {items.map((item, i) => (
-                      <li
-                        key={i}
-                        dangerouslySetInnerHTML={{
-                          __html: item
-                            .replace("- ", "")
-                            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-                            .replace(/\*(.*?)\*/g, "<em>$1</em>"),
-                        }}
-                      />
-                    ))}
+                    {validItems.map((item, i) => {
+                      const isNested = /^\s{2,}/.test(item);
+                      const cleanItem = item.replace(/^\s*[\-\*\+]\s*/, "");
+                      return (
+                        <li
+                          key={i}
+                          className={isNested ? "ml-6 list-[circle]" : ""}
+                          dangerouslySetInnerHTML={{
+                            __html: cleanItem
+                              .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                              .replace(/\*(.*?)\*/g, "<em>$1</em>"),
+                          }}
+                        />
+                      );
+                    })}
                   </ul>
                 );
               }
+              
               return (
                 <p
                   key={index}
