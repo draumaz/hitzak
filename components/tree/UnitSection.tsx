@@ -54,6 +54,7 @@ interface UnitSectionProps {
 
 export function UnitSection({ unit, unitIndex }: UnitSectionProps) {
   const [isGuidebookOpen, setIsGuidebookOpen] = useState(false);
+  const cleanTitle = unit.title.replace(/^Unit\s+\d+\s*:\s*/i, "");
 
   const unitRings = unit.rings || [];
   const standardRings = unitRings.filter((r) => !r.isUnitReview);
@@ -91,10 +92,7 @@ export function UnitSection({ unit, unitIndex }: UnitSectionProps) {
                 </span>
               )}
             </div>
-            <h2 className="mt-1 text-xl font-extrabold md:text-2xl">{unit.title}</h2>
-            <p className="mt-2 text-xs md:text-sm text-white/90 leading-relaxed font-medium">
-              {unit.description}
-            </p>
+            <h2 className="mt-1 text-xl font-extrabold md:text-2xl">{cleanTitle}</h2>
           </div>
 
           {/* Guidebook Trigger */}
@@ -152,7 +150,7 @@ export function UnitSection({ unit, unitIndex }: UnitSectionProps) {
           <UnitReviewNode
             unitId={unit.id}
             unitOrder={unit.order}
-            unitTitle={unit.title}
+            unitTitle={cleanTitle}
             isUnlocked={unit.isReviewUnlocked ?? true}
             isMastered={reviewRing.isMastered}
             lessonId={reviewRing.nextLessonId}
@@ -167,7 +165,7 @@ export function UnitSection({ unit, unitIndex }: UnitSectionProps) {
         <GuidebookModal
           isOpen={isGuidebookOpen}
           onClose={() => setIsGuidebookOpen(false)}
-          title={unit.title}
+          title={cleanTitle}
           guidebookText={unit.guidebook}
           unitColor={unit.color}
         />

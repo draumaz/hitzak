@@ -528,6 +528,13 @@ class StateManager {
     return { hasActiveSubscription: userState.progress.hasActiveSubscription };
   }
 
+  selectCourse(courseId: number, userId = "user_euskaldun") {
+    const userState = this.getOrCreateUserState(userId);
+    userState.progress.activeCourseId = courseId;
+    this.saveStore();
+    return { success: true, activeCourseId: courseId };
+  }
+
   completeLesson(lessonId: number, xp = 15, userId = "user_euskaldun") {
     const userState = this.getOrCreateUserState(userId);
     

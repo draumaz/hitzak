@@ -184,11 +184,8 @@ export default function SettingsPage() {
                   <div className="flex items-center justify-between rounded-2xl border-2 border-duo-gray-border bg-gray-50/70 p-4 dark:border-[#37464f] dark:bg-[#131f24]">
                     <div>
                       <h3 className="text-sm font-extrabold text-[#3c3c3c] dark:text-white">
-                        Sound Effects & Jingle Sounds
+                        Sound Effects
                       </h3>
-                      <p className="text-xs text-[#777777] dark:text-[#afafaf]">
-                        Plays audio feedback when selecting answers or completing lessons.
-                      </p>
                     </div>
                     <button
                       onClick={() => handleSoundToggle(!soundEnabled)}
@@ -233,9 +230,6 @@ export default function SettingsPage() {
                   <ShieldAlert className="h-5 w-5" />
                   <h2 className="text-lg font-black">Data & Progress Management</h2>
                 </div>
-                <p className="mt-2 text-xs text-[#777777] dark:text-[#afafaf]">
-                  If you want to restart your Basque learning journey from the beginning, you can reset all crown levels, streak, and XP to zero.
-                </p>
 
                 <div className="mt-4 flex items-center justify-between">
                   <button
@@ -246,7 +240,7 @@ export default function SettingsPage() {
                     className="flex items-center gap-2 rounded-2xl bg-duo-red px-5 py-3 text-xs font-black uppercase tracking-wider text-white shadow-3d-red transition active:translate-y-1"
                   >
                     <RotateCcw className="h-4 w-4" />
-                    <span>Reset Progress to Clean Slate</span>
+                    <span>Reset Progress</span>
                   </button>
 
                   {resetSuccess && (
@@ -267,6 +261,26 @@ export default function SettingsPage() {
                 </p>
                 <p className="text-xs font-extrabold text-[#3c3c3c] dark:text-white">
                   2026 | draumaz
+                </p>
+                <p className="mt-3 text-[10px] font-bold text-gray-400 dark:text-gray-500 leading-relaxed">
+                  Seed data sources:{" "}
+                  <a
+                    href="https://www.ehu.eus/en/web/eins/basque-grammar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-duo-blue hover:underline"
+                  >
+                    EHU Basque Grammar
+                  </a>{" "}
+                  &{" "}
+                  <a
+                    href="https://github.com/LibreLingo/LibreLingo-EU-from-EN"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-duo-blue hover:underline"
+                  >
+                    LibreLingo
+                  </a>
                 </p>
               </div>
             </div>

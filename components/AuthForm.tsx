@@ -54,8 +54,12 @@ export function AuthForm({ initialMode = "login" }: AuthFormProps) {
         throw new Error(data.error || "Something went wrong. Please try again.");
       }
 
-      // Success: redirect to dashboard
-      router.push("/");
+      // Success: redirect to dashboard or select-language
+      if (mode === "signup") {
+        router.push("/select-language");
+      } else {
+        router.push("/");
+      }
       router.refresh();
     } catch (err: any) {
       setError(err.message);

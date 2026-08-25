@@ -6,7 +6,6 @@ import { TopHeader } from "@/components/TopHeader";
 import {
   BookOpen,
   Sparkles,
-  Volume2,
   ChevronRight,
   Search,
 } from "lucide-react";
@@ -175,18 +174,11 @@ export default function GuidebooksPage() {
                                         className="group flex items-center justify-between rounded-2xl border-2 border-duo-gray-border bg-gray-50/70 p-3.5 transition hover:border-[#84d8ff] hover:bg-[#f7fbff] dark:border-[#37464f] dark:bg-[#131f24] dark:hover:bg-[#1c2e36]"
                                       >
                                         <div>
-                                          <div className="flex items-center gap-2">
-                                            <span className="font-black text-sm text-[#2e2e2e] dark:text-white">
-                                              {basque}
-                                            </span>
-                                            <button
-                                              onClick={() => sound.speak(basque)}
-                                              className="rounded-lg p-1 text-duo-blue transition hover:bg-blue-100 dark:hover:bg-blue-950/40"
-                                              title="Listen pronunciation"
-                                            >
-                                              <Volume2 className="h-4 w-4" />
-                                            </button>
-                                          </div>
+                                            <div className="flex items-center gap-2">
+                                              <span className="font-black text-sm text-[#2e2e2e] dark:text-white">
+                                                {basque}
+                                              </span>
+                                            </div>
                                           <p className="text-xs font-bold text-[#4b4b4b] mt-0.5 dark:text-[#afafaf]">
                                             {english}
                                           </p>

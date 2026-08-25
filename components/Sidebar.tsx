@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
@@ -31,6 +32,20 @@ export function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
   const { theme, resolvedTheme, toggleTheme } = useTheme();
+  const [mistakesCount, setMistakesCount] = useState<number>(0);
+
+  useEffect(() => {
+    fetch("/api/progress")
+      .then((res) => {
+        if (res.ok) return res.json();
+      })
+      .then((data) => {
+        if (data && typeof data.mistakesCount === "number") {
+          setMistakesCount(data.mistakesCount);
+        }
+      })
+      .catch((err) => console.error("Failed to load progress in sidebar:", err));
+  }, [pathname]);
 
   const handleLogout = async () => {
     try {
@@ -60,10 +75,10 @@ export function Sidebar() {
         </div>
         <div className="flex flex-col">
           <span className="font-black tracking-wider text-[10px] text-duo-green-dark dark:text-duo-green">
-            HITZAK
+            HITZAK!
           </span>
           <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#afafaf]">
-            learn basque!
+            the spaced-repetition language learning platform
           </span>
         </div>
       </Link>
@@ -90,7 +105,11 @@ export function Sidebar() {
                   isActive ? "text-[#1899d6] dark:text-[#1cb0f6]" : "text-[#afafaf]"
                 )}
               />
-              {item.label}
+              {item.href === "/practice" && mistakesCount > 0 ? (
+                <span>Practice ({mistakesCount})</span>
+              ) : (
+                item.label
+              )}
             </Link>
           );
         })}

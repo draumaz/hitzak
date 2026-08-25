@@ -97,12 +97,15 @@ export function SkillRingNode({
   const strokeDashoffset = circumference - progressRatio * circumference;
 
   return (
-    <div className={cn("relative flex flex-col items-center", offsetClass)}>
+    <div
+      className={cn("relative flex flex-col items-center", offsetClass)}
+      style={{ zIndex: 100 - order }}
+    >
       {/* 3D Circular Skill Ring Container */}
       <div className="relative flex items-center justify-center">
         {/* SVG Progress Ring */}
         {!isLocked && (
-          <svg className="absolute -inset-2.5 h-[92px] w-[92px] -rotate-90 pointer-events-none z-10">
+          <svg className="absolute top-[-6px] left-[-6px] h-[92px] w-[92px] -rotate-90 pointer-events-none z-10">
             {/* Background Track */}
             <circle
               cx="46"
@@ -148,7 +151,8 @@ export function SkillRingNode({
               "bg-[#ffc800] text-white shadow-[0_6px_0_#e5a400] active:translate-y-1 active:shadow-[0_2px_0_#e5a400]",
             !isLocked &&
               !isMastered &&
-              "text-white shadow-[0_6px_0_rgba(0,0,0,0.2)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.2)]"
+              "text-white shadow-[0_6px_0_rgba(0,0,0,0.2)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.2)]",
+            !isLocked && "after:absolute after:inset-0 after:rounded-full after:bg-black/[0.12] after:pointer-events-none after:z-0"
           )}
           style={{
             backgroundColor: isLocked ? undefined : isMastered ? "#ffc800" : color,
@@ -157,16 +161,16 @@ export function SkillRingNode({
           {isLocked ? (
             <Lock className="h-8 w-8 stroke-[2.5]" />
           ) : isMastered ? (
-            <Crown className="h-9 w-9 fill-white stroke-[2.5]" />
+            <Crown className="h-9 w-9 fill-white stroke-[2.5] z-10" />
           ) : (
-            <IconComp className="h-8 w-8 fill-white stroke-[2.5]" />
+            <IconComp className="h-8 w-8 fill-white stroke-[2.5] z-10" />
           )}
 
           {/* Level Crown Badge (e.g. "3/5" or Gold Star) */}
           {!isLocked && (
             <div
               className={cn(
-                "absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-black shadow-sm border",
+                "absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-black shadow-sm border z-20",
                 isMastered
                   ? "bg-white text-yellow-600 border-yellow-300 dark:bg-[#182c34] dark:text-yellow-400 dark:border-yellow-600"
                   : "bg-white text-[#4b4b4b] border-gray-200 dark:bg-[#182c34] dark:text-white dark:border-[#37464f]"

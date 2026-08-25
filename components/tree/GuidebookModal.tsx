@@ -1,6 +1,6 @@
 "use client";
 
-import { X, BookOpen, Volume2, ChevronRight } from "lucide-react";
+import { X, BookOpen, ChevronRight } from "lucide-react";
 import { sound } from "@/lib/sound";
 
 interface GuidebookModalProps {
@@ -108,13 +108,6 @@ export function GuidebookModal({
                                 <span className="font-black text-sm text-[#2e2e2e] dark:text-white">
                                   {basque}
                                 </span>
-                                <button
-                                  onClick={() => sound.speak(basque)}
-                                  className="rounded-lg p-1 text-duo-blue transition hover:bg-blue-100 dark:hover:bg-blue-950/40"
-                                  title="Listen pronunciation"
-                                >
-                                  <Volume2 className="h-4 w-4" />
-                                </button>
                               </div>
                               <p className="text-xs font-bold text-[#4b4b4b] mt-0.5 dark:text-[#afafaf]">
                                 {english}

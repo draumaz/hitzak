@@ -20,7 +20,12 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { action, lessonId, xp, challengeId } = body;
+    const { action, lessonId, xp, challengeId, courseId } = body;
+
+    if (action === "select_course") {
+      const result = dbManager.selectCourse(courseId, user.userId);
+      return NextResponse.json(result);
+    }
 
     if (action === "record_mistake") {
       const result = dbManager.recordMistake(challengeId, user.userId);

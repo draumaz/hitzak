@@ -181,7 +181,7 @@ export default function LearnPage() {
                 <div className="mb-6 flex flex-col gap-2">
                   <div className="flex items-center justify-between px-1">
                     <span className="text-xs font-black uppercase tracking-wider text-[#777777] dark:text-[#afafaf]">
-                      Curriculum Sections (46 Modules Total • 3 Sections)
+                      Curriculum
                     </span>
                   </div>
 
