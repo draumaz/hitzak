@@ -115,6 +115,27 @@ export default function LearnPage() {
     return targetUnit.rings[0].nextLessonId;
   }, [units]);
 
+  // Auto-scroll to the most recently unlocked skill ring on dashboard load
+  useEffect(() => {
+    if (!loading && units.length > 0) {
+      const timer = setTimeout(() => {
+        const activeRingEl =
+          (document.querySelector('[data-active-ring="true"]') as HTMLElement) ||
+          (getNewestLessonId()
+            ? (document.querySelector(
+                `[data-active-lesson-id="${getNewestLessonId()}"]`
+              ) as HTMLElement)
+            : null);
+
+        if (activeRingEl) {
+          activeRingEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 150);
+
+      return () => clearTimeout(timer);
+    }
+  }, [loading, units, getNewestLessonId]);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Enter") {

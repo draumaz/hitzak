@@ -22,6 +22,7 @@ interface SelectChallengeProps {
   selectedOptionId: number | null;
   onSelectOption: (optionId: number) => void;
   status: "idle" | "correct" | "wrong";
+  encounteredWords?: Set<string>;
 }
 
 export function SelectChallenge({
@@ -33,6 +34,7 @@ export function SelectChallenge({
   selectedOptionId,
   onSelectOption,
   status,
+  encounteredWords,
 }: SelectChallengeProps) {
   // Parse question to extract quoted prompt and clean the header question
   let displayQuestion = question;
@@ -110,7 +112,7 @@ export function SelectChallenge({
 
             {displayPrompt && (
               <span className="text-lg font-bold text-[#4b4b4b] dark:text-white leading-tight">
-                {renderPromptWords(displayPrompt)}
+                {renderPromptWords(displayPrompt, encounteredWords)}
               </span>
             )}
           </div>
@@ -123,6 +125,8 @@ export function SelectChallenge({
           const isSelected = selectedOptionId === option.id;
           const isCorrect = isSelected && status === "correct";
           const isWrong = isSelected && status === "wrong";
+          const normText = option.text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+          const isNewWord = encounteredWords ? !encounteredWords.has(normText) : false;
 
           return (
             <button
@@ -136,7 +140,8 @@ export function SelectChallenge({
               disabled={status !== "idle"}
               className={cn(
                 "group relative flex flex-row items-center justify-center rounded-2xl border-2 py-2.5 px-4 min-h-[48px] font-black text-sm md:text-base transition-all",
-                !isSelected && "border-duo-gray-border bg-white text-[#4b4b4b] shadow-3d-gray hover:bg-gray-50 active:translate-y-0.5 active:shadow-[0_1px_0_#afafaf] dark:border-[#37464f] dark:bg-[#182c34] dark:text-[#f7f7f7] dark:hover:bg-[#203a45]",
+                !isSelected && !isNewWord && "border-duo-gray-border bg-white text-[#4b4b4b] shadow-3d-gray hover:bg-gray-50 active:translate-y-0.5 active:shadow-[0_1px_0_#afafaf] dark:border-[#37464f] dark:bg-[#182c34] dark:text-[#f7f7f7] dark:hover:bg-[#203a45]",
+                !isSelected && isNewWord && "border-yellow-400 bg-yellow-50 text-yellow-950 shadow-3d-yellow hover:bg-yellow-100 dark:border-yellow-500 dark:bg-yellow-950/40 dark:text-yellow-200",
                 isSelected && status === "idle" && "border-[#84d8ff] bg-[#ddf4ff] text-[#1899d6] shadow-3d-blue dark:border-[#1899d6] dark:bg-[#1899d6]/20 dark:text-[#1cb0f6]",
                 isCorrect && "border-duo-green bg-duo-green-light text-duo-green-dark shadow-3d-green dark:border-emerald-500 dark:bg-emerald-950/60 dark:text-emerald-300",
                 isWrong && "border-duo-red bg-duo-red-light text-duo-red-dark shadow-3d-red dark:border-red-500 dark:bg-red-950/60 dark:text-red-300"

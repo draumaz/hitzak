@@ -24,6 +24,7 @@ interface TranslateChallengeProps {
   setSelectedTokens: (tokens: OptionItem[]) => void;
   isKeyboardMode: boolean;
   status: "idle" | "correct" | "wrong";
+  encounteredWords?: Set<string>;
 }
 
 function normalizeWord(word: string): string {
@@ -1369,12 +1370,12 @@ export const BASQUE_TO_ENGLISH: Record<string, string> = {
   "excuse me. who is the driver": "Barkatu. Nor da gidaria?",
   "bihar arte": "See you tomorrow",
   "see you tomorrow": "bihar arte",
-  "you're welcome": "ez da ezer",
-  "you are welcome": "ez da ezer",
+  "no problem": "ez da ezer",
+  "don't worry about it": "ez da ezer",
   "ez": "not, no",
   "ez da ardia, baizik ahuntz bat": "It is not a sheep, but rather a goat.",
   "ez da beroa, baina hezetasuna altua dago": "It is not hot, but the humidity is high.",
-  "ez da ezer": "It is nothing / You're welcome",
+  "ez da ezer": "It's nothing / No problem / Don't worry about it",
   "ez zen denda, baizik etxe bat zen": "It was not a store, but rather it was a house.",
   "ez, hura ez doa dendara, hura baizik bankura doa": "No, she is not going to the store, but rather she is going to the bank.",
   "ez, ni ez nindoan eskolaetara, baizik ni elizaetara nindoan": "No, I was not going to the schools, but rather I was going to the churches.",
@@ -4926,7 +4927,7 @@ export const BASQUE_TO_ENGLISH: Record<string, string> = {
   "zuzen": "straight",
 };
 
-export function renderPromptWords(sentence: string) {
+export function renderPromptWords(sentence: string, encounteredWords?: Set<string>) {
   const parts = sentence.split(/(\s+)/);
   const items: Array<{
     type: "space" | "word";
@@ -5013,6 +5014,12 @@ export function renderPromptWords(sentence: string) {
         const lastWord = matchedWordItems[matchedWordItems.length - 1];
         const lastWordIdx = wordIndices[wordIdxPos + K - 1];
 
+        // Determine if word/phrase has been encountered before
+        const isEncountered = encounteredWords
+          ? matchedWordItems.some((w) => encounteredWords.has(w.cleanWord.toLowerCase())) ||
+            encounteredWords.has(lookupKey)
+          : true;
+
         let phraseText = "";
         for (let idx = i; idx <= lastWordIdx; idx++) {
           const curr = items[idx];
@@ -5030,10 +5037,22 @@ export function renderPromptWords(sentence: string) {
         elements.push(
           <span key={keyCounter++} className="inline-block">
             {firstWord.leadingPunc}
-            <span className="relative group inline-block cursor-help border-b-2 border-dotted border-[#afafaf] hover:border-duo-blue dark:border-[#4b4b4b] dark:hover:border-duo-blue pb-0.5 select-none">
+            <span
+              className={cn(
+                "relative group inline-block cursor-help pb-0.5 select-none transition-all",
+                !isEncountered
+                  ? "bg-yellow-300/90 text-yellow-950 border-b-2 border-yellow-500 font-extrabold px-1.5 py-0.5 rounded-md dark:bg-yellow-500/40 dark:text-yellow-100 dark:border-yellow-400"
+                  : "border-b-2 border-dotted border-[#afafaf] hover:border-duo-blue dark:border-[#4b4b4b] dark:hover:border-duo-blue"
+              )}
+            >
               {phraseText}
               {/* Tooltip */}
-              <span className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 bg-gray-800 text-white text-xs py-1.5 px-3 rounded-lg shadow-lg whitespace-nowrap z-50 dark:bg-gray-100 dark:text-gray-900 font-bold tracking-normal leading-normal">
+              <span className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 bg-gray-800 text-white text-xs py-1.5 px-3 rounded-lg shadow-lg whitespace-nowrap z-50 dark:bg-gray-100 dark:text-gray-900 font-bold tracking-normal leading-normal text-center">
+                {!isEncountered && (
+                  <span className="block text-[10px] font-black uppercase tracking-wider text-yellow-400 dark:text-yellow-600 mb-0.5">
+                    ✨ New word
+                  </span>
+                )}
                 {translation}
                 {/* Tooltip arrow */}
                 <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-t-[5px] border-t-gray-800 border-x-[5px] border-x-transparent dark:border-t-gray-100" />
@@ -5050,7 +5069,26 @@ export function renderPromptWords(sentence: string) {
     }
 
     if (!matched) {
-      elements.push(<span key={keyCounter++}>{item.raw}</span>);
+      if (item.type === "word" && item.cleanWord) {
+        const wordKey = item.cleanWord.toLowerCase();
+        const isEncountered = encounteredWords ? encounteredWords.has(wordKey) : true;
+
+        if (!isEncountered) {
+          elements.push(
+            <span key={keyCounter++} className="inline-block">
+              {item.leadingPunc}
+              <span className="bg-yellow-300/90 text-yellow-950 border-b-2 border-yellow-500 font-extrabold px-1.5 py-0.5 rounded-md dark:bg-yellow-500/40 dark:text-yellow-100 dark:border-yellow-400 inline-block select-none">
+                {item.cleanWord}
+              </span>
+              {item.trailingPunc}
+            </span>
+          );
+        } else {
+          elements.push(<span key={keyCounter++}>{item.raw}</span>);
+        }
+      } else {
+        elements.push(<span key={keyCounter++}>{item.raw}</span>);
+      }
       i++;
     }
   }
@@ -5070,6 +5108,7 @@ export function TranslateChallenge({
   setSelectedTokens,
   isKeyboardMode,
   status,
+  encounteredWords,
 }: TranslateChallengeProps) {
   const [typedBuffer, setTypedBuffer] = useState("");
   const [keyboardText, setKeyboardText] = useState("");
@@ -5237,7 +5276,7 @@ export function TranslateChallenge({
 
             {displayPrompt && (
               <span className="text-lg font-black text-[#3c3c3c] dark:text-white leading-tight">
-                {renderPromptWords(displayPrompt)}
+                {renderPromptWords(displayPrompt, encounteredWords)}
               </span>
             )}
           </div>
@@ -5311,6 +5350,7 @@ export function TranslateChallenge({
                 normalized.startsWith(typedBuffer.toLowerCase());
               const isFilteredOut =
                 !used && typedBuffer.length > 0 && !isMatchingPrefix;
+              const isNewWord = encounteredWords ? !encounteredWords.has(normalized) : false;
 
               return (
                 <button
@@ -5330,7 +5370,13 @@ export function TranslateChallenge({
                     !used &&
                     !isMatchingPrefix &&
                     !isFilteredOut &&
+                    !isNewWord &&
                     "border-duo-gray-border bg-white text-[#4b4b4b] shadow-3d-gray hover:bg-gray-50 active:translate-y-1 active:shadow-3d-gray-pressed dark:border-[#37464f] dark:bg-[#182c34] dark:text-[#f7f7f7] dark:hover:bg-[#203a45]",
+                    !used &&
+                    !isMatchingPrefix &&
+                    !isFilteredOut &&
+                    isNewWord &&
+                    "border-yellow-400 bg-yellow-50 text-yellow-950 shadow-3d-yellow hover:bg-yellow-100 dark:border-yellow-500 dark:bg-yellow-950/40 dark:text-yellow-200",
                     !used &&
                     isMatchingPrefix &&
                     "border-[#84d8ff] bg-[#ddf4ff] text-[#1899d6] shadow-3d-blue scale-105 ring-2 ring-duo-blue/30 dark:border-[#1899d6] dark:bg-[#1899d6]/20 dark:text-[#1cb0f6]",

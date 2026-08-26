@@ -57,6 +57,7 @@ export function UnitReviewNode({
           onClick={handleClick}
           disabled={!isUnlocked}
           data-active-lesson-id={lessonId}
+          data-active-ring={isUnlocked && !isMastered ? "true" : "false"}
           className={cn(
             "relative flex h-20 w-24 items-center justify-center rounded-3xl transition-all duration-100",
             !isUnlocked && "bg-[#e5e5e5] text-[#afafaf] shadow-[0_6px_0_#cecece] cursor-not-allowed",

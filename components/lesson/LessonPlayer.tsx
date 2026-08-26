@@ -199,6 +199,7 @@ interface LessonPlayerProps {
     hearts: number;
     hasActiveSubscription: boolean;
     streak: number;
+    encounteredWords?: string[];
   };
 }
 
@@ -213,6 +214,10 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
   const [isFinished, setIsFinished] = useState(false);
   const [isExitModalOpen, setIsExitModalOpen] = useState(false);
 
+  const [encounteredWords, setEncounteredWords] = useState<Set<string>>(() => {
+    return new Set((initialUserProgress.encounteredWords || []).map((w) => w.toLowerCase()));
+  });
+
   const [challenges, setChallenges] = useState<ChallengeItem[]>(lesson.challenges);
   const [failedChallengeIds, setFailedChallengeIds] = useState<Set<number>>(new Set());
   const [initialTotalChallenges] = useState(lesson.challenges.length);
@@ -224,6 +229,41 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
 
   const currentChallenge = challenges[currentIndex];
   const totalChallenges = challenges.length;
+
+  // Track words encountered in the current lesson session
+  useEffect(() => {
+    if (!currentChallenge) return;
+
+    const wordsToAdd: string[] = [];
+    if (currentChallenge.prompt) {
+      currentChallenge.prompt.split(/\s+/).forEach((w) => {
+        const clean = w.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+        if (clean) wordsToAdd.push(clean);
+      });
+    }
+    if (currentChallenge.options) {
+      currentChallenge.options.forEach((opt) => {
+        opt.text.split(/\s+/).forEach((w) => {
+          const clean = w.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+          if (clean) wordsToAdd.push(clean);
+        });
+      });
+    }
+
+    if (wordsToAdd.length > 0) {
+      setEncounteredWords((prev) => {
+        let updated = false;
+        const next = new Set(prev);
+        wordsToAdd.forEach((w) => {
+          if (!next.has(w)) {
+            next.add(w);
+            updated = true;
+          }
+        });
+        return updated ? next : prev;
+      });
+    }
+  }, [currentIndex, currentChallenge]);
 
   if (!currentChallenge && !isFinished) {
     return (
@@ -292,17 +332,19 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
       if (!failedChallengeIds.has(currentChallenge.id)) {
         setCorrectCount((prev) => prev + 1);
       }
-      try {
-        fetch("/api/progress", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            action: "remove_mistake",
-            challengeId: currentChallenge.id,
-          }),
-        });
-      } catch (err) {
-        console.error(err);
+      if (lesson.id === -1) {
+        try {
+          fetch("/api/progress", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "remove_mistake",
+              challengeId: currentChallenge.id,
+            }),
+          });
+        } catch (err) {
+          console.error(err);
+        }
       }
     } else {
       sound.playIncorrect();
@@ -477,6 +519,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
             selectedOptionId={selectedOptionId}
             onSelectOption={(id) => setSelectedOptionId(id)}
             status={status}
+            encounteredWords={encounteredWords}
           />
         )}
 
@@ -496,6 +539,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
             setSelectedTokens={setSelectedTokens}
             isKeyboardMode={isKeyboardMode}
             status={status}
+            encounteredWords={encounteredWords}
           />
         )}
 
@@ -509,6 +553,41 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
               setStatus("correct");
               if (!failedChallengeIds.has(currentChallenge.id)) {
                 setCorrectCount((prev) => prev + 1);
+              }
+              if (lesson.id === -1) {
+                try {
+                  fetch("/api/progress", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      action: "remove_mistake",
+                      challengeId: currentChallenge.id,
+                    }),
+                  });
+                } catch (err) {
+                  console.error(err);
+                }
+              }
+            }}
+            onMistake={() => {
+              if (!failedChallengeIds.has(currentChallenge.id)) {
+                setFailedChallengeIds((prev) => {
+                  const next = new Set(prev);
+                  next.add(currentChallenge.id);
+                  return next;
+                });
+                try {
+                  fetch("/api/progress", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      action: "record_mistake",
+                      challengeId: currentChallenge.id,
+                    }),
+                  });
+                } catch (err) {
+                  console.error(err);
+                }
               }
             }}
             status={status}

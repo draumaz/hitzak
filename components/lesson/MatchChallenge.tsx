@@ -14,6 +14,7 @@ interface MatchChallengeProps {
   question: string;
   options: MatchOption[];
   onAllMatched: () => void;
+  onMistake?: () => void;
   status: "idle" | "correct" | "wrong";
 }
 
@@ -21,6 +22,7 @@ export function MatchChallenge({
   question,
   options,
   onAllMatched,
+  onMistake,
   status,
 }: MatchChallengeProps) {
   const [shuffledEnglishOptions, setShuffledEnglishOptions] = useState<MatchOption[]>([]);
@@ -101,6 +103,7 @@ export function MatchChallenge({
       // Mismatch
       sound.playIncorrect();
       setMismatchIds(new Set([firstOption.id, option.id]));
+      onMistake?.();
       setTimeout(() => {
         setMismatchIds(new Set());
         setSelectedId(null);

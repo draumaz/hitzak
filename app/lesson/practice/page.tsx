@@ -69,6 +69,7 @@ export default function PracticeLessonPageRoute() {
         hearts: userProgress?.hearts ?? 5,
         hasActiveSubscription: userProgress?.hasActiveSubscription ?? false,
         streak: userProgress?.streak ?? 0,
+        encounteredWords: userProgress?.encounteredWords ?? [],
       }}
     />
   );

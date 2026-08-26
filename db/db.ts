@@ -529,11 +529,41 @@ class StateManager {
     ];
   }
 
+  getEncounteredWords(userId = "user_euskaldun"): string[] {
+    const userState = this.getOrCreateUserState(userId);
+    const completedSet = new Set(userState.completedLessonIds);
+    const words = new Set<string>();
+
+    const completedLessons = this.data.lessons.filter((l) => completedSet.has(l.id));
+    completedLessons.forEach((lesson) => {
+      const lessonChallenges = this.data.challenges.filter((c) => c.lessonId === lesson.id);
+      lessonChallenges.forEach((c) => {
+        if (c.prompt) {
+          c.prompt.split(/\s+/).forEach((w) => {
+            const clean = w.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+            if (clean) words.add(clean);
+          });
+        }
+        if (c.options) {
+          c.options.forEach((opt) => {
+            opt.text.split(/\s+/).forEach((w) => {
+              const clean = w.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+              if (clean) words.add(clean);
+            });
+          });
+        }
+      });
+    });
+
+    return Array.from(words);
+  }
+
   // --- USER PROGRESS & GAMIFICATION ---
   getUserProgress(userId = "user_euskaldun") {
     const userState = this.getOrCreateUserState(userId);
     const mistakesCount = userState.mistakeChallengeIds ? userState.mistakeChallengeIds.length : 0;
-    return { ...userState.progress, mistakesCount };
+    const encounteredWords = this.getEncounteredWords(userId);
+    return { ...userState.progress, mistakesCount, encounteredWords };
   }
 
   reduceHeart(userId = "user_euskaldun") {
@@ -602,8 +632,9 @@ class StateManager {
     if (!userState.mistakeChallengeIds) {
       userState.mistakeChallengeIds = [];
     }
-    if (!userState.mistakeChallengeIds.includes(challengeId)) {
-      userState.mistakeChallengeIds.push(challengeId);
+    const numId = Number(challengeId);
+    if (!userState.mistakeChallengeIds.includes(numId)) {
+      userState.mistakeChallengeIds.push(numId);
       this.saveStore();
     }
     return { success: true, count: userState.mistakeChallengeIds.length };
@@ -611,8 +642,9 @@ class StateManager {
 
   removeMistake(challengeId: number, userId = "user_euskaldun") {
     const userState = this.getOrCreateUserState(userId);
-    if (userState.mistakeChallengeIds && userState.mistakeChallengeIds.includes(challengeId)) {
-      userState.mistakeChallengeIds = userState.mistakeChallengeIds.filter((id) => id !== challengeId);
+    const numId = Number(challengeId);
+    if (userState.mistakeChallengeIds && userState.mistakeChallengeIds.includes(numId)) {
+      userState.mistakeChallengeIds = userState.mistakeChallengeIds.filter((id) => Number(id) !== numId);
       this.saveStore();
     }
     const count = userState.mistakeChallengeIds ? userState.mistakeChallengeIds.length : 0;
@@ -621,8 +653,8 @@ class StateManager {
 
   getMistakePracticeLesson(userId = "user_euskaldun") {
     const userState = this.getOrCreateUserState(userId);
-    const ids = userState.mistakeChallengeIds || [];
-    const challenges = this.data.challenges.filter((c) => ids.includes(c.id));
+    const ids = (userState.mistakeChallengeIds || []).map(Number);
+    const challenges = this.data.challenges.filter((c) => ids.includes(Number(c.id)));
     return {
       id: -1,
       title: "Mistakes Review",
@@ -639,6 +671,7 @@ class StateManager {
     const userState = this.getOrCreateUserState(userId);
     userState.completedLessonIds = [];
     userState.challengeProgressMap = {};
+    userState.mistakeChallengeIds = [];
     userState.progress.hearts = 5;
     userState.progress.points = 0;
     userState.progress.streak = 0;
