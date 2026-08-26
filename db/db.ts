@@ -49,6 +49,36 @@ class StateManager {
     this.loadStore();
   }
 
+  private getStorePath(): string {
+    if (process.env.USERS_STORE_PATH) {
+      return process.env.USERS_STORE_PATH;
+    }
+    if (process.env.DB_DIR) {
+      return path.join(process.env.DB_DIR, "users_store.json");
+    }
+
+    const candidate1 = path.join(process.cwd(), "db", "users_store.json");
+    if (fs.existsSync(candidate1)) {
+      return candidate1;
+    }
+
+    const candidate2 = path.join(process.cwd(), "db", "db", "users_store.json");
+    if (fs.existsSync(candidate2)) {
+      return candidate2;
+    }
+
+    const candidate3 = path.join(process.cwd(), "users_store.json");
+    if (fs.existsSync(candidate3)) {
+      return candidate3;
+    }
+
+    // Default fallback if no file exists yet
+    if (fs.existsSync(path.join(process.cwd(), "db", "db"))) {
+      return candidate2;
+    }
+    return candidate1;
+  }
+
   private loadSeedData(): SeedData {
     const dataDir = path.join(process.cwd(), "data");
     const languagesPath = path.join(dataDir, "languages.json");
@@ -167,11 +197,12 @@ class StateManager {
 
   private loadStore() {
     try {
-      if (fs.existsSync(STORE_PATH)) {
-        const fileContent = fs.readFileSync(STORE_PATH, "utf-8");
+      const storePath = this.getStorePath();
+      if (fs.existsSync(storePath)) {
+        const fileContent = fs.readFileSync(storePath, "utf-8");
         this.store = JSON.parse(fileContent);
       } else {
-        const dir = path.dirname(STORE_PATH);
+        const dir = path.dirname(storePath);
         if (!fs.existsSync(dir)) {
           fs.mkdirSync(dir, { recursive: true });
         }
@@ -180,17 +211,20 @@ class StateManager {
       }
     } catch (e) {
       console.error("Failed to load users store:", e);
-      this.store = { users: {} };
+      if (!this.store || !this.store.users) {
+        this.store = { users: {} };
+      }
     }
   }
 
   private saveStore() {
     try {
-      const dir = path.dirname(STORE_PATH);
+      const storePath = this.getStorePath();
+      const dir = path.dirname(storePath);
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
-      fs.writeFileSync(STORE_PATH, JSON.stringify(this.store, null, 2), "utf-8");
+      fs.writeFileSync(storePath, JSON.stringify(this.store, null, 2), "utf-8");
     } catch (e) {
       console.error("Failed to save users store:", e);
     }
@@ -207,6 +241,7 @@ class StateManager {
   // --- USER AUTHENTICATION & MANAGEMENT ---
   
   createUser(username: string, password: string): UserState | null {
+    this.loadStore();
     const normalized = username.trim().toLowerCase();
     if (!normalized || password.length < 4) return null;
     if (this.store.users[normalized]) return null;
@@ -241,6 +276,7 @@ class StateManager {
   }
 
   verifyUser(username: string, password: string): UserState | null {
+    this.loadStore();
     const normalized = username.trim().toLowerCase();
     const userState = this.store.users[normalized];
     if (!userState) return null;
@@ -253,6 +289,7 @@ class StateManager {
   }
 
   private getOrCreateUserState(userId: string): UserState {
+    this.loadStore();
     const user = Object.values(this.store.users).find((u) => u.id === userId);
     if (user) {
       if (!user.mistakeChallengeIds) {
