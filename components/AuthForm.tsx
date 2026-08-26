@@ -204,6 +204,9 @@ export function AuthForm({ initialMode = "signup" }: AuthFormProps) {
           onClick={toggleMode}
           className="text-xs font-bold text-duo-blue hover:underline"
         >
+          {mode === "login"
+            ? "Don't have an account? Sign up"
+            : "Already have an account? Sign in"}
         </button>
       </div>
     </div>

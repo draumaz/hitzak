@@ -36,10 +36,15 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    const isSecure =
+      req.headers.get("x-forwarded-proto") === "https" ||
+      req.nextUrl.protocol === "https:" ||
+      process.env.SECURE_COOKIES === "true";
+
     // Set cookie
     response.cookies.set("session_token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: isSecure,
       sameSite: "lax",
       path: "/",
       maxAge: 60 * 60 * 24 * 7, // 7 days

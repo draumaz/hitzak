@@ -4,10 +4,15 @@ export async function POST(req: NextRequest) {
   try {
     const response = NextResponse.json({ success: true });
     
+    const isSecure =
+      req.headers.get("x-forwarded-proto") === "https" ||
+      req.nextUrl.protocol === "https:" ||
+      process.env.SECURE_COOKIES === "true";
+
     // Clear session token cookie by setting expiration to 0
     response.cookies.set("session_token", "", {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: isSecure,
       sameSite: "lax",
       path: "/",
       expires: new Date(0),
