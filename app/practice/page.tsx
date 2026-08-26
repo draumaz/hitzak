@@ -57,9 +57,9 @@ export default function PracticePage() {
                 <ShieldAlert className="h-12 w-12 text-duo-red animate-pulse" />
               </div>
 
-              <h2 className="text-3xl font-black text-[#3c3c3c] dark:text-white">Mistakes Inbox</h2>
+              <h2 className="text-3xl font-black text-[#3c3c3c] dark:text-white">Mistakes to review</h2>
               <p className="mt-2 text-sm text-[#777777] dark:text-[#afafaf] max-w-md">
-                You have <span className="font-black text-duo-red">{mistakesCount} mistakes</span> to review. Practice them to master Basque and clear your inbox!
+                You have <span className="font-black text-duo-red">{mistakesCount} mistake(s)</span> to review. Practice them to master Basque and clear your inbox!
               </p>
 
               {/* Action Button */}
@@ -79,9 +79,9 @@ export default function PracticePage() {
                 <Sparkles className="h-12 w-12 text-duo-yellow-dark dark:text-yellow-400 animate-pulse" />
               </div>
 
-              <h2 className="text-3xl font-black text-[#3c3c3c] dark:text-white">Inbox Clean!</h2>
+              <h2 className="text-3xl font-black text-[#3c3c3c] dark:text-white">Nothing to practice</h2>
               <p className="mt-2 text-sm text-[#777777] dark:text-[#afafaf] max-w-md font-medium">
-                Excellent work! You have completed all mistake reviews and have 0 pending wrong answers. Keep learning to build your skills!
+                Excellent work! You have completed all mistake reviews and have nothing to practice. Keep learning to build your skills!
               </p>
 
               {/* Action Button to Return to Home */}
