@@ -115,20 +115,44 @@ export default function LearnPage() {
     return targetUnit.rings[0].nextLessonId;
   }, [units]);
 
-  // Auto-scroll to the most recently unlocked skill ring on dashboard load
+  const [focusedRingId, setFocusedRingId] = useState<string | number | null>(null);
+
+  // Auto-scroll to the focused skill ring or most recently unlocked ring on dashboard load
   useEffect(() => {
     if (!loading && units.length > 0) {
-      const timer = setTimeout(() => {
-        const activeRingEl =
-          (document.querySelector('[data-active-ring="true"]') as HTMLElement) ||
-          (getNewestLessonId()
-            ? (document.querySelector(
-                `[data-active-lesson-id="${getNewestLessonId()}"]`
-              ) as HTMLElement)
-            : null);
+      const savedRingId = typeof window !== "undefined" ? sessionStorage.getItem("last_focused_ring") : null;
+      const savedLessonId = typeof window !== "undefined" ? sessionStorage.getItem("last_focused_lesson") : null;
 
-        if (activeRingEl) {
-          activeRingEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      const timer = setTimeout(() => {
+        let targetRingEl: HTMLElement | null = null;
+
+        if (savedRingId) {
+          targetRingEl = document.querySelector(`[data-ring-id="${savedRingId}"]`) as HTMLElement | null;
+          if (targetRingEl) {
+            setFocusedRingId(savedRingId);
+          }
+        }
+
+        if (!targetRingEl && savedLessonId) {
+          targetRingEl = document.querySelector(`[data-active-lesson-id="${savedLessonId}"]`) as HTMLElement | null;
+          if (targetRingEl) {
+            const rId = targetRingEl.getAttribute("data-ring-id");
+            if (rId) setFocusedRingId(rId);
+          }
+        }
+
+        if (!targetRingEl) {
+          targetRingEl =
+            (document.querySelector('[data-active-ring="true"]') as HTMLElement) ||
+            (getNewestLessonId()
+              ? (document.querySelector(
+                  `[data-active-lesson-id="${getNewestLessonId()}"]`
+                ) as HTMLElement)
+              : null);
+        }
+
+        if (targetRingEl) {
+          targetRingEl.scrollIntoView({ behavior: "smooth", block: "center" });
         }
       }, 150);
 
@@ -263,7 +287,7 @@ export default function LearnPage() {
                 </div>
               ) : (
                 units.map((unit, idx) => (
-                  <UnitSection key={unit.id} unit={unit} unitIndex={idx} />
+                  <UnitSection key={unit.id} unit={unit} unitIndex={idx} focusedRingId={focusedRingId} />
                 ))
               )}
             </main>

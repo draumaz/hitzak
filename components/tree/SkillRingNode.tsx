@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   Crown,
@@ -40,6 +40,7 @@ interface SkillRingNodeProps {
   nextLessonId: number;
   nextLessonLevel: number;
   icon?: string;
+  isFocused?: boolean;
 }
 
 const ICON_MAP: Record<string, any> = {
@@ -74,8 +75,15 @@ export function SkillRingNode({
   nextLessonId,
   nextLessonLevel = 1,
   icon = "star",
+  isFocused = false,
 }: SkillRingNodeProps) {
-  const [showTooltip, setShowTooltip] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(isFocused);
+
+  useEffect(() => {
+    if (isFocused) {
+      setShowTooltip(true);
+    }
+  }, [isFocused]);
 
   const handleClick = () => {
     if (isLocked) {
@@ -143,6 +151,7 @@ export function SkillRingNode({
         <button
           onClick={handleClick}
           disabled={isLocked}
+          data-ring-id={id}
           data-active-lesson-id={nextLessonId}
           data-active-ring={isActive ? "true" : "false"}
           className={cn(
@@ -232,6 +241,12 @@ export function SkillRingNode({
 
             <Link
               href={`/lesson/${nextLessonId}`}
+              onClick={() => {
+                try {
+                  sessionStorage.setItem("last_focused_ring", String(id));
+                  sessionStorage.setItem("last_focused_lesson", String(nextLessonId));
+                } catch (e) {}
+              }}
               className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl py-3 text-xs font-black uppercase tracking-wider text-white shadow-md transition hover:brightness-105 active:translate-y-1"
               style={{
                 backgroundColor: isMastered ? "#ffc800" : color,

@@ -50,9 +50,10 @@ interface UnitSectionProps {
     }>;
   };
   unitIndex: number;
+  focusedRingId?: string | number | null;
 }
 
-export function UnitSection({ unit, unitIndex }: UnitSectionProps) {
+export function UnitSection({ unit, unitIndex, focusedRingId }: UnitSectionProps) {
   const [isGuidebookOpen, setIsGuidebookOpen] = useState(false);
   const cleanTitle = unit.title.replace(/^Unit\s+\d+\s*:\s*/i, "");
 
@@ -141,6 +142,7 @@ export function UnitSection({ unit, unitIndex }: UnitSectionProps) {
               nextLessonId={ring.nextLessonId}
               nextLessonLevel={ring.nextLessonLevel}
               icon={ring.icon}
+              isFocused={focusedRingId === ring.id || focusedRingId === String(ring.id)}
             />
           );
         })}
@@ -156,6 +158,10 @@ export function UnitSection({ unit, unitIndex }: UnitSectionProps) {
             lessonId={reviewRing.nextLessonId}
             xpReward={reviewRing.lessons[0]?.xpReward || 30}
             unitColor={unit.color}
+            isFocused={
+              focusedRingId === `review-${unit.id}` ||
+              focusedRingId === String(reviewRing.nextLessonId)
+            }
           />
         )}
       </div>

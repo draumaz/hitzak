@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Trophy, Lock, Star, Play, Gift, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,7 @@ interface UnitReviewNodeProps {
   lessonId: number;
   xpReward?: number;
   unitColor: string;
+  isFocused?: boolean;
 }
 
 export function UnitReviewNode({
@@ -26,8 +27,15 @@ export function UnitReviewNode({
   lessonId,
   xpReward = 30,
   unitColor,
+  isFocused = false,
 }: UnitReviewNodeProps) {
-  const [showTooltip, setShowTooltip] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(isFocused);
+
+  useEffect(() => {
+    if (isFocused) {
+      setShowTooltip(true);
+    }
+  }, [isFocused]);
 
   const handleClick = () => {
     if (!isUnlocked) {
@@ -56,6 +64,7 @@ export function UnitReviewNode({
         <button
           onClick={handleClick}
           disabled={!isUnlocked}
+          data-ring-id={`review-${unitId}`}
           data-active-lesson-id={lessonId}
           data-active-ring={isUnlocked && !isMastered ? "true" : "false"}
           className={cn(
@@ -115,6 +124,12 @@ export function UnitReviewNode({
 
             <Link
               href={`/lesson/${lessonId}`}
+              onClick={() => {
+                try {
+                  sessionStorage.setItem("last_focused_ring", `review-${unitId}`);
+                  sessionStorage.setItem("last_focused_lesson", String(lessonId));
+                } catch (e) {}
+              }}
               className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl bg-yellow-400 py-3 text-xs font-black uppercase tracking-wider text-yellow-950 shadow-[0_4px_0_#d99b00] transition hover:brightness-105 active:translate-y-1"
             >
               <Play className="h-4 w-4 fill-yellow-950" />
