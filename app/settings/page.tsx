@@ -260,7 +260,7 @@ export default function SettingsPage() {
                   Hitzak 1.0.0
                 </p>
                 <p className="text-xs font-extrabold text-[#3c3c3c] dark:text-white">
-                  2026 | <a href="https://draumaz.xyz" target="_blank" rel="noopener noreferrer" className="text-duo-blue hover:underline">draumaz.xyz</a>
+                  2026 | <a href="https://github.com/draumaz" target="_blank" rel="noopener noreferrer" className="text-duo-blue hover:underline">draumaz</a>
                 </p>
                 <p className="mt-3 text-[10px] font-bold text-gray-400 dark:text-gray-500 leading-relaxed">
                   Seed data sources:{" "}
