@@ -176,6 +176,7 @@ interface ChallengeItem {
   audioText?: string;
   grammarTip?: string;
   order: number;
+  acceptedAnswers?: string[];
   options: Array<{
     id: number;
     text: string;
@@ -250,15 +251,38 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
       const expectedText = correctOptions.map((t) => t.text).join(" ").trim();
 
       const isTargetBasque = currentChallenge.question.toLowerCase().includes("basque");
+      const normConstructed = constructedText.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
 
-      if (isTargetBasque) {
-        const proDropResult = areBasqueSentencesEquivalent(expectedText, constructedText);
-        isCorrect = proDropResult.isEquivalent;
-        if (isCorrect && proDropResult.alsoAccepted) {
-          setAlsoAcceptedText(proDropResult.alsoAccepted);
+      if (currentChallenge.acceptedAnswers && currentChallenge.acceptedAnswers.length > 0) {
+        // Direct normalized match against any accepted variation
+        isCorrect = currentChallenge.acceptedAnswers.some((ans) => {
+          const normAns = ans.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+          return normAns === normConstructed;
+        });
+
+        if (!isCorrect && isTargetBasque) {
+          // Check pro-drop compatibility against accepted answers
+          for (const ans of currentChallenge.acceptedAnswers) {
+            const proDropResult = areBasqueSentencesEquivalent(ans, constructedText);
+            if (proDropResult.isEquivalent) {
+              isCorrect = true;
+              if (proDropResult.alsoAccepted) {
+                setAlsoAcceptedText(proDropResult.alsoAccepted);
+              }
+              break;
+            }
+          }
         }
       } else {
-        isCorrect = constructedText.toLowerCase() === expectedText.toLowerCase();
+        if (isTargetBasque) {
+          const proDropResult = areBasqueSentencesEquivalent(expectedText, constructedText);
+          isCorrect = proDropResult.isEquivalent;
+          if (isCorrect && proDropResult.alsoAccepted) {
+            setAlsoAcceptedText(proDropResult.alsoAccepted);
+          }
+        } else {
+          isCorrect = constructedText.toLowerCase() === expectedText.toLowerCase();
+        }
       }
     }
 

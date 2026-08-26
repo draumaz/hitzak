@@ -61,6 +61,7 @@ export interface SeedChallenge {
   audioSrc?: string;
   audioText?: string;
   grammarTip?: string;
+  acceptedAnswers?: string[];
   options: SeedChallengeOption[];
 }
 
