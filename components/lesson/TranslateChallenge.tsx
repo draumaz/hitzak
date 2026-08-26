@@ -494,7 +494,7 @@ export const BASQUE_TO_ENGLISH: Record<string, string> = {
   "barazki": "vegetable",
   "barazkia": "vegetable",
   "barazkiak": "vegetables",
-  "barkatu": "sorry",
+  "barkatu": "Excuse me / Sorry",
   "barkatu, berandu da": "Sorry it is late.",
   "barkatu. berandu da": "Sorry. It is late.",
   "barkatu. nor da gidaria": "Excuse me. Who is the driver?",
@@ -1365,11 +1365,16 @@ export const BASQUE_TO_ENGLISH: Record<string, string> = {
   "everything": "dena",
   "excited": "animatuta",
   "excuse": "barkatu",
+  "excuse me": "barkatu",
   "excuse me. who is the driver": "Barkatu. Nor da gidaria?",
+  "bihar arte": "See you tomorrow",
+  "see you tomorrow": "bihar arte",
+  "you're welcome": "ez da ezer",
+  "you are welcome": "ez da ezer",
   "ez": "not, no",
   "ez da ardia, baizik ahuntz bat": "It is not a sheep, but rather a goat.",
   "ez da beroa, baina hezetasuna altua dago": "It is not hot, but the humidity is high.",
-  "ez da ezer": "It is nothing.",
+  "ez da ezer": "It is nothing / You're welcome",
   "ez zen denda, baizik etxe bat zen": "It was not a store, but rather it was a house.",
   "ez, hura ez doa dendara, hura baizik bankura doa": "No, she is not going to the store, but rather she is going to the bank.",
   "ez, ni ez nindoan eskolaetara, baizik ni elizaetara nindoan": "No, I was not going to the schools, but rather I was going to the churches.",
@@ -4921,58 +4926,136 @@ export const BASQUE_TO_ENGLISH: Record<string, string> = {
   "zuzen": "straight",
 };
 
-function renderPromptWords(sentence: string) {
-  const words = sentence.split(/(\s+)/);
-  return words.map((word, idx) => {
-    if (word.trim() === "") {
-      return <span key={idx}>{word}</span>;
+export function renderPromptWords(sentence: string) {
+  const parts = sentence.split(/(\s+)/);
+  const items: Array<{
+    type: "space" | "word";
+    raw: string;
+    leadingPunc: string;
+    cleanWord: string;
+    trailingPunc: string;
+  }> = [];
+
+  parts.forEach((p) => {
+    if (!p) return;
+    if (p.trim() === "") {
+      items.push({ type: "space", raw: p, leadingPunc: "", cleanWord: "", trailingPunc: "" });
+    } else {
+      const match = p.match(/^([.,\/#!$%\^&\*;:{}=\-_`~()?\"'\u201c\u201d\u2018\u2019\u00ab\u00bb\u2022\u2013\u2014()\[\]{}]*)(.*?)([.,\/#!$%\^&\*;:{}=\-_`~()?\"'\u201c\u201d\u2018\u2019\u00ab\u00bb\u2022\u2013\u2014()\[\]{}]*)$/);
+      let leadingPunc = "";
+      let cleanWord = p;
+      let trailingPunc = "";
+      if (match) {
+        leadingPunc = match[1];
+        cleanWord = match[2];
+        trailingPunc = match[3];
+      }
+      items.push({ type: "word", raw: p, leadingPunc, cleanWord, trailingPunc });
+    }
+  });
+
+  const wordIndices: number[] = [];
+  items.forEach((it, idx) => {
+    if (it.type === "word" && it.cleanWord) wordIndices.push(idx);
+  });
+
+  const elements: React.ReactNode[] = [];
+  let i = 0;
+  let keyCounter = 0;
+
+  while (i < items.length) {
+    const item = items[i];
+    if (item.type === "space") {
+      elements.push(<span key={keyCounter++}>{item.raw}</span>);
+      i++;
+      continue;
     }
 
-    const match = word.match(/^([.,\/#!$%\^&\*;:{}=\-_`~()?\"'\u201c\u201d\u2018\u2019\u00ab\u00bb\u2022\u2013\u2014()\[\]{}]*)(.*?)([.,\/#!$%\^&\*;:{}=\-_`~()?\"'\u201c\u201d\u2018\u2019\u00ab\u00bb\u2022\u2013\u2014()\[\]{}]*)$/);
-
-    let leadingPunc = "";
-    let cleanWord = word;
-    let trailingPunc = "";
-
-    if (match) {
-      leadingPunc = match[1];
-      cleanWord = match[2];
-      trailingPunc = match[3];
+    const wordIdxPos = wordIndices.indexOf(i);
+    if (wordIdxPos === -1) {
+      elements.push(<span key={keyCounter++}>{item.raw}</span>);
+      i++;
+      continue;
     }
 
-    if (!cleanWord) {
-      return <span key={idx}>{word}</span>;
-    }
+    let matched = false;
+    const maxK = Math.min(4, wordIndices.length - wordIdxPos);
 
-    const lookup = cleanWord.toLowerCase();
-    let translation = BASQUE_TO_ENGLISH[lookup];
-    if (!translation && (lookup.endsWith("'s") || lookup.endsWith("’s"))) {
-      const base = lookup.slice(0, -2);
-      if (BASQUE_TO_ENGLISH[base]) {
-        translation = BASQUE_TO_ENGLISH[base] + "'s";
+    for (let K = maxK; K >= 1; K--) {
+      let hasBoundary = false;
+      for (let j = 0; j < K - 1; j++) {
+        const wIdx = wordIndices[wordIdxPos + j];
+        const wItem = items[wIdx];
+        if (/[.!?]/.test(wItem.trailingPunc)) {
+          hasBoundary = true;
+          break;
+        }
+      }
+      if (hasBoundary && K > 1) continue;
+
+      const matchedWordItems = [];
+      for (let j = 0; j < K; j++) {
+        matchedWordItems.push(items[wordIndices[wordIdxPos + j]]);
+      }
+
+      const lookupKey = matchedWordItems.map((w) => w.cleanWord.toLowerCase()).join(" ");
+      let translation = BASQUE_TO_ENGLISH[lookupKey];
+
+      if (!translation && K === 1 && (lookupKey.endsWith("'s") || lookupKey.endsWith("’s"))) {
+        const base = lookupKey.slice(0, -2);
+        if (BASQUE_TO_ENGLISH[base]) {
+          translation = BASQUE_TO_ENGLISH[base] + "'s";
+        }
+      }
+
+      if (translation) {
+        const firstWord = matchedWordItems[0];
+        const lastWord = matchedWordItems[matchedWordItems.length - 1];
+        const lastWordIdx = wordIndices[wordIdxPos + K - 1];
+
+        let phraseText = "";
+        for (let idx = i; idx <= lastWordIdx; idx++) {
+          const curr = items[idx];
+          if (idx === i) {
+            phraseText += curr.cleanWord;
+          } else if (idx === lastWordIdx) {
+            phraseText += curr.leadingPunc + curr.cleanWord;
+          } else if (curr.type === "space") {
+            phraseText += curr.raw;
+          } else {
+            phraseText += curr.leadingPunc + curr.cleanWord + curr.trailingPunc;
+          }
+        }
+
+        elements.push(
+          <span key={keyCounter++} className="inline-block">
+            {firstWord.leadingPunc}
+            <span className="relative group inline-block cursor-help border-b-2 border-dotted border-[#afafaf] hover:border-duo-blue dark:border-[#4b4b4b] dark:hover:border-duo-blue pb-0.5 select-none">
+              {phraseText}
+              {/* Tooltip */}
+              <span className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 bg-gray-800 text-white text-xs py-1.5 px-3 rounded-lg shadow-lg whitespace-nowrap z-50 dark:bg-gray-100 dark:text-gray-900 font-bold tracking-normal leading-normal">
+                {translation}
+                {/* Tooltip arrow */}
+                <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-t-[5px] border-t-gray-800 border-x-[5px] border-x-transparent dark:border-t-gray-100" />
+              </span>
+            </span>
+            {lastWord.trailingPunc}
+          </span>
+        );
+
+        i = lastWordIdx + 1;
+        matched = true;
+        break;
       }
     }
 
-    if (translation) {
-      return (
-        <span key={idx} className="inline-block">
-          {leadingPunc}
-          <span className="relative group inline-block cursor-help border-b-2 border-dotted border-[#afafaf] hover:border-duo-blue dark:border-[#4b4b4b] dark:hover:border-duo-blue pb-0.5 select-none">
-            {cleanWord}
-            {/* Tooltip */}
-            <span className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 bg-gray-800 text-white text-xs py-1.5 px-3 rounded-lg shadow-lg whitespace-nowrap z-50 dark:bg-gray-100 dark:text-gray-900 font-bold tracking-normal leading-normal">
-              {translation}
-              {/* Tooltip arrow */}
-              <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-t-[5px] border-t-gray-800 border-x-[5px] border-x-transparent dark:border-t-gray-100" />
-            </span>
-          </span>
-          {trailingPunc}
-        </span>
-      );
+    if (!matched) {
+      elements.push(<span key={keyCounter++}>{item.raw}</span>);
+      i++;
     }
+  }
 
-    return <span key={idx}>{word}</span>;
-  });
+  return elements;
 }
 
 export function TranslateChallenge({

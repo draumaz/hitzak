@@ -4,61 +4,7 @@ import { useEffect } from "react";
 import { Volume2 } from "lucide-react";
 import { sound } from "@/lib/sound";
 import { cn } from "@/lib/utils";
-import { BASQUE_TO_ENGLISH } from "./TranslateChallenge";
-
-function renderPromptWords(sentence: string) {
-  const words = sentence.split(/(\s+)/);
-  return words.map((word, idx) => {
-    if (word.trim() === "") {
-      return <span key={idx}>{word}</span>;
-    }
-
-    const match = word.match(/^([.,\/#!$%\^&\*;:{}=\-_`~()?\"'\u201c\u201d\u2018\u2019\u00ab\u00bb\u2022\u2013\u2014()\[\]{}]*)(.*?)([.,\/#!$%\^&\*;:{}=\-_`~()?\"'\u201c\u201d\u2018\u2019\u00ab\u00bb\u2022\u2013\u2014()\[\]{}]*)$/);
-
-    let leadingPunc = "";
-    let cleanWord = word;
-    let trailingPunc = "";
-
-    if (match) {
-      leadingPunc = match[1];
-      cleanWord = match[2];
-      trailingPunc = match[3];
-    }
-
-    if (!cleanWord) {
-      return <span key={idx}>{word}</span>;
-    }
-
-    const lookup = cleanWord.toLowerCase();
-    let translation = BASQUE_TO_ENGLISH[lookup];
-    if (!translation && (lookup.endsWith("'s") || lookup.endsWith("’s"))) {
-      const base = lookup.slice(0, -2);
-      if (BASQUE_TO_ENGLISH[base]) {
-        translation = BASQUE_TO_ENGLISH[base] + "'s";
-      }
-    }
-
-    if (translation) {
-      return (
-        <span key={idx} className="inline-block">
-          {leadingPunc}
-          <span className="relative group inline-block cursor-help border-b-2 border-dotted border-[#afafaf] hover:border-duo-blue dark:border-[#4b4b4b] dark:hover:border-duo-blue pb-0.5 select-none">
-            {cleanWord}
-            {/* Tooltip */}
-            <span className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 bg-gray-800 text-white text-xs py-1.5 px-3 rounded-lg shadow-lg whitespace-nowrap z-50 dark:bg-gray-100 dark:text-gray-900 font-bold tracking-normal leading-normal">
-              {translation}
-              {/* Tooltip arrow */}
-              <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-t-[5px] border-t-gray-800 border-x-[5px] border-x-transparent dark:border-t-gray-100" />
-            </span>
-          </span>
-          {trailingPunc}
-        </span>
-      );
-    }
-
-    return <span key={idx}>{word}</span>;
-  });
-}
+import { BASQUE_TO_ENGLISH, renderPromptWords } from "./TranslateChallenge";
 
 interface SelectOption {
   id: number;
