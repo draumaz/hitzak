@@ -9,6 +9,7 @@ interface ActionBannerProps {
   onCheck: () => void;
   onNext: () => void;
   correctAnswerText?: string;
+  alsoAcceptedText?: string;
   centerAction?: React.ReactNode;
 }
 
@@ -18,6 +19,7 @@ export function ActionBanner({
   onCheck,
   onNext,
   correctAnswerText,
+  alsoAcceptedText,
   centerAction,
 }: ActionBannerProps) {
   return (
@@ -49,6 +51,11 @@ export function ActionBanner({
             <div>
               <h3 className="text-xl font-black text-duo-green-dark dark:text-emerald-300">Nicely done!</h3>
               <p className="text-sm font-bold text-duo-green-dark/80 dark:text-emerald-400">Correct answer</p>
+              {alsoAcceptedText && (
+                <p className="text-xs font-bold text-duo-green-dark/70 dark:text-emerald-400/90 mt-1">
+                  Also accepted: <span className="underline">{alsoAcceptedText}</span>
+                </p>
+              )}
             </div>
           </div>
         )}

@@ -12,6 +12,161 @@ import { LessonCompleteModal } from "./LessonCompleteModal";
 import { sound } from "@/lib/sound";
 import { calculateAccuracy } from "@/lib/utils";
 
+const VERB_TO_PRONOUN: Record<string, string[]> = {
+  // naiz/nintzen verbs -> ni
+  "naiz": ["ni"],
+  "nintzen": ["ni"],
+  "nago": ["ni"],
+  "noa": ["ni"],
+  "nator": ["ni"],
+  
+  // zara/zinen verbs -> zu
+  "zara": ["zu"],
+  "zinen": ["zu"],
+  "zaude": ["zu"],
+  "zoaz": ["zu"],
+  "zator": ["zu"],
+  
+  // da/zen verbs -> hura
+  "da": ["hura"],
+  "zen": ["hura"],
+  "dago": ["hura"],
+  "doa": ["hura"],
+  "dator": ["hura"],
+  
+  // gara/ginen verbs -> gu
+  "gara": ["gu"],
+  "ginen": ["gu"],
+  "gaude": ["gu"],
+  "goaz": ["gu"],
+  "gatoz": ["gu"],
+  
+  // zarete/zineten verbs -> zuek
+  "zarete": ["zuek"],
+  "zineten": ["zuek"],
+  "zaudete": ["zuek"],
+  "zoazte": ["zuek"],
+  "zatozte": ["zuek"],
+  
+  // dira/ziren verbs -> haiek
+  "dira": ["haiek"],
+  "ziren": ["haiek"],
+  "daude": ["haiek"],
+  "doaz": ["haiek"],
+  "datoz": ["haiek"],
+
+  // transitive (ukan/edun) verbs:
+  // dut/nuen -> nik
+  "dut": ["nik"],
+  "nuen": ["nik"],
+  "ditut": ["nik"],
+  "nituen": ["nik"],
+  // duzu/zenuen -> zuk
+  "duzu": ["zuk"],
+  "zenuen": ["zuk"],
+  "dituzu": ["zuk"],
+  "zenituen": ["zuk"],
+  // du/zuen -> hark
+  "du": ["hark"],
+  "zuen": ["hark"],
+  "ditu": ["hark"],
+  "zituen": ["hark"],
+  // dugu/genuen -> guk
+  "dugu": ["guk"],
+  "genuen": ["guk"],
+  "ditugu": ["guk"],
+  "genituen": ["guk"],
+  // duzue/zenuten -> zuek
+  "duzue": ["zuek"],
+  "zenuten": ["zuek"],
+  "dituzue": ["zuek"],
+  "zenituzten": ["zuek"],
+  // dute/zuten -> haiek
+  "dute": ["haiek"],
+  "zuten": ["haiek"],
+  "dituzte": ["haiek"],
+  "zituzten": ["haiek"]
+};
+
+const BASQUE_PRONOUNS = new Set([
+  "ni", "zu", "hura", "gu", "zuek", "haiek",
+  "nik", "guk", "zuk", "hark"
+]);
+
+function cleanWord(w: string): string {
+  return w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").toLowerCase().trim();
+}
+
+function getProDropAlternativeText(expected: string, pronounToDrop: string): string {
+  const words = expected.split(/\s+/);
+  const index = words.findIndex(w => cleanWord(w) === pronounToDrop.toLowerCase());
+  if (index === -1) return expected;
+
+  const before = words.slice(0, index);
+  const after = words.slice(index + 1);
+
+  if (index === 0 && after.length > 0) {
+    after[0] = after[0].charAt(0).toUpperCase() + after[0].slice(1);
+  }
+
+  return [...before, ...after].join(" ");
+}
+
+function areBasqueSentencesEquivalent(
+  expected: string,
+  user: string
+): { isEquivalent: boolean; alsoAccepted?: string } {
+  const normExpected = expected.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+  const normUser = user.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+
+  const expectedWords = expected.split(/\s+/).map(cleanWord).filter(Boolean);
+  const userWords = user.split(/\s+/).map(cleanWord).filter(Boolean);
+
+  const expectedVerbs = expectedWords.filter(w => VERB_TO_PRONOUN[w]);
+  
+  const compatiblePronouns = new Set<string>();
+  for (const v of expectedVerbs) {
+    const prs = VERB_TO_PRONOUN[v];
+    if (prs) {
+      prs.forEach(p => compatiblePronouns.add(p));
+    }
+  }
+
+  const pronounsInExpected = expectedWords.filter(w => BASQUE_PRONOUNS.has(w));
+  pronounsInExpected.forEach(p => compatiblePronouns.add(p));
+
+  if (compatiblePronouns.size === 0) {
+    return { isEquivalent: normExpected === normUser };
+  }
+
+  const filteredExpected = expectedWords.filter(w => !compatiblePronouns.has(w));
+  const filteredUser = userWords.filter(w => !compatiblePronouns.has(w));
+
+  if (filteredExpected.join(" ") === filteredUser.join(" ")) {
+    const usedInExpected = expectedWords.filter(w => compatiblePronouns.has(w));
+    const usedInUser = userWords.filter(w => compatiblePronouns.has(w));
+
+    if (normExpected === normUser) {
+      if (usedInExpected.length > 0) {
+        let alt = expected;
+        for (const p of usedInExpected) {
+          alt = getProDropAlternativeText(alt, p);
+        }
+        return { isEquivalent: true, alsoAccepted: alt };
+      }
+      return { isEquivalent: true };
+    }
+
+    if (usedInUser.length === 0 && usedInExpected.length > 0) {
+      return { isEquivalent: true, alsoAccepted: expected };
+    } else if (usedInUser.length > 0 && usedInExpected.length === 0) {
+      return { isEquivalent: true, alsoAccepted: expected };
+    }
+  }
+
+  return { isEquivalent: normExpected === normUser };
+}
+
 interface ChallengeItem {
   id: number;
   lessonId: number;
@@ -53,6 +208,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
   const [streak, setStreak] = useState(initialUserProgress.streak);
   const [correctCount, setCorrectCount] = useState(0);
   const [status, setStatus] = useState<"idle" | "correct" | "wrong">("idle");
+  const [alsoAcceptedText, setAlsoAcceptedText] = useState<string | undefined>(undefined);
   const [isFinished, setIsFinished] = useState(false);
   const [isExitModalOpen, setIsExitModalOpen] = useState(false);
 
@@ -93,7 +249,17 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
       const constructedText = selectedTokens.map((t) => t.text).join(" ").trim();
       const expectedText = correctOptions.map((t) => t.text).join(" ").trim();
 
-      isCorrect = constructedText.toLowerCase() === expectedText.toLowerCase();
+      const isTargetBasque = currentChallenge.question.toLowerCase().includes("basque");
+
+      if (isTargetBasque) {
+        const proDropResult = areBasqueSentencesEquivalent(expectedText, constructedText);
+        isCorrect = proDropResult.isEquivalent;
+        if (isCorrect && proDropResult.alsoAccepted) {
+          setAlsoAcceptedText(proDropResult.alsoAccepted);
+        }
+      } else {
+        isCorrect = constructedText.toLowerCase() === expectedText.toLowerCase();
+      }
     }
 
     if (isCorrect) {
@@ -151,6 +317,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
     if (currentIndex + 1 < totalChallenges) {
       setCurrentIndex((prev) => prev + 1);
       setStatus("idle");
+      setAlsoAcceptedText(undefined);
       setSelectedOptionId(null);
       setSelectedTokens([]);
       setIsKeyboardMode(true);
@@ -332,6 +499,7 @@ export function LessonPlayer({ lesson, initialUserProgress }: LessonPlayerProps)
         onCheck={handleCheckAnswer}
         onNext={handleNextChallenge}
         correctAnswerText={getCorrectAnswerText()}
+        alsoAcceptedText={alsoAcceptedText}
         centerAction={
           status === "idle" && currentChallenge?.type === "TRANSLATE" ? (
             <button
