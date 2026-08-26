@@ -1,0 +1,699 @@
+{
+  "tourGida": [
+    350,
+    353,
+    358,
+    363,
+    369,
+    376,
+    411,
+    412,
+    413,
+    480,
+    641,
+    643,
+    656,
+    675,
+    1692,
+    1740
+  ],
+  "galdegaiaPromptOrAudio": [
+    277,
+    279,
+    282,
+    283,
+    284,
+    288,
+    296,
+    297,
+    305,
+    2191,
+    2201,
+    2218,
+    2227,
+    2228,
+    2239,
+    2250,
+    2251,
+    2256,
+    2261,
+    2262,
+    2263,
+    2264,
+    2266,
+    2275,
+    3226,
+    3314,
+    3322,
+    3521,
+    3540,
+    3550,
+    6630,
+    6632,
+    6633,
+    6638,
+    6670,
+    6671,
+    6672,
+    6678,
+    6681,
+    6689,
+    6691,
+    6732,
+    6763,
+    6769,
+    6777,
+    6781,
+    6782,
+    6784,
+    6785,
+    6787,
+    6790,
+    6797,
+    6799,
+    6803,
+    6806,
+    6808,
+    6809,
+    6810,
+    7456,
+    7477
+  ],
+  "galdegaiaOptions": [
+    {
+      "id": 282,
+      "optionId": 1729,
+      "text": "Nortzuk gizonak dira?"
+    },
+    {
+      "id": 282,
+      "optionId": 1728,
+      "text": "Nortzuk emakumeak dira?"
+    },
+    {
+      "id": 288,
+      "optionId": 1760,
+      "text": "Hura al autobusa da?"
+    },
+    {
+      "id": 288,
+      "optionId": 1761,
+      "text": "Nortzuk gizonak dira?"
+    },
+    {
+      "id": 298,
+      "optionId": 1818,
+      "text": "Nortzuk emakumeak dira?"
+    },
+    {
+      "id": 302,
+      "optionId": 1838,
+      "text": "Hura al autobusa da?"
+    },
+    {
+      "id": 305,
+      "optionId": 1854,
+      "text": "Hura al autobusa da?"
+    },
+    {
+      "id": 317,
+      "optionId": 1928,
+      "text": "Hura al autobusa da?"
+    },
+    {
+      "id": 2205,
+      "optionId": 14234,
+      "text": "Noiz zu etorri zinen elizatik atzo."
+    },
+    {
+      "id": 2208,
+      "optionId": 14253,
+      "text": "Noiz zuek poztu zineten."
+    },
+    {
+      "id": 2218,
+      "optionId": 14325,
+      "text": "Noiz zu etorri zinen elizatik atzo."
+    },
+    {
+      "id": 2228,
+      "optionId": 14391,
+      "text": "Noiz zuek poztu zineten."
+    },
+    {
+      "id": 2255,
+      "optionId": 14569,
+      "text": "Non haiek ohi geratu dira?"
+    },
+    {
+      "id": 2262,
+      "optionId": 14613,
+      "text": "Non haiek ohi geratu dira?"
+    },
+    {
+      "id": 2275,
+      "optionId": 14705,
+      "text": "Non haiek ohi geratu dira?"
+    },
+    {
+      "id": 3218,
+      "optionId": 20988,
+      "text": "Nola txerria dago? Txerria nekatu dago."
+    },
+    {
+      "id": 3225,
+      "optionId": 21030,
+      "text": "Nola txerria dago? Txerria nekatu dago."
+    },
+    {
+      "id": 3238,
+      "optionId": 21110,
+      "text": "Nola txerria dago? Txerria nekatu dago."
+    },
+    {
+      "id": 3322,
+      "optionId": 21729,
+      "text": "Zergatik hura dago triste?"
+    },
+    {
+      "id": 3532,
+      "optionId": 23305,
+      "text": "Nola eguraldia zegoen atzo?"
+    },
+    {
+      "id": 3535,
+      "optionId": 23323,
+      "text": "Nola eguraldia zegoen atzo?"
+    },
+    {
+      "id": 3545,
+      "optionId": 23389,
+      "text": "Nola eguraldia dago gaur?"
+    },
+    {
+      "id": 6632,
+      "optionId": 44114,
+      "text": "Zergatik gidariak ibiltzen ari dira?"
+    },
+    {
+      "id": 6638,
+      "optionId": 44153,
+      "text": "Zergatik gidariak ibiltzen ari dira?"
+    },
+    {
+      "id": 6672,
+      "optionId": 44366,
+      "text": "Zer zu jolasten ari zara?"
+    },
+    {
+      "id": 6678,
+      "optionId": 44404,
+      "text": "Zer zuek egiten ari zarete?"
+    },
+    {
+      "id": 6682,
+      "optionId": 44433,
+      "text": "Zer zuek egiten ari zarete?"
+    },
+    {
+      "id": 6685,
+      "optionId": 44450,
+      "text": "Zer zu ari zara idazten?"
+    },
+    {
+      "id": 6732,
+      "optionId": 44745,
+      "text": "Zergatik zu ari zara irribarre egiten?"
+    },
+    {
+      "id": 6753,
+      "optionId": 44890,
+      "text": "Zer zu ari zara idazten?"
+    },
+    {
+      "id": 6782,
+      "optionId": 45058,
+      "text": "Zerekin zu ari zinen jolasten?"
+    },
+    {
+      "id": 6782,
+      "optionId": 45060,
+      "text": "Zerekin zuk idatziko duzu?"
+    },
+    {
+      "id": 6785,
+      "optionId": 45079,
+      "text": "Norekin gu joango gara?"
+    },
+    {
+      "id": 6785,
+      "optionId": 45077,
+      "text": "Zerekin zuk idatziko duzu?"
+    },
+    {
+      "id": 6788,
+      "optionId": 45097,
+      "text": "Norekin zu joan zinen?"
+    },
+    {
+      "id": 6792,
+      "optionId": 45121,
+      "text": "Zerekin zu ari zinen jolasten?"
+    },
+    {
+      "id": 6792,
+      "optionId": 45122,
+      "text": "Norekin gu joango gara?"
+    },
+    {
+      "id": 6798,
+      "optionId": 45158,
+      "text": "Zerekin zu ari zinen jolasten?"
+    },
+    {
+      "id": 6802,
+      "optionId": 45183,
+      "text": "Norekin gu joango gara?"
+    },
+    {
+      "id": 6808,
+      "optionId": 45220,
+      "text": "Zerekin zuk idatziko duzu?"
+    },
+    {
+      "id": 6863,
+      "optionId": 45581,
+      "text": "Zerekin zuk jolasten duzu?"
+    },
+    {
+      "id": 7498,
+      "optionId": 50072,
+      "text": "Zergatik zuk egosten duzu txerria?"
+    }
+  ],
+  "galdegaiaAcceptedAnswers": [
+    {
+      "id": 282,
+      "count": 3,
+      "samples": [
+        "Nortzuk emakumeak dira?",
+        "Nortzuk emakumeak dira",
+        "Nortzuk emakumeak dira."
+      ]
+    },
+    {
+      "id": 288,
+      "count": 3,
+      "samples": [
+        "Hura al autobusa da?",
+        "Hura al autobusa da",
+        "Hura al autobusa da."
+      ]
+    },
+    {
+      "id": 300,
+      "count": 1,
+      "samples": [
+        "Zer hura da"
+      ]
+    },
+    {
+      "id": 305,
+      "count": 3,
+      "samples": [
+        "Hura al autobusa da?",
+        "Hura al autobusa da",
+        "Hura al autobusa da."
+      ]
+    },
+    {
+      "id": 343,
+      "count": 2,
+      "samples": [
+        "Barkatu Nor gidaria da",
+        "Barkatu, Nor gidaria da"
+      ]
+    },
+    {
+      "id": 353,
+      "count": 4,
+      "samples": [
+        "Barkatu Nor turismo-gidaria da",
+        "Barkatu Nor turismo gidaria da",
+        "Barkatu, Nor turismo-gidaria da"
+      ]
+    },
+    {
+      "id": 357,
+      "count": 2,
+      "samples": [
+        "Barkatu Nor gidaria da",
+        "Barkatu, Nor gidaria da"
+      ]
+    },
+    {
+      "id": 363,
+      "count": 4,
+      "samples": [
+        "Barkatu Nor turismo-gidaria da",
+        "Barkatu Nor turismo gidaria da",
+        "Barkatu, Nor turismo-gidaria da"
+      ]
+    },
+    {
+      "id": 369,
+      "count": 4,
+      "samples": [
+        "Barkatu Nor turismo-gidaria da",
+        "Barkatu Nor turismo gidaria da",
+        "Barkatu, Nor turismo-gidaria da"
+      ]
+    },
+    {
+      "id": 506,
+      "count": 1,
+      "samples": [
+        "Zein koloretakoa kotxea zen"
+      ]
+    },
+    {
+      "id": 523,
+      "count": 1,
+      "samples": [
+        "Zein koloretakoa autobusa da"
+      ]
+    },
+    {
+      "id": 530,
+      "count": 1,
+      "samples": [
+        "Zein koloretakoa autobusa da"
+      ]
+    },
+    {
+      "id": 880,
+      "count": 1,
+      "samples": [
+        "Zer hau da"
+      ]
+    },
+    {
+      "id": 2218,
+      "count": 2,
+      "samples": [
+        "Noiz zu etorri zinen elizatik atzo.",
+        "Noiz zu etorri zinen elizatik atzo"
+      ]
+    },
+    {
+      "id": 2227,
+      "count": 1,
+      "samples": [
+        "Noiz zuek poztu zineten"
+      ]
+    },
+    {
+      "id": 2228,
+      "count": 2,
+      "samples": [
+        "Noiz zuek poztu zineten.",
+        "Noiz zuek poztu zineten"
+      ]
+    },
+    {
+      "id": 2251,
+      "count": 1,
+      "samples": [
+        "Non haiek ohi geratu dira"
+      ]
+    },
+    {
+      "id": 2256,
+      "count": 5,
+      "samples": [
+        "Noiz hura etzaten da ohi",
+        "Noiz hura etzaten al da ohi",
+        "Noiz hura etzaten ohi da"
+      ]
+    },
+    {
+      "id": 2261,
+      "count": 5,
+      "samples": [
+        "Noiz hura etzaten da ohi",
+        "Noiz hura etzaten al da ohi",
+        "Noiz hura etzaten ohi da"
+      ]
+    },
+    {
+      "id": 2262,
+      "count": 3,
+      "samples": [
+        "Non haiek ohi geratu dira?",
+        "Non haiek ohi geratu dira",
+        "Non haiek ohi geratu dira."
+      ]
+    },
+    {
+      "id": 2263,
+      "count": 5,
+      "samples": [
+        "Noiz hura etzaten da ohi",
+        "Noiz hura etzaten al da ohi",
+        "Noiz hura etzaten ohi da"
+      ]
+    },
+    {
+      "id": 2264,
+      "count": 1,
+      "samples": [
+        "Non haiek ohi geratu dira"
+      ]
+    },
+    {
+      "id": 2275,
+      "count": 3,
+      "samples": [
+        "Non haiek ohi geratu dira?",
+        "Non haiek ohi geratu dira",
+        "Non haiek ohi geratu dira."
+      ]
+    },
+    {
+      "id": 3226,
+      "count": 39,
+      "samples": [
+        "Nola txerria dago Txerria nekatu dago",
+        "Nola txerria dago. Txerria nekatu dago.",
+        "Nola txerria dago. Txerria nekatu dago"
+      ]
+    },
+    {
+      "id": 3322,
+      "count": 3,
+      "samples": [
+        "Zergatik hura dago triste?",
+        "Zergatik hura dago triste",
+        "Zergatik hura dago triste."
+      ]
+    },
+    {
+      "id": 6630,
+      "count": 1,
+      "samples": [
+        "Zergatik gidariak ibiltzen ari dira"
+      ]
+    },
+    {
+      "id": 6632,
+      "count": 3,
+      "samples": [
+        "Zergatik gidariak ibiltzen ari dira?",
+        "Zergatik gidariak ibiltzen ari dira",
+        "Zergatik gidariak ibiltzen ari dira."
+      ]
+    },
+    {
+      "id": 6638,
+      "count": 3,
+      "samples": [
+        "Zergatik gidariak ibiltzen ari dira?",
+        "Zergatik gidariak ibiltzen ari dira",
+        "Zergatik gidariak ibiltzen ari dira."
+      ]
+    },
+    {
+      "id": 6672,
+      "count": 3,
+      "samples": [
+        "Zer zu jolasten ari zara?",
+        "Zer zu jolasten ari zara",
+        "Zer zu jolasten ari zara."
+      ]
+    },
+    {
+      "id": 6678,
+      "count": 3,
+      "samples": [
+        "Zer zuek egiten ari zarete?",
+        "Zer zuek egiten ari zarete",
+        "Zer zuek egiten ari zarete."
+      ]
+    },
+    {
+      "id": 6681,
+      "count": 1,
+      "samples": [
+        "Zer zuek egiten ari zarete"
+      ]
+    },
+    {
+      "id": 6691,
+      "count": 1,
+      "samples": [
+        "Zer zu jolasten ari zara"
+      ]
+    },
+    {
+      "id": 6732,
+      "count": 3,
+      "samples": [
+        "Zergatik zu ari zara irribarre egiten?",
+        "Zergatik zu ari zara irribarre egiten",
+        "Zergatik zu ari zara irribarre egiten."
+      ]
+    },
+    {
+      "id": 6782,
+      "count": 3,
+      "samples": [
+        "Zerekin zu ari zinen jolasten?",
+        "Zerekin zu ari zinen jolasten",
+        "Zerekin zu ari zinen jolasten."
+      ]
+    },
+    {
+      "id": 6784,
+      "count": 5,
+      "samples": [
+        "Zerekin zu ari zinen jolasten",
+        "Zerekin zu ari al zinen jolasten",
+        "Zerekin zu ari jolasten zinen"
+      ]
+    },
+    {
+      "id": 6785,
+      "count": 3,
+      "samples": [
+        "Zerekin zuk idatziko duzu?",
+        "Zerekin zuk idatziko duzu",
+        "Zerekin zuk idatziko duzu."
+      ]
+    },
+    {
+      "id": 6790,
+      "count": 2,
+      "samples": [
+        "Norekin zu joan zinen",
+        "Norekin zu joan al zinen"
+      ]
+    },
+    {
+      "id": 6806,
+      "count": 2,
+      "samples": [
+        "Zerekin zuk jolasten duzu",
+        "Zerekin zuk jolasten al duzu"
+      ]
+    },
+    {
+      "id": 6808,
+      "count": 3,
+      "samples": [
+        "Zerekin zuk idatziko duzu?",
+        "Zerekin zuk idatziko duzu",
+        "Zerekin zuk idatziko duzu."
+      ]
+    },
+    {
+      "id": 7477,
+      "count": 1,
+      "samples": [
+        "Zergatik zuk egosten duzu txerria"
+      ]
+    },
+    {
+      "id": 7543,
+      "count": 17,
+      "samples": [
+        "Ni gose naiz Noiz gosaria da",
+        "Ni gose naiz. Noiz gosaria da.",
+        "Ni gose naiz. Noiz gosaria da"
+      ]
+    },
+    {
+      "id": 7547,
+      "count": 17,
+      "samples": [
+        "Ni gose naiz Noiz gosaria da",
+        "Ni gose naiz. Noiz gosaria da.",
+        "Ni gose naiz. Noiz gosaria da"
+      ]
+    }
+  ],
+  "politenessChallenges": [
+    164,
+    181,
+    201,
+    213,
+    224,
+    241,
+    244,
+    250,
+    340,
+    343,
+    353,
+    357,
+    363,
+    368,
+    369,
+    1367,
+    1496,
+    1526,
+    4380,
+    4389,
+    4390,
+    4406,
+    4410,
+    4529,
+    4541,
+    4548,
+    4553,
+    4558,
+    4570,
+    4592,
+    4597,
+    4626,
+    4627,
+    4919,
+    4926,
+    4927,
+    4935,
+    4943,
+    4950,
+    5745,
+    5852
+  ],
+  "identificationDefinite": [
+    271,
+    309,
+    887,
+    891,
+    6343,
+    6351,
+    6353,
+    6357,
+    6369,
+    6380
+  ]
+}

@@ -1,0 +1,2853 @@
+[
+  {
+    "id": 350,
+    "lessonId": 35,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Arratsalde on. Ni turismo-gidaria naiz.",
+    "audioText": "Arratsalde on. Ni tour gida naiz.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 353,
+    "lessonId": 36,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Excuse me. Who is the tour guide?",
+    "audioText": "Barkatu. Nor da tour gida?",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 358,
+    "lessonId": 36,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Arratsalde on. Ni tour gida naiz.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 363,
+    "lessonId": 37,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Excuse me. Who is the tour guide?",
+    "audioText": "Barkatu. Nor da tour gida?",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 369,
+    "lessonId": 37,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Excuse me. Who is the tour guide?",
+    "audioText": "Barkatu. Nor da tour gida?",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 376,
+    "lessonId": 38,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Hura polizia zen, baina orain turismo-gidaria da.",
+    "audioText": "Hura polizia zen, baina orain tour gida da.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 411,
+    "lessonId": 42,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Hura polizia zen, baina orain turismo-gidaria da.",
+    "audioText": "Hura polizia zen, baina orain tour gida da.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 412,
+    "lessonId": 42,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Ni turista nintzen, baina orain tour gida naiz.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 413,
+    "lessonId": 42,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Ni turista nintzen, baina orain turismo-gidaria naiz.",
+    "audioText": "Ni turista nintzen, baina orain tour gida naiz.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 480,
+    "lessonId": 48,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Ni turista nintzen, baina orain turismo-gidaria naiz.",
+    "audioText": "Ni turista nintzen, baina orain tour gida naiz.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 641,
+    "lessonId": 65,
+    "type": "SELECT",
+    "question": "Select the correct translation for \"Turismo-gidaria polita da, baina turista ederra da.\":",
+    "prompt": "Turismo-gidaria polita da, baina turista ederra da.",
+    "audioText": "Tour gida polita da, baina turista ederra da.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 643,
+    "lessonId": 65,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Turismo-gidaria polita da, baina turista ederra da.",
+    "audioText": "Tour gida polita da, baina turista ederra da.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 656,
+    "lessonId": 66,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "The tour guide is pretty, but the tourist is beautiful.",
+    "audioText": "Tour gida polita da, baina turista ederra da.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 675,
+    "lessonId": 68,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Tour gida polita da, baina turista ederra da.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 1173,
+    "lessonId": 118,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein arkatz da berea?",
+    "audioText": "Zein arkatz da berea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein arkatz da berea?",
+        "match": "Zein arkatz da",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein arkatz da berea?",
+        "match": "Zein arkatz da",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1184,
+    "lessonId": 119,
+    "type": "SELECT",
+    "question": "Select the correct translation for \"Zein arkatz da berea?\":",
+    "prompt": "Zein arkatz da berea?",
+    "audioText": "Zein arkatz da berea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein arkatz da berea?",
+        "match": "Zein arkatz da",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein arkatz da berea?",
+        "match": "Zein arkatz da",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1186,
+    "lessonId": 119,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein baloia da gurea?",
+    "audioText": "Zein baloia da gurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1189,
+    "lessonId": 119,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein boligrafoa da zurea.",
+    "audioText": "Zein boligrafoa da zurea.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein boligrafoa da zurea.",
+        "match": "Zein boligrafoa da",
+        "wh": "zein",
+        "mid": "boligrafoa",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein boligrafoa da zurea.",
+        "match": "Zein boligrafoa da",
+        "wh": "zein",
+        "mid": "boligrafoa",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1195,
+    "lessonId": 120,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zein liburua haiena da?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7802",
+        "text": "Zein erlojua da zuena?",
+        "match": "Zein erlojua da",
+        "wh": "zein",
+        "mid": "erlojua",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1197,
+    "lessonId": 120,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Which ball is ours?",
+    "audioText": "Zein baloia da gurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1198,
+    "lessonId": 120,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Arropa horia haiena da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7822",
+        "text": "Zein aterkia da zurea?",
+        "match": "Zein aterkia da",
+        "wh": "zein",
+        "mid": "aterkia",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7821",
+        "text": "Zein motxila da zurea?",
+        "match": "Zein motxila da",
+        "wh": "zein",
+        "mid": "motxila",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1199,
+    "lessonId": 120,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Which umbrella is yours?",
+    "audioText": "Zein aterkia da zurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein aterkia da zurea?",
+        "match": "Zein aterkia da",
+        "wh": "zein",
+        "mid": "aterkia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1202,
+    "lessonId": 121,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zein boligrafoa da zurea.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein boligrafoa da zurea.",
+        "match": "Zein boligrafoa da",
+        "wh": "zein",
+        "mid": "boligrafoa",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7846",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7845",
+        "text": "Zein boligrafoa da zurea.",
+        "match": "Zein boligrafoa da",
+        "wh": "zein",
+        "mid": "boligrafoa",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7847",
+        "text": "Zein aterkia da zurea?",
+        "match": "Zein aterkia da",
+        "wh": "zein",
+        "mid": "aterkia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1203,
+    "lessonId": 121,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein aterkia da zurea?",
+    "audioText": "Zein aterkia da zurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein aterkia da zurea?",
+        "match": "Zein aterkia da",
+        "wh": "zein",
+        "mid": "aterkia",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein aterkia da zurea?",
+        "match": "Zein aterkia da",
+        "wh": "zein",
+        "mid": "aterkia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1204,
+    "lessonId": 121,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Which umbrella is yours?",
+    "audioText": "Zein aterkia da zurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein aterkia da zurea?",
+        "match": "Zein aterkia da",
+        "wh": "zein",
+        "mid": "aterkia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1205,
+    "lessonId": 121,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Liburu horia zaharra haiena da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7864",
+        "text": "Zein arkatz da berea?",
+        "match": "Zein arkatz da",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1206,
+    "lessonId": 121,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Which ball is ours?",
+    "audioText": "Zein baloia da gurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1207,
+    "lessonId": 121,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein arropa da haiena?",
+    "audioText": "Zein arropa da haiena?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein arropa da haiena?",
+        "match": "Zein arropa da",
+        "wh": "zein",
+        "mid": "arropa",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein arropa da haiena?",
+        "match": "Zein arropa da",
+        "wh": "zein",
+        "mid": "arropa",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1208,
+    "lessonId": 121,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Boligrafoa beltza nirea da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7880",
+        "text": "Zein etxea da gurea?",
+        "match": "Zein etxea da",
+        "wh": "zein",
+        "mid": "etxea",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1210,
+    "lessonId": 121,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein motxila da zurea?",
+    "audioText": "Zein motxila da zurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein motxila da zurea?",
+        "match": "Zein motxila da",
+        "wh": "zein",
+        "mid": "motxila",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein motxila da zurea?",
+        "match": "Zein motxila da",
+        "wh": "zein",
+        "mid": "motxila",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1212,
+    "lessonId": 122,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zein baloia da gurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7905",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1214,
+    "lessonId": 122,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein baloia da gurea?",
+    "audioText": "Zein baloia da gurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1215,
+    "lessonId": 122,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zein etxea da gurea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein etxea da gurea?",
+        "match": "Zein etxea da",
+        "wh": "zein",
+        "mid": "etxea",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7922",
+        "text": "Zein etxea da gurea?",
+        "match": "Zein etxea da",
+        "wh": "zein",
+        "mid": "etxea",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1216,
+    "lessonId": 122,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein arkatz da berea?",
+    "audioText": "Zein arkatz da berea?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein arkatz da berea?",
+        "match": "Zein arkatz da",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein arkatz da berea?",
+        "match": "Zein arkatz da",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1218,
+    "lessonId": 122,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Liburu hura haiena da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_7942",
+        "text": "Zein baloia da gurea?",
+        "match": "Zein baloia da",
+        "wh": "zein",
+        "mid": "baloia",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1219,
+    "lessonId": 122,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein arropa da haiena?",
+    "audioText": "Zein arropa da haiena?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein arropa da haiena?",
+        "match": "Zein arropa da",
+        "wh": "zein",
+        "mid": "arropa",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein arropa da haiena?",
+        "match": "Zein arropa da",
+        "wh": "zein",
+        "mid": "arropa",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1226,
+    "lessonId": 123,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein arkatz dira bereak?",
+    "audioText": "Zein arkatz dira bereak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein arkatz dira bereak?",
+        "match": "Zein arkatz dira",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein arkatz dira bereak?",
+        "match": "Zein arkatz dira",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1239,
+    "lessonId": 124,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein arkatz dira bereak?",
+    "audioText": "Zein arkatz dira bereak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein arkatz dira bereak?",
+        "match": "Zein arkatz dira",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein arkatz dira bereak?",
+        "match": "Zein arkatz dira",
+        "wh": "zein",
+        "mid": "arkatz",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1242,
+    "lessonId": 125,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Norenak dira alkandora zuriak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8081",
+        "text": "Zein eraztun dira gureak?",
+        "match": "Zein eraztun dira",
+        "wh": "zein",
+        "mid": "eraztun",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1245,
+    "lessonId": 125,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zein eskularruak  dira zuenak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein eskularruak  dira zuenak?",
+        "match": "Zein eskularruak  dira",
+        "wh": "zein",
+        "mid": "eskularruak",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8098",
+        "text": "Zein eskularruak dira zuenak?",
+        "match": "Zein eskularruak dira",
+        "wh": "zein",
+        "mid": "eskularruak",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1252,
+    "lessonId": 126,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zein eraztun dira gureak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein eraztun dira gureak?",
+        "match": "Zein eraztun dira",
+        "wh": "zein",
+        "mid": "eraztun",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8140",
+        "text": "Zein eskularruak dira zuenak?",
+        "match": "Zein eskularruak dira",
+        "wh": "zein",
+        "mid": "eskularruak",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8139",
+        "text": "Zein eraztun dira gureak?",
+        "match": "Zein eraztun dira",
+        "wh": "zein",
+        "mid": "eraztun",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1255,
+    "lessonId": 126,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Erlojuak horiek zuenak dira.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8159",
+        "text": "Zein aterkiak dira nireak?",
+        "match": "Zein aterkiak dira",
+        "wh": "zein",
+        "mid": "aterkiak",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8158",
+        "text": "Zein eskularruak dira zuenak?",
+        "match": "Zein eskularruak dira",
+        "wh": "zein",
+        "mid": "eskularruak",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1257,
+    "lessonId": 126,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein aterkiak dira nireak?",
+    "audioText": "Zein aterkiak dira nireak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein aterkiak dira nireak?",
+        "match": "Zein aterkiak dira",
+        "wh": "zein",
+        "mid": "aterkiak",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein aterkiak dira nireak?",
+        "match": "Zein aterkiak dira",
+        "wh": "zein",
+        "mid": "aterkiak",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1262,
+    "lessonId": 127,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Norenak dira eskularruak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8199",
+        "text": "Zein eskularruak dira zuenak?",
+        "match": "Zein eskularruak dira",
+        "wh": "zein",
+        "mid": "eskularruak",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1292,
+    "lessonId": 130,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zein galtzerdi dira gureak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein galtzerdi dira gureak?",
+        "match": "Zein galtzerdi dira",
+        "wh": "zein",
+        "mid": "galtzerdi",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8375",
+        "text": "Zein galtzerdi dira gureak?",
+        "match": "Zein galtzerdi dira",
+        "wh": "zein",
+        "mid": "galtzerdi",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1295,
+    "lessonId": 130,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Nire jaka urdina da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8394",
+        "text": "Zein galtzerdi dira gureak?",
+        "match": "Zein galtzerdi dira",
+        "wh": "zein",
+        "mid": "galtzerdi",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8395",
+        "text": "Zein soineko dira zuenak?",
+        "match": "Zein soineko dira",
+        "wh": "zein",
+        "mid": "soineko",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1302,
+    "lessonId": 131,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Mikelen zapatak gorriak dira.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_8435",
+        "text": "Zein txano dira bereak?",
+        "match": "Zein txano dira",
+        "wh": "zein",
+        "mid": "txano",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1322,
+    "lessonId": 133,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zein txano dira bereak?",
+    "audioText": "Zein txano dira bereak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zein txano dira bereak?",
+        "match": "Zein txano dira",
+        "wh": "zein",
+        "mid": "txano",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zein txano dira bereak?",
+        "match": "Zein txano dira",
+        "wh": "zein",
+        "mid": "txano",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1692,
+    "lessonId": 170,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Haien ama tour gida da.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 1740,
+    "lessonId": 174,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Bere senarra turismo-gidaria da.",
+    "audioText": "Bere senarra tour gida da.",
+    "issues": [
+      {
+        "rule": "TOUR_GIDA",
+        "detail": "Contains tour gida"
+      }
+    ]
+  },
+  {
+    "id": 1816,
+    "lessonId": 182,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non bizi dira bere gurasoak?",
+    "audioText": "Non bizi dira bere gurasoak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non bizi dira bere gurasoak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi dira bere gurasoak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1819,
+    "lessonId": 182,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non bizi zara zu?",
+    "audioText": "Non bizi zara zu?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non bizi zara zu?",
+        "match": "Non bizi zara",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zara"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi zara zu?",
+        "match": "Non bizi zara",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zara"
+      }
+    ]
+  },
+  {
+    "id": 1821,
+    "lessonId": 183,
+    "type": "SELECT",
+    "question": "Select the correct translation for \"Non bizi dira bere gurasoak?\":",
+    "prompt": "Non bizi dira bere gurasoak?",
+    "audioText": "Non bizi dira bere gurasoak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non bizi dira bere gurasoak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi dira bere gurasoak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1829,
+    "lessonId": 183,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non bizi dira zure semeak?",
+    "audioText": "Non bizi dira zure semeak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non bizi dira zure semeak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi dira zure semeak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1832,
+    "lessonId": 184,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Non bizi da haien ama?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi da haien ama?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_11713",
+        "text": "Non bizi da zure amona?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_11711",
+        "text": "Non bizi da haien ama?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1838,
+    "lessonId": 184,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Non bizi da zure amona?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi da zure amona?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_11746",
+        "text": "Non bizi da zure amona?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1840,
+    "lessonId": 184,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where do you live?",
+    "audioText": "Non bizi zara zu?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi zara zu?",
+        "match": "Non bizi zara",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zara"
+      }
+    ]
+  },
+  {
+    "id": 1841,
+    "lessonId": 185,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where do you live?",
+    "audioText": "Non bizi zara zu?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi zara zu?",
+        "match": "Non bizi zara",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zara"
+      }
+    ]
+  },
+  {
+    "id": 1842,
+    "lessonId": 185,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Non bizi da zure amona?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi da zure amona?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_11770",
+        "text": "Non bizi da zure amona?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1844,
+    "lessonId": 185,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where do you live?",
+    "audioText": "Non bizi zarete zuek?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi zarete zuek?",
+        "match": "Non bizi zarete",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zarete"
+      }
+    ]
+  },
+  {
+    "id": 1845,
+    "lessonId": 185,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Non bizi da zure amona?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi da zure amona?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_11787",
+        "text": "Non bizi da zure amona?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1846,
+    "lessonId": 185,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where do you live?",
+    "audioText": "Non bizi zara zu?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi zara zu?",
+        "match": "Non bizi zara",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zara"
+      }
+    ]
+  },
+  {
+    "id": 1847,
+    "lessonId": 185,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non bizi zara zu?",
+    "audioText": "Non bizi zara zu?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non bizi zara zu?",
+        "match": "Non bizi zara",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zara"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi zara zu?",
+        "match": "Non bizi zara",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zara"
+      }
+    ]
+  },
+  {
+    "id": 1848,
+    "lessonId": 185,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Arraina ibaian bizi da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_11806",
+        "text": "Non bizi dira zure semeak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1849,
+    "lessonId": 185,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non bizi zarete zuek?",
+    "audioText": "Non bizi zarete zuek?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non bizi zarete zuek?",
+        "match": "Non bizi zarete",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zarete"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi zarete zuek?",
+        "match": "Non bizi zarete",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zarete"
+      }
+    ]
+  },
+  {
+    "id": 1850,
+    "lessonId": 185,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where do you live?",
+    "audioText": "Non bizi zarete zuek?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi zarete zuek?",
+        "match": "Non bizi zarete",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zarete"
+      }
+    ]
+  },
+  {
+    "id": 1855,
+    "lessonId": 186,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Haien aita Bilbon bizi da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_11849",
+        "text": "Non bizi zara zu?",
+        "match": "Non bizi zara",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "zara"
+      }
+    ]
+  },
+  {
+    "id": 1856,
+    "lessonId": 186,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where does their mother live?",
+    "audioText": "Non bizi da haien ama?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi da haien ama?",
+        "match": "Non bizi da",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1858,
+    "lessonId": 186,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Non bizi dira zure semeak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi dira zure semeak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_11868",
+        "text": "Non bizi dira zure semeak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1869,
+    "lessonId": 187,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non biziko da bere ahizpa?",
+    "audioText": "Non biziko da bere ahizpa?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non biziko da bere ahizpa?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko da bere ahizpa?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1873,
+    "lessonId": 188,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non biziko da zure biloba?",
+    "audioText": "Non biziko da zure biloba?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1879,
+    "lessonId": 188,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non biziko da zure biloba?",
+    "audioText": "Non biziko da zure biloba?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1885,
+    "lessonId": 189,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Ez, ilobak Madrilen biziko dira.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12044",
+        "text": "Non biziko dira zure seme-alabak?",
+        "match": "Non biziko dira",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1886,
+    "lessonId": 189,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where will you live?",
+    "audioText": "Non biziko zarete?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko zarete?",
+        "match": "Non biziko zarete",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "zarete"
+      }
+    ]
+  },
+  {
+    "id": 1887,
+    "lessonId": 189,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non biziko naiz?",
+    "audioText": "Non biziko naiz?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non biziko naiz?",
+        "match": "Non biziko naiz",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "naiz"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko naiz?",
+        "match": "Non biziko naiz",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "naiz"
+      }
+    ]
+  },
+  {
+    "id": 1888,
+    "lessonId": 189,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Non biziko naiz?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko naiz?",
+        "match": "Non biziko naiz",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "naiz"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12059",
+        "text": "Non biziko dira zure seme-alabak?",
+        "match": "Non biziko dira",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12058",
+        "text": "Non biziko naiz?",
+        "match": "Non biziko naiz",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "naiz"
+      }
+    ]
+  },
+  {
+    "id": 1891,
+    "lessonId": 190,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non biziko gara?",
+    "audioText": "Non biziko gara?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non biziko gara?",
+        "match": "Non biziko gara",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "gara"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko gara?",
+        "match": "Non biziko gara",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "gara"
+      }
+    ]
+  },
+  {
+    "id": 1892,
+    "lessonId": 190,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Basoan biziko naiz.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12087",
+        "text": "Non biziko naiz?",
+        "match": "Non biziko naiz",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "naiz"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12088",
+        "text": "Non biziko gara?",
+        "match": "Non biziko gara",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "gara"
+      }
+    ]
+  },
+  {
+    "id": 1895,
+    "lessonId": 190,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Non biziko da bere ahizpa?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko da bere ahizpa?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12106",
+        "text": "Non biziko dira zure seme-alabak?",
+        "match": "Non biziko dira",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12105",
+        "text": "Non biziko da bere ahizpa?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12107",
+        "text": "Non biziko naiz?",
+        "match": "Non biziko naiz",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "naiz"
+      }
+    ]
+  },
+  {
+    "id": 1898,
+    "lessonId": 190,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Euskal Herrian biziko gara.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12128",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1899,
+    "lessonId": 190,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where will her sister live?",
+    "audioText": "Non biziko da bere ahizpa?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko da bere ahizpa?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1903,
+    "lessonId": 191,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where will your grandson live?",
+    "audioText": "Non biziko da zure biloba?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1905,
+    "lessonId": 191,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Non biziko gara?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko gara?",
+        "match": "Non biziko gara",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "gara"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12176",
+        "text": "Non biziko gara?",
+        "match": "Non biziko gara",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "gara"
+      }
+    ]
+  },
+  {
+    "id": 1932,
+    "lessonId": 194,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Gure umea baserrian bizi zen, baina orain  etxea bizi da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12363",
+        "text": "Non bizi ziren?",
+        "match": "Non bizi ziren",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "ziren"
+      }
+    ]
+  },
+  {
+    "id": 1938,
+    "lessonId": 194,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zuek duela hiru urte Italian bizi zinen.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12415",
+        "text": "Non bizi ziren?",
+        "match": "Non bizi ziren",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "ziren"
+      }
+    ]
+  },
+  {
+    "id": 1947,
+    "lessonId": 195,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "Where did you live?",
+    "audioText": "Non bizi ziren?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi ziren?",
+        "match": "Non bizi ziren",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "ziren"
+      }
+    ]
+  },
+  {
+    "id": 1952,
+    "lessonId": 196,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Gu Bilbon bizi ginen duela urtebete.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12530",
+        "text": "Non bizi ziren?",
+        "match": "Non bizi ziren",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "ziren"
+      }
+    ]
+  },
+  {
+    "id": 1959,
+    "lessonId": 196,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non bizi ziren?",
+    "audioText": "Non bizi ziren?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non bizi ziren?",
+        "match": "Non bizi ziren",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "ziren"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non bizi ziren?",
+        "match": "Non bizi ziren",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "ziren"
+      }
+    ]
+  },
+  {
+    "id": 1962,
+    "lessonId": 197,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Non biziko da zure biloba?",
+    "audioText": "Non biziko da zure biloba?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 1963,
+    "lessonId": 197,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio review",
+    "audioText": "Gure aitona-amonak basoan bizi dira.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12614",
+        "text": "Non bizi dira zure semeak?",
+        "match": "Non bizi dira",
+        "wh": "non",
+        "mid": "bizi",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 1967,
+    "lessonId": 197,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio review",
+    "audioText": "Zu Francian bizi zara.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_12636",
+        "text": "Non biziko da zure biloba?",
+        "match": "Non biziko da",
+        "wh": "non",
+        "mid": "biziko",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 2134,
+    "lessonId": 214,
+    "type": "SELECT",
+    "question": "Select the correct translation for \"Noiz iritsiko dira gure osabak?\":",
+    "prompt": "Noiz iritsiko dira gure osabak?",
+    "audioText": "Noiz iritsiko dira gure osabak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Noiz iritsiko dira gure osabak?",
+        "match": "Noiz iritsiko dira",
+        "wh": "noiz",
+        "mid": "iritsiko",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Noiz iritsiko dira gure osabak?",
+        "match": "Noiz iritsiko dira",
+        "wh": "noiz",
+        "mid": "iritsiko",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 2141,
+    "lessonId": 215,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Noiz egongo dira gure izebak Espainian?",
+    "audioText": "Noiz egongo dira gure izebak Espainian?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Noiz egongo dira gure izebak Espainian?",
+        "match": "Noiz egongo dira",
+        "wh": "noiz",
+        "mid": "egongo",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Noiz egongo dira gure izebak Espainian?",
+        "match": "Noiz egongo dira",
+        "wh": "noiz",
+        "mid": "egongo",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 2148,
+    "lessonId": 215,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zu ibiliko zara hemen.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_13867",
+        "text": "Noiz iritsiko dira gure osabak?",
+        "match": "Noiz iritsiko dira",
+        "wh": "noiz",
+        "mid": "iritsiko",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 2160,
+    "lessonId": 216,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "When will our uncles arrive?",
+    "audioText": "Noiz iritsiko dira gure osabak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Noiz iritsiko dira gure osabak?",
+        "match": "Noiz iritsiko dira",
+        "wh": "noiz",
+        "mid": "iritsiko",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 2161,
+    "lessonId": 217,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Noiz egongo dira gure izebak Espainian?",
+    "audioText": "Noiz egongo dira gure izebak Espainian?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Noiz egongo dira gure izebak Espainian?",
+        "match": "Noiz egongo dira",
+        "wh": "noiz",
+        "mid": "egongo",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Noiz egongo dira gure izebak Espainian?",
+        "match": "Noiz egongo dira",
+        "wh": "noiz",
+        "mid": "egongo",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 2162,
+    "lessonId": 217,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Ni egunero goiz iritsiko naiz.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_13959",
+        "text": "Noiz egongo dira gure izebak Espainian?",
+        "match": "Noiz egongo dira",
+        "wh": "noiz",
+        "mid": "egongo",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 2165,
+    "lessonId": 217,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Noiz iritsiko dira gure osabak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Noiz iritsiko dira gure osabak?",
+        "match": "Noiz iritsiko dira",
+        "wh": "noiz",
+        "mid": "iritsiko",
+        "verb": "dira"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_13979",
+        "text": "Noiz iritsiko dira gure osabak?",
+        "match": "Noiz iritsiko dira",
+        "wh": "noiz",
+        "mid": "iritsiko",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 2170,
+    "lessonId": 217,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "When will our uncles arrive?",
+    "audioText": "Noiz iritsiko dira gure osabak?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Noiz iritsiko dira gure osabak?",
+        "match": "Noiz iritsiko dira",
+        "wh": "noiz",
+        "mid": "iritsiko",
+        "verb": "dira"
+      }
+    ]
+  },
+  {
+    "id": 3218,
+    "lessonId": 322,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Oilaskoak kezkatuta daude.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_20988",
+        "text": "Nola txerria dago? Txerria nekatu dago.",
+        "match": "Nola txerria dago",
+        "wh": "nola",
+        "mid": "txerria",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 3225,
+    "lessonId": 323,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Gu eserita geunden, baina orain zutik gaude.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_21030",
+        "text": "Nola txerria dago? Txerria nekatu dago.",
+        "match": "Nola txerria dago",
+        "wh": "nola",
+        "mid": "txerria",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 3226,
+    "lessonId": 323,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "How is the pig? The pig is tired.",
+    "audioText": "Nola txerria dago?  Txerria nekatu dago.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Nola txerria dago?  Txerria nekatu dago.",
+        "match": "Nola txerria dago",
+        "wh": "nola",
+        "mid": "txerria",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 3238,
+    "lessonId": 324,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Behiak ez daude zutik.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_21110",
+        "text": "Nola txerria dago? Txerria nekatu dago.",
+        "match": "Nola txerria dago",
+        "wh": "nola",
+        "mid": "txerria",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 3314,
+    "lessonId": 332,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zergatik hura dago triste?",
+    "audioText": "Zergatik hura dago triste?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zergatik hura dago triste?",
+        "match": "Zergatik hura dago",
+        "wh": "zergatik",
+        "mid": "hura",
+        "verb": "dago"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zergatik hura dago triste?",
+        "match": "Zergatik hura dago",
+        "wh": "zergatik",
+        "mid": "hura",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 3322,
+    "lessonId": 333,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zergatik hura dago triste?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zergatik hura dago triste?",
+        "match": "Zergatik hura dago",
+        "wh": "zergatik",
+        "mid": "hura",
+        "verb": "dago"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_21729",
+        "text": "Zergatik hura dago triste?",
+        "match": "Zergatik hura dago",
+        "wh": "zergatik",
+        "mid": "hura",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 3521,
+    "lessonId": 353,
+    "type": "SELECT",
+    "question": "Select the correct translation for \"Nola eguraldia dago gaur?\":",
+    "prompt": "Nola eguraldia dago gaur?",
+    "audioText": "Nola eguraldia dago gaur?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Nola eguraldia dago gaur?",
+        "match": "Nola eguraldia dago",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "dago"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Nola eguraldia dago gaur?",
+        "match": "Nola eguraldia dago",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 3532,
+    "lessonId": 354,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Bazegoen eguraldi txarra zegoen atzo.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_23305",
+        "text": "Nola eguraldia zegoen atzo?",
+        "match": "Nola eguraldia zegoen",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "zegoen"
+      }
+    ]
+  },
+  {
+    "id": 3535,
+    "lessonId": 354,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Eguzkia beroa eta horia da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_23323",
+        "text": "Nola eguraldia zegoen atzo?",
+        "match": "Nola eguraldia zegoen",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "zegoen"
+      }
+    ]
+  },
+  {
+    "id": 3540,
+    "lessonId": 354,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Nola eguraldia zegoen atzo?",
+    "audioText": "Nola eguraldia zegoen atzo?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Nola eguraldia zegoen atzo?",
+        "match": "Nola eguraldia zegoen",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "zegoen"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Nola eguraldia zegoen atzo?",
+        "match": "Nola eguraldia zegoen",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "zegoen"
+      }
+    ]
+  },
+  {
+    "id": 3545,
+    "lessonId": 355,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Gaur eguzkitsu, beroa eta lehorra dago.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_23389",
+        "text": "Nola eguraldia dago gaur?",
+        "match": "Nola eguraldia dago",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 3550,
+    "lessonId": 355,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Nola eguraldia dago gaur?",
+    "audioText": "Nola eguraldia dago gaur?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Nola eguraldia dago gaur?",
+        "match": "Nola eguraldia dago",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "dago"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Nola eguraldia dago gaur?",
+        "match": "Nola eguraldia dago",
+        "wh": "nola",
+        "mid": "eguraldia",
+        "verb": "dago"
+      }
+    ]
+  },
+  {
+    "id": 4818,
+    "lessonId": 482,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zuek eskolara bizikletaz behar ahal zarete.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_31772",
+        "text": "Nor ezin da etortzen?",
+        "match": "Nor ezin da",
+        "wh": "nor",
+        "mid": "ezin",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 4828,
+    "lessonId": 483,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Haiek elizara kotxez  ezin dira  joaten.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_31849",
+        "text": "Nor ezin da etortzen?",
+        "match": "Nor ezin da",
+        "wh": "nor",
+        "mid": "ezin",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 4838,
+    "lessonId": 484,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Gaur goizean zu etorri motorrez behar zara.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_31929",
+        "text": "Nor ezin da etortzen?",
+        "match": "Nor ezin da",
+        "wh": "nor",
+        "mid": "ezin",
+        "verb": "da"
+      }
+    ]
+  },
+  {
+    "id": 6670,
+    "lessonId": 667,
+    "type": "SELECT",
+    "question": "Select the correct translation for \"Zer zuek egiten ari zarete?\":",
+    "prompt": "Zer zuek egiten ari zarete?",
+    "audioText": "Zer zuek egiten ari zarete?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zer zuek egiten ari zarete?",
+        "match": "Zer zuek egiten",
+        "wh": "zer",
+        "mid": "zuek",
+        "verb": "egiten"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zer zuek egiten ari zarete?",
+        "match": "Zer zuek egiten",
+        "wh": "zer",
+        "mid": "zuek",
+        "verb": "egiten"
+      }
+    ]
+  },
+  {
+    "id": 6671,
+    "lessonId": 668,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zer zu ari zara idazten?",
+    "audioText": "Zer zu ari zara idazten?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zer zu ari zara idazten?",
+        "match": "Zer zu ari",
+        "wh": "zer",
+        "mid": "zu",
+        "verb": "ari"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zer zu ari zara idazten?",
+        "match": "Zer zu ari",
+        "wh": "zer",
+        "mid": "zu",
+        "verb": "ari"
+      }
+    ]
+  },
+  {
+    "id": 6678,
+    "lessonId": 668,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zer zuek egiten ari zarete?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zer zuek egiten ari zarete?",
+        "match": "Zer zuek egiten",
+        "wh": "zer",
+        "mid": "zuek",
+        "verb": "egiten"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_44404",
+        "text": "Zer zuek egiten ari zarete?",
+        "match": "Zer zuek egiten",
+        "wh": "zer",
+        "mid": "zuek",
+        "verb": "egiten"
+      }
+    ]
+  },
+  {
+    "id": 6681,
+    "lessonId": 669,
+    "type": "TRANSLATE",
+    "question": "Translate into Basque:",
+    "prompt": "What are you all doing?",
+    "audioText": "Zer zuek egiten ari zarete?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zer zuek egiten ari zarete?",
+        "match": "Zer zuek egiten",
+        "wh": "zer",
+        "mid": "zuek",
+        "verb": "egiten"
+      }
+    ]
+  },
+  {
+    "id": 6682,
+    "lessonId": 669,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zuek turistari laguntzen ari zarete.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_44433",
+        "text": "Zer zuek egiten ari zarete?",
+        "match": "Zer zuek egiten",
+        "wh": "zer",
+        "mid": "zuek",
+        "verb": "egiten"
+      }
+    ]
+  },
+  {
+    "id": 6685,
+    "lessonId": 669,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zu dantzan ari al zara?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_44450",
+        "text": "Zer zu ari zara idazten?",
+        "match": "Zer zu ari",
+        "wh": "zer",
+        "mid": "zu",
+        "verb": "ari"
+      }
+    ]
+  },
+  {
+    "id": 6689,
+    "lessonId": 669,
+    "type": "TRANSLATE",
+    "question": "Translate this sentence:",
+    "prompt": "Zer zu ari zara idazten?",
+    "audioText": "Zer zu ari zara idazten?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "prompt",
+        "text": "Zer zu ari zara idazten?",
+        "match": "Zer zu ari",
+        "wh": "zer",
+        "mid": "zu",
+        "verb": "ari"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zer zu ari zara idazten?",
+        "match": "Zer zu ari",
+        "wh": "zer",
+        "mid": "zu",
+        "verb": "ari"
+      }
+    ]
+  },
+  {
+    "id": 6732,
+    "lessonId": 674,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio playback",
+    "audioText": "Zergatik zu ari zara irribarre egiten?",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "audioText",
+        "text": "Zergatik zu ari zara irribarre egiten?",
+        "match": "Zergatik zu ari",
+        "wh": "zergatik",
+        "mid": "zu",
+        "verb": "ari"
+      },
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_44745",
+        "text": "Zergatik zu ari zara irribarre egiten?",
+        "match": "Zergatik zu ari",
+        "wh": "zergatik",
+        "mid": "zu",
+        "verb": "ari"
+      }
+    ]
+  },
+  {
+    "id": 6753,
+    "lessonId": 676,
+    "type": "LISTEN",
+    "question": "Listen and select what you hear:",
+    "prompt": "Audio review",
+    "audioText": "Turista parkean ibiltzen ari da.",
+    "issues": [
+      {
+        "rule": "GALDEGAIA",
+        "field": "option_44890",
+        "text": "Zer zu ari zara idazten?",
+        "match": "Zer zu ari",
+        "wh": "zer",
+        "mid": "zu",
+        "verb": "ari"
+      }
+    ]
+  }
+]
