@@ -1,11 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const challengesPath = path.join(__dirname, '../data/courses/1/challenges.json');
-const challenges = JSON.parse(fs.readFileSync(challengesPath, 'utf8'));
-
-console.log(`Checking English translation challenges across ${challenges.length} challenges...`);
-
 // Advanced Natural English Linguistic Generator
 function generateNaturalEnglishVariations(target, prompt = "") {
   const variations = new Set();
@@ -27,29 +22,33 @@ function generateNaturalEnglishVariations(target, prompt = "") {
     return Array.from(res);
   }
 
-  // 1. Indefinite article: "one [noun]" <-> "a/an [noun]"
+  // 1. Indefinite article: "one [noun/phrase]" <-> "a/an [noun/phrase]"
   function expandIndefiniteArticle(text) {
     const res = new Set([text]);
     
-    // Replace "one [noun]" with "a/an [noun]"
-    const oneMatches = text.match(/\b(one)\s+([a-z]+)\b/gi);
-    if (oneMatches) {
-      let replaced = text;
-      replaced = replaced.replace(/\b(one)\s+(teacher|student|boy|girl|woman|man|fat cat|thin dog|cat|dog|owl|chicken|bird|purse|bag|car|house|pen|bottle of water|bottle|season|doctor|nurse|cook|chef|driver|waiter|stranger|friend|police officer|tourist|animal|person|snake|turtle|pig|horse|cow|sheep|goat|wolf|fish|book|hotel|inn|shop|store|school|restaurant|bar|street|table|door|window|shirt|dress|skirt|coat|sweater|jacket|apple|banana|lemon|pear|strawberry|peach)\b/gi, (match, oneWord, noun) => {
-        const startsWithVowel = /^[aeiou]/i.test(noun);
+    // Replace "one [noun]" with "a/an [noun]" (excluding numbers/math like "one hundred", "one thousand", "one billion", "one million", "one plus", "one o’clock", "one thirty")
+    if (/\bone\s+(?!hundred|thousand|million|billion|plus|minus|times|o’clock|o'clock|thirty|quarter\b)[a-z]/i.test(text)) {
+      let replaced = text.replace(/\b(one)\s+([a-z]+)/gi, (match, oneWord, nextWord) => {
+        const lowerNext = nextWord.toLowerCase();
+        if (["hundred", "thousand", "million", "billion", "plus", "minus", "times", "o’clock", "o'clock", "thirty"].includes(lowerNext)) {
+          return match;
+        }
+        const startsWithVowel = /^[aeiou]/i.test(nextWord);
         const art = startsWithVowel ? (oneWord[0] === 'O' ? 'An' : 'an') : (oneWord[0] === 'O' ? 'A' : 'a');
-        return `${art} ${noun}`;
+        return `${art} ${nextWord}`;
       });
       res.add(replaced);
     }
 
-    // Also if target had "a/an [noun]", allow "one [noun]" as literal fallback
-    const artMatches = text.match(/\b(a|an)\s+([a-z]+)\b/gi);
-    if (artMatches) {
-      let replaced = text;
-      replaced = replaced.replace(/\b(a|an)\s+(teacher|student|boy|girl|woman|man|fat cat|thin dog|cat|dog|owl|chicken|bird|purse|bag|car|house|pen|bottle of water|bottle|season|doctor|nurse|cook|chef|driver|waiter|stranger|friend|police officer|tourist|animal|person|snake|turtle|pig|horse|cow|sheep|goat|wolf|fish|book|hotel|inn|shop|store|school|restaurant|bar|street|table|door|window|shirt|dress|skirt|coat|sweater|jacket|apple|banana|lemon|pear|strawberry|peach)\b/gi, (match, art, noun) => {
+    // Replace "a/an [noun/phrase]" with "one [noun/phrase]" (excluding "a lot", "a few", "a bit")
+    if (/\b(a|an)\s+(?!lot|few|bit\b)[a-z]/i.test(text)) {
+      let replaced = text.replace(/\b(a|an)\s+([a-z]+)/gi, (match, art, nextWord) => {
+        const lowerNext = nextWord.toLowerCase();
+        if (["lot", "few", "bit"].includes(lowerNext)) {
+          return match;
+        }
         const one = art[0] === 'A' ? 'One' : 'one';
-        return `${one} ${noun}`;
+        return `${one} ${nextWord}`;
       });
       res.add(replaced);
     }
@@ -187,7 +186,7 @@ function generateNaturalEnglishVariations(target, prompt = "") {
     [/\bdid not\b/g, "didn't"],
     [/\bDid not\b/g, "Didn't"],
     [/\bcannot\b/g, "can't"],
-    [/\bCannot\b/g, "Can't"],
+    [/\bCan't\b/g, "Can't"],
     [/\bcan not\b/g, "can't"],
     [/\bCan not\b/g, "Can't"],
     [/\bwill not\b/g, "won't"],
@@ -328,7 +327,8 @@ function generateNaturalEnglishVariations(target, prompt = "") {
     return Array.from(res);
   }
 
-  // Transformation pipeline
+  // Transformation pipeline:
+  // We apply the expansions sequentially and combinatorially
   let currentSet = new Set([base]);
 
   // Step 0: Artifacts
