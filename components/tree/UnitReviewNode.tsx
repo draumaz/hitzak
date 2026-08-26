@@ -39,7 +39,10 @@ export function UnitReviewNode({
   };
 
   return (
-    <div className="relative flex flex-col items-center mt-6">
+    <div
+      className="relative flex flex-col items-center mt-6"
+      style={{ zIndex: showTooltip ? 150 : undefined }}
+    >
       {/* 3D Trophy / Review Node Button */}
       <div className="relative">
         {/* Pulsing ring if unlocked and not yet mastered */}

@@ -41,7 +41,10 @@ export function LessonNode({
   };
 
   return (
-    <div className={cn("relative flex flex-col items-center", offsetClass)}>
+    <div
+      className={cn("relative flex flex-col items-center", offsetClass)}
+      style={{ zIndex: showTooltip ? 150 : undefined }}
+    >
       {/* 3D Circular Node Button */}
       <div className="relative">
         {/* Active Ring Animation */}

@@ -190,8 +190,6 @@ export default function LearnPage() {
                     {sections.map((sec, idx) => {
                       const isCurrent = sec.id === activeSectionId;
                       const Icon = SECTION_ICONS[sec.icon] || Compass;
-                      const unitStart = (sec.order - 1) * 25 + 1;
-                      const unitEnd = sec.order * 25;
                       const isUnlocked = idx === 0 || sections[idx - 1].progressPercent === 100;
 
                       return (
@@ -220,19 +218,7 @@ export default function LearnPage() {
                           ) : (
                             <Lock className="h-3.5 w-3.5" />
                           )}
-                          <span>Sec {sec.order}</span>
-                          <span
-                            className={cn(
-                              "rounded-full px-1.5 py-0.2 text-[10px] font-extrabold",
-                              isCurrent
-                                ? "bg-white/20 text-white"
-                                : isUnlocked
-                                  ? "bg-gray-100 text-[#777777] dark:bg-[#131f24] dark:text-[#afafaf]"
-                                  : "bg-gray-200 text-gray-400 dark:bg-gray-800 dark:text-gray-600"
-                            )}
-                          >
-                            U{unitStart}–{unitEnd}
-                          </span>
+                          <span>Section {sec.order}</span>
                         </button>
                       );
                     })}

@@ -99,7 +99,7 @@ export function SkillRingNode({
   return (
     <div
       className={cn("relative flex flex-col items-center", offsetClass)}
-      style={{ zIndex: 100 - order }}
+      style={{ zIndex: showTooltip ? 150 : 100 - order }}
     >
       {/* 3D Circular Skill Ring Container */}
       <div className="relative flex items-center justify-center">
