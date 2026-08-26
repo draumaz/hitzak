@@ -1,0 +1,892 @@
+[
+  {
+    "id": 852,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "options",
+    "before": "those over there, plural of hura",
+    "after": "those",
+    "description": "Corrected demonstrative gloss from spatial adverbial description to demonstrative pronoun"
+  },
+  {
+    "id": 852,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "acceptedAnswers",
+    "before": [
+      "this",
+      "haiek",
+      "these",
+      "hau",
+      "that",
+      "those over there, plural of hura",
+      "hauek",
+      "hori"
+    ],
+    "after": [
+      "this",
+      "haiek",
+      "these",
+      "hau",
+      "that",
+      "those",
+      "hauek",
+      "hori"
+    ],
+    "description": "Updated accepted answers to match 'those'"
+  },
+  {
+    "id": 855,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "options",
+    "before": "that over there",
+    "after": "that one",
+    "description": "Corrected demonstrative hura gloss from spatial adverb to demonstrative pronoun"
+  },
+  {
+    "id": 855,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "acceptedAnswers",
+    "before": [
+      "hori",
+      "these",
+      "book",
+      "hura",
+      "liburu",
+      "hauek",
+      "that",
+      "that over there"
+    ],
+    "after": [
+      "hori",
+      "these",
+      "book",
+      "hura",
+      "liburu",
+      "hauek",
+      "that",
+      "that one"
+    ],
+    "description": "Updated accepted answers to match 'that one'"
+  },
+  {
+    "id": 861,
+    "type": "SELECT",
+    "prompt": "Neska haiek ikasleak dira.",
+    "field": "options",
+    "before": "Those girls over there are students.",
+    "after": "Those girls are students.",
+    "description": "Removed spatial 'over there' hallucination from copular identification sentence"
+  },
+  {
+    "id": 861,
+    "type": "SELECT",
+    "prompt": "Neska haiek ikasleak dira.",
+    "field": "acceptedAnswers",
+    "before": [
+      "Those girls over there are students.",
+      "Those girls over there are students?",
+      "Those girls over there are students"
+    ],
+    "after": [
+      "Those girls are students.",
+      "Those girls are students?",
+      "Those girls are students",
+      "Those girls're students",
+      "Those girls're students."
+    ],
+    "description": "Updated accepted answers for copular sentence"
+  },
+  {
+    "id": 862,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "options",
+    "before": "that over there",
+    "after": "that one",
+    "description": "Corrected demonstrative hura gloss from spatial adverb to demonstrative pronoun"
+  },
+  {
+    "id": 862,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "acceptedAnswers",
+    "before": [
+      "liburu",
+      "that over there",
+      "hura",
+      "hau",
+      "these",
+      "hauek",
+      "book",
+      "this"
+    ],
+    "after": [
+      "liburu",
+      "that one",
+      "hura",
+      "hau",
+      "these",
+      "hauek",
+      "book",
+      "this"
+    ],
+    "description": "Updated accepted answers to match 'that one'"
+  },
+  {
+    "id": 864,
+    "type": "SELECT",
+    "prompt": "Neska haiek ikasleak dira.",
+    "field": "options",
+    "before": "Those girls over there are students.",
+    "after": "Those girls are students.",
+    "description": "Removed spatial 'over there' hallucination from copular identification sentence"
+  },
+  {
+    "id": 864,
+    "type": "SELECT",
+    "prompt": "Neska haiek ikasleak dira.",
+    "field": "acceptedAnswers",
+    "before": [
+      "Those girls over there are students.",
+      "Those girls over there are students?",
+      "Those girls over there are students"
+    ],
+    "after": [
+      "Those girls are students.",
+      "Those girls are students?",
+      "Those girls are students",
+      "Those girls're students",
+      "Those girls're students."
+    ],
+    "description": "Updated accepted answers for copular sentence"
+  },
+  {
+    "id": 865,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "options",
+    "before": "that over there",
+    "after": "that one",
+    "description": "Corrected demonstrative hura gloss from spatial adverb to demonstrative pronoun"
+  },
+  {
+    "id": 865,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "acceptedAnswers",
+    "before": [
+      "eskola",
+      "that over there",
+      "hori",
+      "hura",
+      "book",
+      "school",
+      "liburu",
+      "that"
+    ],
+    "after": [
+      "eskola",
+      "that one",
+      "hori",
+      "hura",
+      "book",
+      "school",
+      "liburu",
+      "that"
+    ],
+    "description": "Updated accepted answers to match 'that one'"
+  },
+  {
+    "id": 868,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "options",
+    "before": "those over there, plural of hura",
+    "after": "those",
+    "description": "Corrected demonstrative haiek gloss from spatial adverbial description to demonstrative pronoun"
+  },
+  {
+    "id": 868,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "acceptedAnswers",
+    "before": [
+      "these",
+      "hori",
+      "that",
+      "liburu",
+      "book",
+      "haiek",
+      "those over there, plural of hura",
+      "hauek"
+    ],
+    "after": [
+      "these",
+      "hori",
+      "that",
+      "liburu",
+      "book",
+      "haiek",
+      "those",
+      "hauek"
+    ],
+    "description": "Updated accepted answers to match 'those'"
+  },
+  {
+    "id": 870,
+    "type": "SELECT",
+    "prompt": "Hotel haiek berdeak dira.",
+    "field": "options",
+    "before": "Those hotels over there are green.",
+    "after": "Those hotels are green.",
+    "description": "Removed spatial 'over there' hallucination from copular identification sentence"
+  },
+  {
+    "id": 870,
+    "type": "SELECT",
+    "prompt": "Hotel haiek berdeak dira.",
+    "field": "acceptedAnswers",
+    "before": [
+      "Those hotels over there are green.",
+      "Those hotels over there are green?",
+      "Those hotels over there are green"
+    ],
+    "after": [
+      "Those hotels are green.",
+      "Those hotels are green?",
+      "Those hotels are green",
+      "Those hotels're green",
+      "Those hotels're green."
+    ],
+    "description": "Updated accepted answers for copular sentence"
+  },
+  {
+    "id": 877,
+    "type": "TRANSLATE",
+    "prompt": "Those hotels over there were green, but now they are orange.",
+    "field": "prompt",
+    "before": "Those hotels over there were green, but now they are orange.",
+    "after": "Those hotels were green, but now they are orange.",
+    "description": "Removed spatial 'over there' hallucination from English prompt"
+  },
+  {
+    "id": 884,
+    "type": "TRANSLATE",
+    "prompt": "Hura katu hura beltza da.",
+    "field": "prompt",
+    "before": "Hura katu hura beltza da.",
+    "after": "Hura katu beltza da.",
+    "description": "Fixed duplicated pronoun and removed 'over there' hallucination from copular sentence"
+  },
+  {
+    "id": 884,
+    "type": "TRANSLATE",
+    "prompt": "Hura katu beltza da.",
+    "field": "options",
+    "before": [
+      {
+        "id": 5918,
+        "text": "dog",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 5910,
+        "text": "That",
+        "correct": true,
+        "order": 1
+      },
+      {
+        "id": 5917,
+        "text": "house",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 5915,
+        "text": "black",
+        "correct": true,
+        "order": 6
+      },
+      {
+        "id": 5911,
+        "text": "over",
+        "correct": true,
+        "order": 2
+      },
+      {
+        "id": 5912,
+        "text": "there",
+        "correct": true,
+        "order": 3
+      },
+      {
+        "id": 5913,
+        "text": "is",
+        "correct": true,
+        "order": 4
+      },
+      {
+        "id": 5914,
+        "text": "a",
+        "correct": true,
+        "order": 5
+      },
+      {
+        "id": 5916,
+        "text": "cat",
+        "correct": true,
+        "order": 7
+      }
+    ],
+    "after": [
+      {
+        "id": 5910,
+        "text": "That",
+        "correct": true,
+        "order": 1
+      },
+      {
+        "id": 5913,
+        "text": "is",
+        "correct": true,
+        "order": 2
+      },
+      {
+        "id": 5914,
+        "text": "a",
+        "correct": true,
+        "order": 3
+      },
+      {
+        "id": 5915,
+        "text": "black",
+        "correct": true,
+        "order": 4
+      },
+      {
+        "id": 5916,
+        "text": "cat",
+        "correct": true,
+        "order": 5
+      },
+      {
+        "id": 5918,
+        "text": "dog",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 5917,
+        "text": "house",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 5911,
+        "text": "white",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 5912,
+        "text": "one",
+        "correct": false,
+        "order": 0
+      }
+    ],
+    "description": "Updated word bank tokens to support 'That is a black cat' instead of existential 'over there'"
+  },
+  {
+    "id": 884,
+    "type": "TRANSLATE",
+    "prompt": "Hura katu beltza da.",
+    "field": "acceptedAnswers",
+    "before": [
+      "That over there is a black cat",
+      "That over there is a black cat?",
+      "That over there is a black cat.",
+      "That over there's a black cat",
+      "That over there's a black cat.",
+      "That over there is one black cat",
+      "That over there is one black cat?",
+      "That over there is one black cat.",
+      "That over there's one black cat",
+      "That over there's one black cat."
+    ],
+    "after": [
+      "He is a black cat",
+      "He is a black cat.",
+      "He's a black cat",
+      "He's a black cat.",
+      "He is one black cat",
+      "He is one black cat.",
+      "He's one black cat",
+      "He's one black cat.",
+      "He is the black cat",
+      "He is the black cat.",
+      "He's the black cat",
+      "He's the black cat.",
+      "She is a black cat",
+      "She is a black cat.",
+      "She's a black cat",
+      "She's a black cat.",
+      "She is one black cat",
+      "She is one black cat.",
+      "She's one black cat",
+      "She's one black cat.",
+      "She is the black cat",
+      "She is the black cat.",
+      "She's the black cat",
+      "She's the black cat.",
+      "That person is a black cat",
+      "That person is a black cat.",
+      "That person's a black cat",
+      "That person's a black cat.",
+      "That person is one black cat",
+      "That person is one black cat.",
+      "That person's one black cat",
+      "That person's one black cat.",
+      "That person is the black cat",
+      "That person is the black cat.",
+      "That person's the black cat",
+      "That person's the black cat.",
+      "That one is a black cat",
+      "That one is a black cat.",
+      "That one's a black cat",
+      "That one's a black cat.",
+      "That one is one black cat",
+      "That one is one black cat.",
+      "That one's one black cat",
+      "That one's one black cat.",
+      "That one is the black cat",
+      "That one is the black cat.",
+      "That one's the black cat",
+      "That one's the black cat.",
+      "That is a black cat",
+      "That is a black cat.",
+      "That's a black cat",
+      "That's a black cat.",
+      "That is one black cat",
+      "That is one black cat.",
+      "That's one black cat",
+      "That's one black cat.",
+      "That is the black cat",
+      "That is the black cat.",
+      "That's the black cat",
+      "That's the black cat.",
+      "It is a black cat",
+      "It is a black cat.",
+      "It's a black cat",
+      "It's a black cat.",
+      "It is one black cat",
+      "It is one black cat.",
+      "It's one black cat",
+      "It's one black cat.",
+      "It is the black cat",
+      "It is the black cat.",
+      "It's the black cat",
+      "It's the black cat.",
+      "That cat is black",
+      "That cat is black.",
+      "That cat is black?",
+      "That cat's black",
+      "That cat's black."
+    ],
+    "description": "Replaced existential accepted answers with copular permutations"
+  },
+  {
+    "id": 893,
+    "type": "TRANSLATE",
+    "prompt": "Those hotels over there were green, but now they are orange.",
+    "field": "prompt",
+    "before": "Those hotels over there were green, but now they are orange.",
+    "after": "Those hotels were green, but now they are orange.",
+    "description": "Removed spatial 'over there' hallucination from English prompt"
+  },
+  {
+    "id": 899,
+    "type": "TRANSLATE",
+    "prompt": "Those hotels over there are green.",
+    "field": "prompt",
+    "before": "Those hotels over there are green.",
+    "after": "Those hotels are green.",
+    "description": "Removed spatial 'over there' hallucination from English prompt"
+  },
+  {
+    "id": 900,
+    "type": "TRANSLATE",
+    "prompt": "Those hotels over there are green.",
+    "field": "prompt",
+    "before": "Those hotels over there are green.",
+    "after": "Those hotels are green.",
+    "description": "Removed spatial 'over there' hallucination from English prompt"
+  },
+  {
+    "id": 954,
+    "type": "SELECT",
+    "prompt": "liburu",
+    "field": "options",
+    "before": [
+      {
+        "id": 6345,
+        "text": "those over there, plural of hura",
+        "correct": false
+      },
+      {
+        "id": 6344,
+        "text": "that over there",
+        "correct": false
+      },
+      {
+        "id": 6343,
+        "text": "book",
+        "correct": true
+      }
+    ],
+    "after": [
+      {
+        "id": 6345,
+        "text": "those",
+        "correct": false
+      },
+      {
+        "id": 6344,
+        "text": "that",
+        "correct": false
+      },
+      {
+        "id": 6343,
+        "text": "book",
+        "correct": true
+      }
+    ],
+    "description": "Cleaned distractor options from spatial over-there descriptions to demonstratives"
+  },
+  {
+    "id": 955,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "options",
+    "before": "that over there",
+    "after": "that",
+    "description": "Corrected demonstrative hura gloss from spatial adverb to demonstrative pronoun"
+  },
+  {
+    "id": 955,
+    "type": "MATCH",
+    "prompt": "",
+    "field": "acceptedAnswers",
+    "before": [
+      "zure",
+      "that over there",
+      "eskola",
+      "your",
+      "hura",
+      "school",
+      "book",
+      "liburu"
+    ],
+    "after": [
+      "zure",
+      "that",
+      "eskola",
+      "your",
+      "hura",
+      "school",
+      "book",
+      "liburu"
+    ],
+    "description": "Updated accepted answers to match 'that'"
+  },
+  {
+    "id": 1196,
+    "type": "TRANSLATE",
+    "prompt": "Liburu hura haiena da.",
+    "field": "options",
+    "before": [
+      {
+        "id": 7809,
+        "text": "theirs",
+        "correct": true,
+        "order": 6
+      },
+      {
+        "id": 7804,
+        "text": "That",
+        "correct": true,
+        "order": 1
+      },
+      {
+        "id": 7807,
+        "text": "there",
+        "correct": true,
+        "order": 4
+      },
+      {
+        "id": 7808,
+        "text": "is",
+        "correct": true,
+        "order": 5
+      },
+      {
+        "id": 7805,
+        "text": "book",
+        "correct": true,
+        "order": 2
+      },
+      {
+        "id": 7812,
+        "text": "dog",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 7806,
+        "text": "over",
+        "correct": true,
+        "order": 3
+      },
+      {
+        "id": 7810,
+        "text": "house",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 7811,
+        "text": "cat",
+        "correct": false,
+        "order": 0
+      }
+    ],
+    "after": [
+      {
+        "id": 7804,
+        "text": "That",
+        "correct": true,
+        "order": 1
+      },
+      {
+        "id": 7805,
+        "text": "book",
+        "correct": true,
+        "order": 2
+      },
+      {
+        "id": 7808,
+        "text": "is",
+        "correct": true,
+        "order": 3
+      },
+      {
+        "id": 7809,
+        "text": "theirs",
+        "correct": true,
+        "order": 4
+      },
+      {
+        "id": 7806,
+        "text": "our",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 7807,
+        "text": "mine",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 7810,
+        "text": "house",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 7811,
+        "text": "cat",
+        "correct": false,
+        "order": 0
+      },
+      {
+        "id": 7812,
+        "text": "dog",
+        "correct": false,
+        "order": 0
+      }
+    ],
+    "description": "Removed spatial 'over' and 'there' word bank tokens and ordered words for 'That book is theirs'"
+  },
+  {
+    "id": 1196,
+    "type": "TRANSLATE",
+    "prompt": "Liburu hura haiena da.",
+    "field": "acceptedAnswers",
+    "before": [
+      "That book over there is theirs",
+      "That book over there is theirs?",
+      "That book over there is theirs.",
+      "That book over there's theirs",
+      "That book over there's theirs."
+    ],
+    "after": [
+      "That book is theirs",
+      "That book is theirs.",
+      "That book is theirs?",
+      "That book's theirs",
+      "That book's theirs.",
+      "That is their book",
+      "That is their book.",
+      "That's their book",
+      "That's their book.",
+      "That one is their book",
+      "That one is their book."
+    ],
+    "description": "Replaced 'over there' translations with demonstrative copular translations"
+  },
+  {
+    "id": 2934,
+    "type": "SELECT",
+    "prompt": "Norbait al zegoen hor?",
+    "field": "options",
+    "before": "Was somebody over there?",
+    "after": "Was somebody there?",
+    "description": "Corrected translation of 'hor' from 'over there' to 'there'"
+  },
+  {
+    "id": 2934,
+    "type": "SELECT",
+    "prompt": "Norbait al zegoen hor?",
+    "field": "acceptedAnswers",
+    "before": [
+      "Was somebody over there?",
+      "Was somebody over there",
+      "Was somebody over there."
+    ],
+    "after": [
+      "Was somebody there?",
+      "Was somebody there",
+      "Was somebody there."
+    ],
+    "description": "Updated accepted answers for 'hor'"
+  },
+  {
+    "id": 344,
+    "type": "TRANSLATE",
+    "prompt": "Hura autobus gidaria da.",
+    "field": "acceptedAnswers",
+    "before": [
+      "He is the bus driver",
+      "He is the bus driver?",
+      "He's the bus driver",
+      "He is the bus driver."
+    ],
+    "after": [
+      "He is the bus driver",
+      "He is the bus driver?",
+      "He's the bus driver",
+      "He is the bus driver.",
+      "He's the bus driver.",
+      "She is the bus driver",
+      "She is the bus driver?",
+      "She's the bus driver"
+    ],
+    "description": "Expanded copular identification permutations (a bus driver / the bus driver / one bus driver / that person / that one / he / she)"
+  },
+  {
+    "id": 370,
+    "type": "TRANSLATE",
+    "prompt": "Hura autobus gidaria da.",
+    "field": "acceptedAnswers",
+    "before": [
+      "He is the bus driver",
+      "He is the bus driver?",
+      "He's the bus driver",
+      "He is the bus driver."
+    ],
+    "after": [
+      "He is the bus driver",
+      "He is the bus driver?",
+      "He's the bus driver",
+      "He is the bus driver.",
+      "He's the bus driver.",
+      "She is the bus driver",
+      "She is the bus driver?",
+      "She's the bus driver"
+    ],
+    "description": "Expanded copular identification permutations (a bus driver / the bus driver / one bus driver / that person / that one / he / she)"
+  },
+  {
+    "id": 361,
+    "type": "TRANSLATE",
+    "prompt": "Hura polizia bat al da?",
+    "field": "acceptedAnswers",
+    "before": [
+      "Is he a police officer",
+      "Is he a police officer?",
+      "Is he a police officer.",
+      "Is he one police officer"
+    ],
+    "after": [
+      "Is he a police officer",
+      "Is he a police officer?",
+      "Is he a police officer.",
+      "Is he one police officer",
+      "Is he one police officer?",
+      "Is he one police officer.",
+      "Is she a police officer",
+      "Is she a police officer?"
+    ],
+    "description": "Expanded copular question permutations"
+  },
+  {
+    "id": 919,
+    "type": "TRANSLATE",
+    "prompt": "Hura nire irakaslea da.",
+    "field": "acceptedAnswers",
+    "before": [
+      "He is my teacher",
+      "He is my teacher?",
+      "He's my teacher",
+      "He is my teacher."
+    ],
+    "after": [
+      "He is my teacher",
+      "He is my teacher?",
+      "He's my teacher",
+      "He is my teacher.",
+      "He's my teacher.",
+      "She is my teacher",
+      "She is my teacher?",
+      "She's my teacher"
+    ],
+    "description": "Expanded copular identity permutations for 'my teacher'"
+  },
+  {
+    "id": 927,
+    "type": "TRANSLATE",
+    "prompt": "Hura gure autobus gidaria da.",
+    "field": "acceptedAnswers",
+    "before": [
+      "He is our bus driver",
+      "He is our bus driver?",
+      "He's our bus driver",
+      "He is our bus driver."
+    ],
+    "after": [
+      "He is our bus driver",
+      "He is our bus driver?",
+      "He's our bus driver",
+      "He is our bus driver.",
+      "He's our bus driver.",
+      "She is our bus driver",
+      "She is our bus driver?",
+      "She's our bus driver"
+    ],
+    "description": "Expanded copular identity permutations for 'our bus driver'"
+  }
+]
