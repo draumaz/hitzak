@@ -13,12 +13,30 @@ function renderPromptWords(sentence: string) {
       return <span key={idx}>{word}</span>;
     }
 
-    const cleanWord = word.replace(/^[.,\/#!$%\^&\*;:{}=\-_`~()?]+|[.,\/#!$%\^&\*;:{}=\-_`~()?]+$/g, "");
-    const leadingPunc = word.substring(0, word.indexOf(cleanWord));
-    const trailingPunc = word.substring(word.indexOf(cleanWord) + cleanWord.length);
+    const match = word.match(/^([.,\/#!$%\^&\*;:{}=\-_`~()?\"'\u201c\u201d\u2018\u2019\u00ab\u00bb\u2022\u2013\u2014()\[\]{}]*)(.*?)([.,\/#!$%\^&\*;:{}=\-_`~()?\"'\u201c\u201d\u2018\u2019\u00ab\u00bb\u2022\u2013\u2014()\[\]{}]*)$/);
+
+    let leadingPunc = "";
+    let cleanWord = word;
+    let trailingPunc = "";
+
+    if (match) {
+      leadingPunc = match[1];
+      cleanWord = match[2];
+      trailingPunc = match[3];
+    }
+
+    if (!cleanWord) {
+      return <span key={idx}>{word}</span>;
+    }
 
     const lookup = cleanWord.toLowerCase();
-    const translation = BASQUE_TO_ENGLISH[lookup];
+    let translation = BASQUE_TO_ENGLISH[lookup];
+    if (!translation && (lookup.endsWith("'s") || lookup.endsWith("’s"))) {
+      const base = lookup.slice(0, -2);
+      if (BASQUE_TO_ENGLISH[base]) {
+        translation = BASQUE_TO_ENGLISH[base] + "'s";
+      }
+    }
 
     if (translation) {
       return (
