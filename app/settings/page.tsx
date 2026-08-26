@@ -257,7 +257,7 @@ export default function SettingsPage() {
               {/* Version & Credits */}
               <div className="rounded-3xl border-2 border-duo-gray-border bg-gray-50/70 p-5 text-center dark:border-[#37464f] dark:bg-[#131f24]">
                 <p className="text-xs font-extrabold text-[#3c3c3c] dark:text-white">
-                  Hitzak 1.0.0
+                  Hitzak {process.env.NEXT_PUBLIC_GIT_HASH || "dev"}
                 </p>
                 <p className="text-xs font-extrabold text-[#3c3c3c] dark:text-white">
                   2026 | <a href="https://github.com/draumaz" target="_blank" rel="noopener noreferrer" className="text-duo-blue hover:underline">draumaz</a>
