@@ -11,7 +11,7 @@ interface AuthFormProps {
   initialMode?: "login" | "signup";
 }
 
-export function AuthForm({ initialMode = "login" }: AuthFormProps) {
+export function AuthForm({ initialMode = "signup" }: AuthFormProps) {
   const router = useRouter();
   const [mode, setMode] = useState<"login" | "signup">(initialMode);
   const [username, setUsername] = useState("");
@@ -82,13 +82,8 @@ export function AuthForm({ initialMode = "login" }: AuthFormProps) {
           />
         </div>
         <h1 className="text-3xl font-black tracking-wide text-[#3c3c3c] dark:text-white">
-          {mode === "login" ? "Welcome Back!" : "Start Learning!"}
+          Hitzak
         </h1>
-        <p className="mt-1 text-xs font-bold text-[#777777] dark:text-[#afafaf] uppercase tracking-wider">
-          {mode === "login"
-            ? "Sign in to resume your Basque journey"
-            : "Create an account to track your milestones"}
-        </p>
       </div>
 
       {/* Tabs */}
@@ -146,6 +141,7 @@ export function AuthForm({ initialMode = "login" }: AuthFormProps) {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               disabled={loading}
+              autoFocus
               className="w-full rounded-2xl border-2 border-duo-gray-border bg-gray-50/50 py-3 pl-11 pr-4 text-sm font-bold outline-none transition focus:border-duo-blue dark:border-[#37464f] dark:bg-[#131f24] dark:focus:border-duo-blue"
             />
           </div>
@@ -208,9 +204,6 @@ export function AuthForm({ initialMode = "login" }: AuthFormProps) {
           onClick={toggleMode}
           className="text-xs font-bold text-duo-blue hover:underline"
         >
-          {mode === "login"
-            ? "Don't have an account yet? Create one for free!"
-            : "Already have an account? Sign in here!"}
         </button>
       </div>
     </div>

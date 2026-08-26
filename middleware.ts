@@ -29,7 +29,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // 3. Redirect unauthenticated users to /login
+  // 3. Redirect unauthenticated users to /signup
   if (!payload) {
     // If it's an API route (e.g. /api/progress), return a JSON 401 response
     if (pathname.startsWith("/api/")) {
@@ -38,7 +38,7 @@ export async function middleware(request: NextRequest) {
         { status: 401, headers: { "Content-Type": "application/json" } }
       );
     }
-    return NextResponse.redirect(new URL("/login", request.url));
+    return NextResponse.redirect(new URL("/signup", request.url));
   }
 
   return NextResponse.next();
