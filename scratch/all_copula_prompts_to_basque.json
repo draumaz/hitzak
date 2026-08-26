@@ -1,0 +1,3102 @@
+[
+  {
+    "prompt": "Hello, I am a boy.",
+    "target": "Kaixo ni mutil bat naiz",
+    "count": 2
+  },
+  {
+    "prompt": "You are a man.",
+    "target": "Zu gizon bat zara",
+    "count": 1
+  },
+  {
+    "prompt": "You are a woman.",
+    "target": "Zu emakume bat zara",
+    "count": 2
+  },
+  {
+    "prompt": "I am a man.",
+    "target": "Ni gizon bat naiz",
+    "count": 4
+  },
+  {
+    "prompt": "Aitor is a boy.",
+    "target": "Aitor mutil bat da",
+    "count": 1
+  },
+  {
+    "prompt": "He is Mikel.",
+    "target": "Hura Mikel da",
+    "count": 1
+  },
+  {
+    "prompt": "You are Aitor. You are one student.",
+    "target": "Zu Aitor zara Zu ikasle bat zara",
+    "count": 2
+  },
+  {
+    "prompt": "She is Miren. Miren is a woman.",
+    "target": "Hura Miren da Miren emakumea da",
+    "count": 3
+  },
+  {
+    "prompt": "Hello. I am Miren. I am a teacher.",
+    "target": "Kaixo Ni Miren naiz Ni irakaslea naiz",
+    "count": 2
+  },
+  {
+    "prompt": "You are Miren. You are a woman.",
+    "target": "Zu Miren zara Zu emakumea zara",
+    "count": 1
+  },
+  {
+    "prompt": "Hi. I am Aitor. I am a boy.",
+    "target": "Epa Ni Aitor naiz Ni mutila naiz",
+    "count": 1
+  },
+  {
+    "prompt": "You are Mikel. You are a man.",
+    "target": "Zu Mikel zara Zu gizona zara",
+    "count": 1
+  },
+  {
+    "prompt": "Miren is also a teacher.",
+    "target": "Miren ere irakaslea da",
+    "count": 1
+  },
+  {
+    "prompt": "She is Terese. She is a student.",
+    "target": "Hura Terese da Hura ikaslea da",
+    "count": 1
+  },
+  {
+    "prompt": "Terese and Karmele are girls.",
+    "target": "Terese eta Karmele neskak dira",
+    "count": 1
+  },
+  {
+    "prompt": "We are women.",
+    "target": "Gu emakumeak gara",
+    "count": 2
+  },
+  {
+    "prompt": "They are Aitor and Jon.",
+    "target": "Haiek Aitor eta Jon dira",
+    "count": 1
+  },
+  {
+    "prompt": "Terese and Karmele are also students.",
+    "target": "Terese eta Karmele ere ikasleak dira",
+    "count": 2
+  },
+  {
+    "prompt": "Hello. We are Miren and Aintza.",
+    "target": "Kaixo Gu Miren eta Aintza gara",
+    "count": 1
+  },
+  {
+    "prompt": "You are boys.",
+    "target": "Zuek mutilak zarete",
+    "count": 2
+  },
+  {
+    "prompt": "They are also boys.",
+    "target": "Haiek ere mutilak dira",
+    "count": 2
+  },
+  {
+    "prompt": "Hi. We are Mikel and Joseba.",
+    "target": "Epa Gu Mikel eta Joseba gara",
+    "count": 1
+  },
+  {
+    "prompt": "Excuse me. Who are you?",
+    "target": "Barkatu Nor zara zu",
+    "count": 2
+  },
+  {
+    "prompt": "Yes. She is Miren.",
+    "target": "Bai Hura Miren da",
+    "count": 1
+  },
+  {
+    "prompt": "Yes. We are Mikel and Miren.",
+    "target": "Bai Gu Mikel eta Miren gara",
+    "count": 1
+  },
+  {
+    "prompt": "Hello Mikel. How are you.",
+    "target": "Kaixo Mikel Zer moduz",
+    "count": 1
+  },
+  {
+    "prompt": "Is he Mikel?",
+    "target": "Hura Mikel al da",
+    "count": 4
+  },
+  {
+    "prompt": "Good morning. How are you?",
+    "target": "Egun on Zer moduz",
+    "count": 1
+  },
+  {
+    "prompt": "Are they Mikel and Miren?",
+    "target": "Haiek Mikel eta Miren dira",
+    "count": 1
+  },
+  {
+    "prompt": "Good afternoon. Are you Mikel?",
+    "target": "Arratsalde on Zu Mikel al zara",
+    "count": 1
+  },
+  {
+    "prompt": "I am fine. And you?",
+    "target": "Ni ondo nago Eta zu",
+    "count": 1
+  },
+  {
+    "prompt": "Welcome. How are you?",
+    "target": "Ongi etorri Zer moduz",
+    "count": 2
+  },
+  {
+    "prompt": "Sorry. It is late.",
+    "target": "Barkatu Berandu da",
+    "count": 1
+  },
+  {
+    "prompt": "Sorry. The bus is late.",
+    "target": "Barkatu Autobusa berandu da",
+    "count": 1
+  },
+  {
+    "prompt": "Who are they?",
+    "target": "Nortzuk dira haiek",
+    "count": 1
+  },
+  {
+    "prompt": "Are you a teacher or a student?",
+    "target": "Zu irakaslea edo ikaslea zara",
+    "count": 1
+  },
+  {
+    "prompt": "What are you?",
+    "target": "Zer zara zu",
+    "count": 2
+  },
+  {
+    "prompt": "What is he?",
+    "target": "Zer da hura",
+    "count": 1
+  },
+  {
+    "prompt": "Is she a girl?",
+    "target": "Hura neska da",
+    "count": 1
+  },
+  {
+    "prompt": "Are they buses or cars?",
+    "target": "Haiek autobusak edo kotxeak dira",
+    "count": 1
+  },
+  {
+    "prompt": "What are we?",
+    "target": "Zer gara gu",
+    "count": 1
+  },
+  {
+    "prompt": "Is it a bus or a car?",
+    "target": "Hura autobusa edo kotxea da",
+    "count": 1
+  },
+  {
+    "prompt": "They are tourists.",
+    "target": "Haiek turistak dira",
+    "count": 2
+  },
+  {
+    "prompt": "Excuse me. Who is the driver?",
+    "target": "Barkatu Nor da gidaria",
+    "count": 2
+  },
+  {
+    "prompt": "Is he a police officer?",
+    "target": "Hura polizia bat al da",
+    "count": 1
+  },
+  {
+    "prompt": "Excuse me. Who is the tour guide?",
+    "target": "Barkatu Nor da tour gida",
+    "count": 3
+  },
+  {
+    "prompt": "Hi. We are students.",
+    "target": "Epa Gu ikasleak gara",
+    "count": 1
+  },
+  {
+    "prompt": "They were drivers, but now they are students.",
+    "target": "Haiek gidariak ziren baina orain ikasleak dira",
+    "count": 2
+  },
+  {
+    "prompt": "You(plural) were students, but now you are doctors.",
+    "target": "Zuek ikasleak zineten baina orain medikuak zarete",
+    "count": 3
+  },
+  {
+    "prompt": "We were boys, but now we are men.",
+    "target": "Gu mutilak ginen baina orain gizonak gara",
+    "count": 1
+  },
+  {
+    "prompt": "They were students, but now they are nurses.",
+    "target": "Haiek ikasleak ziren baina orain erizainak dira",
+    "count": 1
+  },
+  {
+    "prompt": "You were a girl, but now you are a woman.",
+    "target": "Zu neska zinen baina orain emakume zara",
+    "count": 1
+  },
+  {
+    "prompt": "He was a teacher, but now he is a nurse.",
+    "target": "Hura irakaslea zen baina orain erizaina da",
+    "count": 1
+  },
+  {
+    "prompt": "You(plural) were strangers, but now you(plural) are friends.",
+    "target": "Zuek arrotzak zineten baina orain lagunak zara",
+    "count": 2
+  },
+  {
+    "prompt": "I was a student, but now I am a priest.",
+    "target": "Ni ikaslea nintzen baina orain apaiza naiz",
+    "count": 2
+  },
+  {
+    "prompt": "We were friends, but now we are strangers.",
+    "target": "Gu lagunak ginen baina orain arrotzak gara",
+    "count": 3
+  },
+  {
+    "prompt": "He was a driver, but now he is a chef.",
+    "target": "Hura gidaria zen baina orain sukaldaria da",
+    "count": 1
+  },
+  {
+    "prompt": "You were a waiter, but now you are a teacher.",
+    "target": "Zu camareroa zinen baina orain irakaslea zara",
+    "count": 2
+  },
+  {
+    "prompt": "They were boys, but now they are priests.",
+    "target": "Haiek mutilak ziren baina orain apaizak dira",
+    "count": 2
+  },
+  {
+    "prompt": "She was a cook, but now she is a doctor.",
+    "target": "Hura sukaldaria zen baina orain medikua da",
+    "count": 1
+  },
+  {
+    "prompt": "I was a girl, but now I am a housewife.",
+    "target": "Ni neska nintzen baina orain etxekoandrea naiz",
+    "count": 2
+  },
+  {
+    "prompt": "The bus is red and black and the car is blue and orange.",
+    "target": "Autobusa gorria eta beltza da eta kotxea urdina eta laranja da",
+    "count": 1
+  },
+  {
+    "prompt": "Which color was the car?",
+    "target": "Zein koloretakoa zen kotxea",
+    "count": 1
+  },
+  {
+    "prompt": "It was a black car, but now it is red.",
+    "target": "Kotxe beltza zen baina orain gorria da",
+    "count": 1
+  },
+  {
+    "prompt": "One car is white and one car is blue.",
+    "target": "Kotxe bat zuria da eta kotxe bat urdina da",
+    "count": 2
+  },
+  {
+    "prompt": "One purse was black and one purse was gray.",
+    "target": "Poltsa bat beltza zen eta poltsa bat grisa zen",
+    "count": 1
+  },
+  {
+    "prompt": "Is it a yellow bus or an orange bus?",
+    "target": "Autobusa horia edo autobus laranja da",
+    "count": 1
+  },
+  {
+    "prompt": "They were white cars, but now they are yellow.",
+    "target": "Haiek kotxe zuriak ziren baina orain horiak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The bus and the car are blue.",
+    "target": "Autobusa eta kotxea urdinak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Which color is the bus?",
+    "target": "Zein koloretakoa da autobusa",
+    "count": 2
+  },
+  {
+    "prompt": "The purses were yellow.",
+    "target": "Poltsak horiak ziren",
+    "count": 1
+  },
+  {
+    "prompt": "It was a green bus, but now it is yellow.",
+    "target": "Autobus berdea zen baina orain horia da",
+    "count": 1
+  },
+  {
+    "prompt": "The store is not gray.",
+    "target": "Denda ez da grisa",
+    "count": 1
+  },
+  {
+    "prompt": "The buses were not red.",
+    "target": "Autobusak ez ziren gorriak",
+    "count": 1
+  },
+  {
+    "prompt": "We were not doctors, but nurses.",
+    "target": "Gu ez ginen medikuak baizik erizainak",
+    "count": 1
+  },
+  {
+    "prompt": "It was not a store, but rather it was a house.",
+    "target": "Ez zen denda baizik etxe bat zen",
+    "count": 1
+  },
+  {
+    "prompt": "The mini-hotel was not black.",
+    "target": "Ostatu ez zen beltza",
+    "count": 1
+  },
+  {
+    "prompt": "It is not a red store, but rather a green store.",
+    "target": "Ez da denda gorria baizik denda berdea",
+    "count": 1
+  },
+  {
+    "prompt": "She is not a doctor, but I was a doctor.",
+    "target": "Hura ez da medikua baina ni medikua zen",
+    "count": 2
+  },
+  {
+    "prompt": "The hotels were not gray.",
+    "target": "Hotelak ez ziren grisak",
+    "count": 1
+  },
+  {
+    "prompt": "The housewife is tall and the friend is short.",
+    "target": "Etxekoandrea altua da eta laguna motza da",
+    "count": 1
+  },
+  {
+    "prompt": "The cars are gray.",
+    "target": "Kotxeak grisak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The waiter was thin and the cook was fat.",
+    "target": "Camareroa argala zen eta sukaldaria gizena zen",
+    "count": 2
+  },
+  {
+    "prompt": "The cook is short and fat.",
+    "target": "Sukaldaria motza eta gizena da",
+    "count": 1
+  },
+  {
+    "prompt": "The old man is fat and tall.",
+    "target": "Gizon zahara gizena eta altua da",
+    "count": 1
+  },
+  {
+    "prompt": "It was a small green bus.",
+    "target": "Autobus txiki berdea zen",
+    "count": 1
+  },
+  {
+    "prompt": "The tall bus is purple",
+    "target": "Autobus altua morea da",
+    "count": 1
+  },
+  {
+    "prompt": "The young driver was thin and short.",
+    "target": "Gidari gaztea argala eta motza zen",
+    "count": 1
+  },
+  {
+    "prompt": "The stranger was old and thin.",
+    "target": "Arrotza zaharra eta argala zen",
+    "count": 1
+  },
+  {
+    "prompt": "The blue car is ugly and the green car is pretty.",
+    "target": "Kotxe urdina zaharra eta kotxe berdea polita da",
+    "count": 3
+  },
+  {
+    "prompt": "The car is not old, but rather it is new.",
+    "target": "Kotxea ez da zaharra baizik berria da",
+    "count": 1
+  },
+  {
+    "prompt": "The tour guide is pretty, but the tourist is beautiful.",
+    "target": "Tour gida polita da baina turista ederra da",
+    "count": 1
+  },
+  {
+    "prompt": "The police officer is a young and handsome man.",
+    "target": "Polizia gizon gaztea eta ederra da",
+    "count": 1
+  },
+  {
+    "prompt": "The new car is fast and the old car is slow.",
+    "target": "Kotxe berria azkarra eta kotxe zaharra motela da",
+    "count": 1
+  },
+  {
+    "prompt": "The nurse is pretty and the doctor is handsome.",
+    "target": "Erizaina polita da eta medikua ederra",
+    "count": 1
+  },
+  {
+    "prompt": "The doctor is not ugly, but rather he is handsome.",
+    "target": "Medikua ez da itsusia baizik ederra da",
+    "count": 3
+  },
+  {
+    "prompt": "The woman is pretty, but the man is ugly.",
+    "target": "Emakumea polita da baina gizona itsusia da",
+    "count": 1
+  },
+  {
+    "prompt": "You were one thin dog.",
+    "target": "Zu txakur argal bat zinen",
+    "count": 1
+  },
+  {
+    "prompt": "The old dog is slow.",
+    "target": "Txakur zaharra motela da",
+    "count": 2
+  },
+  {
+    "prompt": "Dogs and cats are animals.",
+    "target": "Txakurrak eta katuak animaliak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The boy is not a cat.",
+    "target": "Mutila ez da katua",
+    "count": 3
+  },
+  {
+    "prompt": "A bus is not an animal.",
+    "target": "Austobusa ez da animalia",
+    "count": 1
+  },
+  {
+    "prompt": "Boys and girls are also animals.",
+    "target": "Mutilak eta neskak ere animaliak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The turtle was fast.",
+    "target": "Dortoka azkarra zen",
+    "count": 1
+  },
+  {
+    "prompt": "You(plural) are tall pigs and short sheep.",
+    "target": "Zuek txerri altuak eta ardi motzak zarete",
+    "count": 1
+  },
+  {
+    "prompt": "The driver is a pig.",
+    "target": "Gidaria txerria da",
+    "count": 3
+  },
+  {
+    "prompt": "A cow is not a priest.",
+    "target": "Behia ez da apaiza",
+    "count": 1
+  },
+  {
+    "prompt": "Yes. Horses are big animals.",
+    "target": "Bai Zaldiak animalia handiak dira",
+    "count": 3
+  },
+  {
+    "prompt": "Is a fish a bird? It is not.",
+    "target": "Arraina txoria da Ez da",
+    "count": 2
+  },
+  {
+    "prompt": "It is a bird, not a fish.",
+    "target": "Hura txoria da ez arraina",
+    "count": 2
+  },
+  {
+    "prompt": "Is a horse an animal?",
+    "target": "Zaldia animalia da",
+    "count": 1
+  },
+  {
+    "prompt": "The guide was a yellow snake.",
+    "target": "Gida suge horia zen",
+    "count": 1
+  },
+  {
+    "prompt": "A goat is not a bird.",
+    "target": "Ahuntza ez da txoria",
+    "count": 2
+  },
+  {
+    "prompt": "The tall horse is beautiful.",
+    "target": "Zaldi altua ederra da",
+    "count": 1
+  },
+  {
+    "prompt": "The Basque sheep are fast.",
+    "target": "Euskal ardiak azkarrak dira",
+    "count": 1
+  },
+  {
+    "prompt": "They are the good cows and the bad horses.",
+    "target": "Behi onak eta zaldi txarrak dira",
+    "count": 2
+  },
+  {
+    "prompt": "The pretty, green turtle is nice.",
+    "target": "Dortoka polit berdea jatora da",
+    "count": 1
+  },
+  {
+    "prompt": "The big goat was strong.",
+    "target": "Ahuntz handia indartsua zen",
+    "count": 1
+  },
+  {
+    "prompt": "The new dog is good.",
+    "target": "Txakur berria ona da",
+    "count": 1
+  },
+  {
+    "prompt": "The small mouse was bad.",
+    "target": "Sagu txikia txarra zen",
+    "count": 1
+  },
+  {
+    "prompt": "Those small dogs are gray while these big dogs are black.",
+    "target": "Txakur txiki horiek grisak dira baizik txakur handi hauek beltzak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Those hotels are white.",
+    "target": "Hotel horiek zuriak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Those hotels over there were green, but now they are orange.",
+    "target": "Hotel haiek berdeak zineten baina orain laranjak dira",
+    "count": 2
+  },
+  {
+    "prompt": "This is Joseba. Hello Joseba, how are you?",
+    "target": "Hau Joseba da Kaixo Joseba zer moduz",
+    "count": 2
+  },
+  {
+    "prompt": "What is this?",
+    "target": "Zer da hau",
+    "count": 1
+  },
+  {
+    "prompt": "Those hotels over there are green.",
+    "target": "Hotel haiek berdeak dira",
+    "count": 2
+  },
+  {
+    "prompt": "Are you(plural) our drivers?",
+    "target": "Zuek gure gidariak zarete",
+    "count": 1
+  },
+  {
+    "prompt": "They are your teachers.",
+    "target": "Haiek zuen irakasleak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Are we his students?",
+    "target": "Gu bere ikasleak gara",
+    "count": 2
+  },
+  {
+    "prompt": "I am your teacher.",
+    "target": "Ni zure irakaslea naiz",
+    "count": 1
+  },
+  {
+    "prompt": "Their teacher was a doctor.",
+    "target": "Haien irakaslea medikua zen",
+    "count": 1
+  },
+  {
+    "prompt": "You are my friends.",
+    "target": "Zuek nire lagunak zarete",
+    "count": 1
+  },
+  {
+    "prompt": "He is our bus driver.",
+    "target": "Hura gure autobus gidaria da",
+    "count": 3
+  },
+  {
+    "prompt": "Your doctor was a teacher.",
+    "target": "Zure medikua irakaslea zen",
+    "count": 2
+  },
+  {
+    "prompt": "Yes. I am his nurse.",
+    "target": "Bai Ni bere erizaina naiz",
+    "count": 1
+  },
+  {
+    "prompt": "The man's dogs were big and black.",
+    "target": "Gizonaren txakurrak handiak eta beltzak ziren",
+    "count": 2
+  },
+  {
+    "prompt": "The housewife's house is new and green.",
+    "target": "Etxekoandrearen etxea berria eta berdea da",
+    "count": 2
+  },
+  {
+    "prompt": "The student's books are red.",
+    "target": "Ikaslearen liburuak gorriak dira",
+    "count": 3
+  },
+  {
+    "prompt": "The teacher's school was blue.",
+    "target": "Irakaslearen eskola urdina zen",
+    "count": 1
+  },
+  {
+    "prompt": "The police officer's car is fast.",
+    "target": "Poliziaren kotxea azkarra da",
+    "count": 1
+  },
+  {
+    "prompt": "The driver's bus is yellow and slow.",
+    "target": "Gidariaren autobusa horia eta motela da",
+    "count": 1
+  },
+  {
+    "prompt": "The woman's cats were small and orange.",
+    "target": "Emakumearen katuak txikiak eta laranjak ziren",
+    "count": 1
+  },
+  {
+    "prompt": "The nurse's purse was purple.",
+    "target": "Erizainaren poltsa morea zen",
+    "count": 1
+  },
+  {
+    "prompt": "The doctors’ owls were ugly.",
+    "target": "Medikuen hontzak itsusiak ziren",
+    "count": 1
+  },
+  {
+    "prompt": "The waiters’ chickens are short.",
+    "target": "Camareroen oilaskoak motzak dira",
+    "count": 2
+  },
+  {
+    "prompt": "The girls’ sheep are good.",
+    "target": "Nesken ardiak onak dira",
+    "count": 2
+  },
+  {
+    "prompt": "The boys’ fish was weak.",
+    "target": "Mutilen arraina ahula zen",
+    "count": 1
+  },
+  {
+    "prompt": "The friends' horse is strong.",
+    "target": "Lagunen zaldia indartsua da",
+    "count": 2
+  },
+  {
+    "prompt": "The tourists' mini-hotel is old.",
+    "target": "Turisten ostatua zaharra da",
+    "count": 2
+  },
+  {
+    "prompt": "It is his watch.",
+    "target": "Bere erlojua da",
+    "count": 1
+  },
+  {
+    "prompt": "The books are Mikel’s.",
+    "target": "Liburuak Mikelenak dira",
+    "count": 3
+  },
+  {
+    "prompt": "Yes, I am Miren’s friend.",
+    "target": "Bai ni Mirenen lagun naiz",
+    "count": 1
+  },
+  {
+    "prompt": "Arantxa’s cows are young.",
+    "target": "Arantxaren behiak gazteak dira",
+    "count": 2
+  },
+  {
+    "prompt": "Are you Miren’s friend?",
+    "target": "Zu Mirenen laguna zara",
+    "count": 1
+  },
+  {
+    "prompt": "It is Miren’s pencil.",
+    "target": "Mirenen arkatza da",
+    "count": 1
+  },
+  {
+    "prompt": "Whose pen is it?",
+    "target": "Noren boligrafoa da",
+    "count": 2
+  },
+  {
+    "prompt": "Whose are the books?",
+    "target": "Norenak dira liburuak",
+    "count": 1
+  },
+  {
+    "prompt": "Whose clothes are those?",
+    "target": "Noren arropak dira horiek",
+    "count": 3
+  },
+  {
+    "prompt": "Whose glasses are they?",
+    "target": "Noren betaurrekoak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The priest's coat is short.",
+    "target": "Apaizaren berokia laburra da",
+    "count": 2
+  },
+  {
+    "prompt": "Whose coat is it?",
+    "target": "Norena da berokia",
+    "count": 1
+  },
+  {
+    "prompt": "Belts are long.",
+    "target": "Gerrikoak luzeak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Your socks are orange and green.",
+    "target": "Zure galtzerdiak laranjak eta berdeak dira",
+    "count": 1
+  },
+  {
+    "prompt": "That is the turtle’s ring.",
+    "target": "Hori da dortokaren eraztuna",
+    "count": 1
+  },
+  {
+    "prompt": "Those are Miren's glasses.",
+    "target": "Horiek dira Mirenen betaurrekoak",
+    "count": 1
+  },
+  {
+    "prompt": "Which ball is ours?",
+    "target": "Zein baloia da gurea",
+    "count": 2
+  },
+  {
+    "prompt": "Which umbrella is yours?",
+    "target": "Zein aterkia da zurea",
+    "count": 2
+  },
+  {
+    "prompt": "The black pen is mine.",
+    "target": "Boligrafoa beltza nirea da",
+    "count": 1
+  },
+  {
+    "prompt": "That red car is mine.",
+    "target": "Kotxe gorri hori nirea da",
+    "count": 1
+  },
+  {
+    "prompt": "The old yellow book is theirs.",
+    "target": "Liburu horia zaharra haiena da",
+    "count": 1
+  },
+  {
+    "prompt": "The green backpack is yours.",
+    "target": "Motxila berdea zurea da",
+    "count": 1
+  },
+  {
+    "prompt": "These watches are yours(plural).",
+    "target": "Erlojuak horiek zuenak dira",
+    "count": 2
+  },
+  {
+    "prompt": "The white shirts are mine.",
+    "target": "Alkandora zuriak nireak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Whose watches are those?",
+    "target": "Noren erlojuak dira horiek",
+    "count": 1
+  },
+  {
+    "prompt": "The blue backpacks are theirs.",
+    "target": "Motxila urdinak haienak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Which are my coats?",
+    "target": "Zein dira nire berokiak",
+    "count": 1
+  },
+  {
+    "prompt": "The yellow rings are ours.",
+    "target": "Eraztun horiak gureak dira",
+    "count": 2
+  },
+  {
+    "prompt": "Which are your(plural) backpacks?",
+    "target": "Zein dira zuenak motxilak",
+    "count": 3
+  },
+  {
+    "prompt": "These glasses are his.",
+    "target": "Betaurreko hauek bereak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Whose wallets are those?",
+    "target": "Noren zorroak dira horiek",
+    "count": 1
+  },
+  {
+    "prompt": "The orange socks are ours.",
+    "target": "Galtzerdi laranjak gureak dira",
+    "count": 2
+  },
+  {
+    "prompt": "Your wallet is brown.",
+    "target": "Zure zorroa marroia da",
+    "count": 1
+  },
+  {
+    "prompt": "The long skirts are mine.",
+    "target": "Gona luzeak nireak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The turtle's dress is black.",
+    "target": "Dortokaren soinekoa beltza da",
+    "count": 1
+  },
+  {
+    "prompt": "It is Anitza's dress.",
+    "target": "Anitzaren soinekoa da",
+    "count": 1
+  },
+  {
+    "prompt": "Those are our shoes.",
+    "target": "Horiek dira gure zapatak",
+    "count": 1
+  },
+  {
+    "prompt": "Whose sweater is that?",
+    "target": "Noren jertse da",
+    "count": 1
+  },
+  {
+    "prompt": "Whose trousers are these?",
+    "target": "Norenak dira prakak",
+    "count": 1
+  },
+  {
+    "prompt": "Mikel’s shoes are red.",
+    "target": "Mikelen zapatak gorriak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The purple dresses are yours(plural).",
+    "target": "Soineko moreak zuenak dira",
+    "count": 1
+  },
+  {
+    "prompt": "It is the bird's sweater.",
+    "target": "Txoriaren jertsea da",
+    "count": 1
+  },
+  {
+    "prompt": "The hats are Anitza's",
+    "target": "Txanoak Anitzarenak dira",
+    "count": 1
+  },
+  {
+    "prompt": "We are in the mini-hotel.",
+    "target": "Gu ostatuan gaude",
+    "count": 2
+  },
+  {
+    "prompt": "You(plural) are outside. We are inside.",
+    "target": "Zuek kanpoan zaudete Gu barruan gaude",
+    "count": 2
+  },
+  {
+    "prompt": "A boy is in the tree.",
+    "target": "Mutila dago zuhaitzean",
+    "count": 1
+  },
+  {
+    "prompt": "A bird is in the tree.",
+    "target": "Txoria dago zuhaitzean",
+    "count": 1
+  },
+  {
+    "prompt": "Good morning. You are in our mini-hotel.",
+    "target": "Egun on Zu gure ostatuan zaude",
+    "count": 1
+  },
+  {
+    "prompt": "Excuse me. Where am I?",
+    "target": "Barkatu Ni on nago",
+    "count": 1
+  },
+  {
+    "prompt": "They are in the purse.",
+    "target": "Haiek poltsan daude",
+    "count": 1
+  },
+  {
+    "prompt": "You(plural) are also in the church.",
+    "target": "Zuek elizan ere zaudete",
+    "count": 1
+  },
+  {
+    "prompt": "I am here.",
+    "target": "Ni hemen nago",
+    "count": 1
+  },
+  {
+    "prompt": "Over there are a forest and a lake.",
+    "target": "Baso bat eta laku bat daude han",
+    "count": 1
+  },
+  {
+    "prompt": "Where are they?",
+    "target": "Non daude haiek",
+    "count": 2
+  },
+  {
+    "prompt": "Where is Madrid?",
+    "target": "Non dago Madril",
+    "count": 1
+  },
+  {
+    "prompt": "Where is the skirt?",
+    "target": "Non dago gona",
+    "count": 1
+  },
+  {
+    "prompt": "You (plural) are in the woods.",
+    "target": "Zuek basoan zaudete",
+    "count": 3
+  },
+  {
+    "prompt": "Over there is Spain.",
+    "target": "Han Espainia dago",
+    "count": 2
+  },
+  {
+    "prompt": "Spain is in Europe.",
+    "target": "Espainia Europan dago",
+    "count": 1
+  },
+  {
+    "prompt": "There is a turtle here.",
+    "target": "Badago hori dortoka",
+    "count": 1
+  },
+  {
+    "prompt": "You(plural) are in Basque country.",
+    "target": "Zuek Euskal Herrian zaudete",
+    "count": 1
+  },
+  {
+    "prompt": "What is over there?",
+    "target": "Zer dago han",
+    "count": 1
+  },
+  {
+    "prompt": "You are in the lake.",
+    "target": "Zu lakuan zaude",
+    "count": 1
+  },
+  {
+    "prompt": "Is France also in Europe?",
+    "target": "Frantzia ere dago Europan",
+    "count": 2
+  },
+  {
+    "prompt": "Vitoria is in Basque Country.",
+    "target": "Gasteiz Euskal Herrian dago",
+    "count": 1
+  },
+  {
+    "prompt": "Look! There is France.",
+    "target": "Begira Frantzia dago",
+    "count": 2
+  },
+  {
+    "prompt": "The river is in San Sebastian.",
+    "target": "Ibaia Donostian dago",
+    "count": 2
+  },
+  {
+    "prompt": "They are over there.",
+    "target": "Haiek han daude",
+    "count": 2
+  },
+  {
+    "prompt": "The ring is in Bilboa.",
+    "target": "Eraztuna Bilbon dago",
+    "count": 1
+  },
+  {
+    "prompt": "San Sebastian is in Basque Country.",
+    "target": "Donostia Euskal Herrian dago",
+    "count": 1
+  },
+  {
+    "prompt": "She is in France.",
+    "target": "Hura Frantzia dago",
+    "count": 1
+  },
+  {
+    "prompt": "Our dog is in the street.",
+    "target": "Gure txakurra kalean dago",
+    "count": 1
+  },
+  {
+    "prompt": "There are two women.",
+    "target": "Badaude bi emakume",
+    "count": 1
+  },
+  {
+    "prompt": "Are there three chickens?",
+    "target": "Hiru oilasko daude",
+    "count": 2
+  },
+  {
+    "prompt": "No, there are two dogs and five cats.",
+    "target": "Ez badaude bi txakur eta bost katu",
+    "count": 1
+  },
+  {
+    "prompt": "A ball is five euros.",
+    "target": "Baloi bost euro da",
+    "count": 2
+  },
+  {
+    "prompt": "How much is the backpack?",
+    "target": "Zenbat da motxila",
+    "count": 3
+  },
+  {
+    "prompt": "How many sheep are there?",
+    "target": "Zenbat ardi daude",
+    "count": 1
+  },
+  {
+    "prompt": "Nine Euros minus one Euro are eight Euros.",
+    "target": "Bederatzi euro ken euro bat zortzi euro dira",
+    "count": 1
+  },
+  {
+    "prompt": "What is ten Euros minus two Euros?",
+    "target": "Zein da hamar euro ken bi euro",
+    "count": 3
+  },
+  {
+    "prompt": "There are eight snakes.",
+    "target": "Badaude zortzi suge",
+    "count": 2
+  },
+  {
+    "prompt": "Ten cooks minus four cooks is six cooks.",
+    "target": "Hamar sukaldari ken lau sukaldari sei sukaldari dira",
+    "count": 1
+  },
+  {
+    "prompt": "What is six plus eight?",
+    "target": "Zer da sei gehi zortzi",
+    "count": 1
+  },
+  {
+    "prompt": "Seven plus three are ten.",
+    "target": "Zazpi gehi hiru hamar dira",
+    "count": 2
+  },
+  {
+    "prompt": "We are ten housewives.",
+    "target": "Gu hamar etxekoandre gara",
+    "count": 1
+  },
+  {
+    "prompt": "No, there are six pigs and nine fish.",
+    "target": "Ez badaude sei txerri eta bederatzi arrain",
+    "count": 1
+  },
+  {
+    "prompt": "How many goats are there?",
+    "target": "Zenbat ahuntz daude",
+    "count": 1
+  },
+  {
+    "prompt": "There are thirteen strangers.",
+    "target": "Badaude hamahiru arrotz",
+    "count": 2
+  },
+  {
+    "prompt": "There are eleven cooks and eighteen waiters.",
+    "target": "Badaude hamaika sukaldari eta hemazortzi camarero",
+    "count": 1
+  },
+  {
+    "prompt": "There are nineteen priests.",
+    "target": "Badaude hemeretzi apaiz",
+    "count": 1
+  },
+  {
+    "prompt": "There are sixteen birds, fifteen chickens and one owl.",
+    "target": "Badaude hamasei txori hamabost oilasko eta hontz bat",
+    "count": 1
+  },
+  {
+    "prompt": "Twelve plus five is nineteen.",
+    "target": "Hamabi gehi bost hemeretzi dira",
+    "count": 1
+  },
+  {
+    "prompt": "What is ten plus four?",
+    "target": "Zer da hamar gehi lau",
+    "count": 1
+  },
+  {
+    "prompt": "How many priests are there?",
+    "target": "Zenbat apaiz daude",
+    "count": 1
+  },
+  {
+    "prompt": "What is seventeen and fourteen?",
+    "target": "Zer dira hamazazpi eta hamalau",
+    "count": 1
+  },
+  {
+    "prompt": "How many are you?",
+    "target": "Zenbat zarete",
+    "count": 1
+  },
+  {
+    "prompt": "Our father and  mother are our parents.",
+    "target": "Gure aita eta ama dira gure gurasoak",
+    "count": 2
+  },
+  {
+    "prompt": "Our father’s father is our grandfather.",
+    "target": "Gure aitaren aita gure aitona da",
+    "count": 1
+  },
+  {
+    "prompt": "The tourist is my daughter.",
+    "target": "Turista nire alaba da",
+    "count": 1
+  },
+  {
+    "prompt": "Her mother’s mother is her grandmother.",
+    "target": "Amaren ama bere amona da",
+    "count": 2
+  },
+  {
+    "prompt": "Your daughters are students.",
+    "target": "Zure alabak ikasleak dira",
+    "count": 1
+  },
+  {
+    "prompt": "She is your(plural) mother.",
+    "target": "Hura zuen ama da",
+    "count": 1
+  },
+  {
+    "prompt": "We are their grandparents.",
+    "target": "Gu haien aitonaamonak gara",
+    "count": 1
+  },
+  {
+    "prompt": "My cousin (male) is also a waiter.",
+    "target": "Nire lehengusua da ere camareroa",
+    "count": 2
+  },
+  {
+    "prompt": "I am your uncle.",
+    "target": "Ni zure osaba naiz",
+    "count": 1
+  },
+  {
+    "prompt": "The husband of my mother is my father.",
+    "target": "Nire amaren senarra nire aita da",
+    "count": 1
+  },
+  {
+    "prompt": "The child is my son.",
+    "target": "Umea nire semea da",
+    "count": 2
+  },
+  {
+    "prompt": "Our uncle is a nurse.",
+    "target": "Gure osaba erizaina bat da",
+    "count": 1
+  },
+  {
+    "prompt": "My wife is a housewife.",
+    "target": "Nire emaztea etxekoandrea da",
+    "count": 3
+  },
+  {
+    "prompt": "She is our aunt.",
+    "target": "Hura gure izeba da",
+    "count": 1
+  },
+  {
+    "prompt": "My uncle’s son is my cousin (male).",
+    "target": "Nire osabaren semea lehengusua da",
+    "count": 1
+  },
+  {
+    "prompt": "My sister’s boyfriend is tall.",
+    "target": "Nire arrebaren mutillaguna altua da",
+    "count": 1
+  },
+  {
+    "prompt": "I am Miren’s brother.",
+    "target": "Mirenen neba naiz",
+    "count": 2
+  },
+  {
+    "prompt": "Your sons and daughters are students.",
+    "target": "Zure semealbak ikasleak dira",
+    "count": 1
+  },
+  {
+    "prompt": "I am Aitor’s sister.",
+    "target": "Aitorren arreba naiz",
+    "count": 1
+  },
+  {
+    "prompt": "Those children are our sons and daughters.",
+    "target": "Umeak horiek gure semealbak dira",
+    "count": 1
+  },
+  {
+    "prompt": "My brother’s girlfriend is nice.",
+    "target": "Nire anaiaren neskalaguna jatorra da",
+    "count": 1
+  },
+  {
+    "prompt": "This girl is my girlfriend.",
+    "target": "Neska hau nire neskalaguna da",
+    "count": 1
+  },
+  {
+    "prompt": "I am Aitor’s brother.",
+    "target": "Aitorren anaia naiz",
+    "count": 1
+  },
+  {
+    "prompt": "We are your nieces.",
+    "target": "Gu zure ilobak gara",
+    "count": 1
+  },
+  {
+    "prompt": "Our children were in the store yesterday.",
+    "target": "Gure semealabak dendan ziren atzo",
+    "count": 1
+  },
+  {
+    "prompt": "The small, gray dogs are coming from home.",
+    "target": "Txakur txiki grisak etxetik datoz",
+    "count": 2
+  },
+  {
+    "prompt": "The tourists are now coming from Paris.",
+    "target": "Turistak orain Parisetik zatoz",
+    "count": 2
+  },
+  {
+    "prompt": "Where are you all coming from this morning?",
+    "target": "Nondik zatozte zuek gaur goizean",
+    "count": 1
+  },
+  {
+    "prompt": "I am coming from school.",
+    "target": "Ni eskolatik dator",
+    "count": 3
+  },
+  {
+    "prompt": "The doctor is coming from Vitoria today.",
+    "target": "Medikua gaur Gasteizetik dator",
+    "count": 1
+  },
+  {
+    "prompt": "I am coming from San Sebastian this morning.",
+    "target": "Epa Ni Donostiatik nator gaur goizean",
+    "count": 1
+  },
+  {
+    "prompt": "Hello. Are you all coming from the bank?",
+    "target": "Kaixo Zuek bankutik etortzen al zatozte",
+    "count": 2
+  },
+  {
+    "prompt": "Good Afternoon. We are coming from the train station.",
+    "target": "Arratsalde on Gu tren geltokitik gatoz",
+    "count": 1
+  },
+  {
+    "prompt": "The parents are coming from the train station.",
+    "target": "Gurasoak tren geltokitik datoz",
+    "count": 1
+  },
+  {
+    "prompt": "Good Afternoon. Are you coming from the bus station?",
+    "target": "Arratsalde on Zu autobus geltokitik dator",
+    "count": 3
+  },
+  {
+    "prompt": "Good morning. I am coming from the airport.",
+    "target": "Egun on Ni aireportutik nator",
+    "count": 1
+  },
+  {
+    "prompt": "The housewife is coming from the airport.",
+    "target": "Etxekoandrea aireportutik dator",
+    "count": 1
+  },
+  {
+    "prompt": "The grandparents are coming from the church.",
+    "target": "Aitonaamonak elizatik datoz",
+    "count": 1
+  },
+  {
+    "prompt": "We were coming from home.",
+    "target": "Gu etxetik gentozen",
+    "count": 2
+  },
+  {
+    "prompt": "I was coming from the bank.",
+    "target": "Ni bankutik nentorren",
+    "count": 1
+  },
+  {
+    "prompt": "Were you coming from  cinema?",
+    "target": "Zu zinematik zentozen",
+    "count": 2
+  },
+  {
+    "prompt": "You all were coming from church.",
+    "target": "Zuek elizatik zentozten",
+    "count": 1
+  },
+  {
+    "prompt": "The friends were coming from the train station.",
+    "target": "Lagunak tren geltokitik zetozen",
+    "count": 1
+  },
+  {
+    "prompt": "The nurse was coming from the airport yesterday.",
+    "target": "Erizaina atzo aireportutik zetorren",
+    "count": 1
+  },
+  {
+    "prompt": "Where are you all going?",
+    "target": "Nora zoazte zuek",
+    "count": 2
+  },
+  {
+    "prompt": "I am going to the lake.",
+    "target": "Ni lakura noa",
+    "count": 1
+  },
+  {
+    "prompt": "The drivers are going to the train station.",
+    "target": "Gidariak tren geltokira doaz",
+    "count": 1
+  },
+  {
+    "prompt": "I am going to the mountain.",
+    "target": "Ni mendira noa",
+    "count": 1
+  },
+  {
+    "prompt": "No, she is not going to the store, but rather she is going to the bank.",
+    "target": "Ez hura ez doa dendara hura baizik bankura doa",
+    "count": 1
+  },
+  {
+    "prompt": "We were going to the farm houses.",
+    "target": "Gu basserietara gindoazen",
+    "count": 2
+  },
+  {
+    "prompt": "Where were you all going?",
+    "target": "Nora zindoazten zuek",
+    "count": 1
+  },
+  {
+    "prompt": "Were the mothers going to the bicycles?",
+    "target": "Amak bizikletaetara zihoazen",
+    "count": 2
+  },
+  {
+    "prompt": "I was going to the mountains.",
+    "target": "Ni mendietara nindoan",
+    "count": 1
+  },
+  {
+    "prompt": "The grandmothers were going to the stores.",
+    "target": "Amonak dendaetara zihoazen",
+    "count": 1
+  },
+  {
+    "prompt": "Was father also going to the buses?",
+    "target": "Aita ere autobusetara zihoan",
+    "count": 1
+  },
+  {
+    "prompt": "No, I was not going to the schools, but rather I was going to the churches.",
+    "target": "Ez ni ez nindoan eskolaetara baizik ni elizaetara nindoan",
+    "count": 1
+  },
+  {
+    "prompt": "Where were you going?",
+    "target": "Nora zindoazen zu",
+    "count": 1
+  },
+  {
+    "prompt": "I am going to Irun.",
+    "target": "Ni noa Irunera",
+    "count": 1
+  },
+  {
+    "prompt": "The daughters are going to Bilbao.",
+    "target": "Alabak Bilbora doaz",
+    "count": 1
+  },
+  {
+    "prompt": "The uncles were going to Germany.",
+    "target": "Osabak Alemaniara zihoazen",
+    "count": 2
+  },
+  {
+    "prompt": "Are you going to San Sebastian?",
+    "target": "Zu Donostiara zoaz",
+    "count": 2
+  },
+  {
+    "prompt": "I was going to Vitoria.",
+    "target": "Ni Gasteizera nindoan",
+    "count": 1
+  },
+  {
+    "prompt": "The son is going to France.",
+    "target": "Seme Frantziara doa",
+    "count": 1
+  },
+  {
+    "prompt": "We were going to Madrid.",
+    "target": "Gu Madrilera gindoazen",
+    "count": 1
+  },
+  {
+    "prompt": "Were you all going to Basque Country?",
+    "target": "Euskal Herrira zindoazten zuek",
+    "count": 1
+  },
+  {
+    "prompt": "The green dress is under the brown wallet.",
+    "target": "Soineko berdea zorro marroiaren azpian dago",
+    "count": 1
+  },
+  {
+    "prompt": "The trousers are on the left.",
+    "target": "Prakak ezkerrean daude",
+    "count": 2
+  },
+  {
+    "prompt": "The ring is between the belt and the purse.",
+    "target": "Eraztuna gerrikoaren eta poltsaren artean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The blue skirt is under the watches.",
+    "target": "Gona urdina erlojuen azpian dago",
+    "count": 4
+  },
+  {
+    "prompt": "The  orange shirt is on the left.",
+    "target": "Alkandora larangaren ezkerrean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The tall horse is also behind two white sheep.",
+    "target": "Zaldi altuaren ere bi ardi zuriren atzean dago",
+    "count": 2
+  },
+  {
+    "prompt": "The black goat is between the skirts and the hat.",
+    "target": "Ahuntz beltza gonaen eta txanoaren artean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The yellow socks are on the gray shoes.",
+    "target": "Galtzerdi horiak zapata grisen gainean daude",
+    "count": 1
+  },
+  {
+    "prompt": "Her brother is on the left side of the pig.",
+    "target": "Bere neba txerriaren ezker aldean dago",
+    "count": 1
+  },
+  {
+    "prompt": "Your boyfriend is behind the cow.",
+    "target": "Zure mutillaguna behiaren atzean dago",
+    "count": 1
+  },
+  {
+    "prompt": "His brother is on the right side of the door.",
+    "target": "Bere anaia atearen eskuin aldean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The turtle is on the bridge.",
+    "target": "Dortoka zubiaren gainean dago",
+    "count": 1
+  },
+  {
+    "prompt": "My cousin is on the right.",
+    "target": "Nire lehengusua eskuinean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The window is on the left.",
+    "target": "Leihoa ezkerrean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The book is next to the purse.",
+    "target": "Liburua poltsaren ondoan dago",
+    "count": 1
+  },
+  {
+    "prompt": "The dog is in front of the table.",
+    "target": "Txakurra mahaiaren aurrean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The door is between two windows.",
+    "target": "Atea bi leihoen artean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The car is on the left side of the bridge.",
+    "target": "Kotxea zubiaren ezker aldean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The plaza is big and pretty.",
+    "target": "Plaza handia eta polita da",
+    "count": 2
+  },
+  {
+    "prompt": "The restaurant is over the bar.",
+    "target": "Jatetxea tabernaren gainean dago",
+    "count": 1
+  },
+  {
+    "prompt": "The plaza is in front of the bar.",
+    "target": "Plaza tabernaren aurrean dago",
+    "count": 2
+  },
+  {
+    "prompt": "The horse is outside the market.",
+    "target": "Zaldia merkatuaren kanpoan dago",
+    "count": 2
+  },
+  {
+    "prompt": "The snake is inside the park.",
+    "target": "Sugea parkearen barruan dago",
+    "count": 3
+  },
+  {
+    "prompt": "The bar is under the restaurant.",
+    "target": "Taberna jatetxearen azpian dago",
+    "count": 1
+  },
+  {
+    "prompt": "The bar is beside the hotel.",
+    "target": "Taberna hotelaren ondoan dago",
+    "count": 1
+  },
+  {
+    "prompt": "Yesterday I was in Basque country.",
+    "target": "Atzo ni Euskal Herrian nengoen",
+    "count": 1
+  },
+  {
+    "prompt": "I was here.",
+    "target": "Ni hemen nengoen",
+    "count": 2
+  },
+  {
+    "prompt": "My aunts and I were in Vitoria.",
+    "target": "Nire izebak eta ni Gasteizen geunden",
+    "count": 1
+  },
+  {
+    "prompt": "I was in Irun.",
+    "target": "Ni Irunen nengoen",
+    "count": 1
+  },
+  {
+    "prompt": "My book was in the house.",
+    "target": "Nire liburua etxean zegoen",
+    "count": 1
+  },
+  {
+    "prompt": "Where were you yesterday?",
+    "target": "Non zeunden zu atzo",
+    "count": 1
+  },
+  {
+    "prompt": "Our mother and I were in France",
+    "target": "Gure ama eta ni Frantzian geunden",
+    "count": 1
+  },
+  {
+    "prompt": "They were over there yesterday.",
+    "target": "Haiek han zeuden atzo",
+    "count": 1
+  },
+  {
+    "prompt": "What was over there?",
+    "target": "Zer zegoen han",
+    "count": 1
+  },
+  {
+    "prompt": "I was poor.",
+    "target": "Ni pobrea nengoen",
+    "count": 2
+  },
+  {
+    "prompt": "You (plural) were dry.",
+    "target": "Zuek lehorrak zeundeten",
+    "count": 2
+  },
+  {
+    "prompt": "The bad owl was wet.",
+    "target": "Hontz txarra bustia zegoen",
+    "count": 1
+  },
+  {
+    "prompt": "Were you thirsty?",
+    "target": "Zu egarria zeunden",
+    "count": 1
+  },
+  {
+    "prompt": "The wet boys were hungry.",
+    "target": "Mutil bustiak goseak zeuden",
+    "count": 1
+  },
+  {
+    "prompt": "We were hungry, but now we are thirsty.",
+    "target": "Gu gosea geunden baina orain egarria gaude",
+    "count": 1
+  },
+  {
+    "prompt": "The dirty pig was hungry and thirsty.",
+    "target": "Txerri zikina gosea eta egarria zegoen",
+    "count": 1
+  },
+  {
+    "prompt": "You were wet, but now you are dry.",
+    "target": "Zu bustia zeunden baina orain lehorra zaude",
+    "count": 1
+  },
+  {
+    "prompt": "Something was under the black table.",
+    "target": "Zerbait zegoen mahai beltzaren azpian",
+    "count": 2
+  },
+  {
+    "prompt": "Was anything behind the chicken?",
+    "target": "Ezer oilasko atzean zegoen",
+    "count": 1
+  },
+  {
+    "prompt": "Nobody was here.",
+    "target": "Inor ez hemen zegoen",
+    "count": 1
+  },
+  {
+    "prompt": "Everything was wet.",
+    "target": "Dena bustia zegoen",
+    "count": 1
+  },
+  {
+    "prompt": "Nobody was next to the blue bird.",
+    "target": "Inor ez zegoen txori urdinaren ondoan",
+    "count": 1
+  },
+  {
+    "prompt": "Where is everybody?",
+    "target": "Non dago denek",
+    "count": 1
+  },
+  {
+    "prompt": "Was anybody poor?",
+    "target": "Inor pobrea zen",
+    "count": 1
+  },
+  {
+    "prompt": "There is the San Sebastian road.",
+    "target": "Hor dago Donostiako bidea",
+    "count": 2
+  },
+  {
+    "prompt": "This is the Irun road.",
+    "target": "Hau da Irungo bidea",
+    "count": 1
+  },
+  {
+    "prompt": "Are they from Germany?",
+    "target": "Haiek Alemaniakoak dira",
+    "count": 1
+  },
+  {
+    "prompt": "We are from Vitoria.",
+    "target": "Gu Gasteizekoak gara Irungoa al zara",
+    "count": 3
+  },
+  {
+    "prompt": "I am from Bilbao, but I live in San Sebastian.",
+    "target": "Ni Bilbokoa naiz baina Donostian bizi naiz",
+    "count": 3
+  },
+  {
+    "prompt": "He is from Spain, but he lives in Germany.",
+    "target": "Hura Espainiakoa da baina Alemanian bizi da",
+    "count": 1
+  },
+  {
+    "prompt": "The books of the school are new.",
+    "target": "Eskolako liburuak berriak dira",
+    "count": 2
+  },
+  {
+    "prompt": "The walls of the bank are white.",
+    "target": "Bankuko hormak zuriak dira",
+    "count": 3
+  },
+  {
+    "prompt": "The door of the house is red.",
+    "target": "Etxeko atea gorria da",
+    "count": 2
+  },
+  {
+    "prompt": "The walls of the station are yellow.",
+    "target": "Geltokiko hormak horiak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Where is the door of the school?",
+    "target": "Non dago eskolako atea",
+    "count": 1
+  },
+  {
+    "prompt": "The windows of the house are small.",
+    "target": "Etxeko leihoak txikiak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Where are the chairs of the hotel?",
+    "target": "Non daude hoteleko aulkiak",
+    "count": 1
+  },
+  {
+    "prompt": "The door of the hotel is black.",
+    "target": "Hoteleko atea beltza da",
+    "count": 1
+  },
+  {
+    "prompt": "The chairs of the church are brown.",
+    "target": "Elizako aulkiak marroiak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The roofs of the hotels are red.",
+    "target": "Hoteletako teilatuak gorriak dira",
+    "count": 2
+  },
+  {
+    "prompt": "The windows of the churches are also big.",
+    "target": "Elizetako leihoak ere handiak dira",
+    "count": 3
+  },
+  {
+    "prompt": "The windows of the stores are big.",
+    "target": "Dendetako leihoak handiak dira",
+    "count": 2
+  },
+  {
+    "prompt": "You all are busy.",
+    "target": "Zuek lanpetua zaudete",
+    "count": 2
+  },
+  {
+    "prompt": "I was bored, but now I am busy.",
+    "target": "Ni aspertua nengoen baina ni orain lanpetua nago",
+    "count": 1
+  },
+  {
+    "prompt": "How are you all?",
+    "target": "Zer moduz zaudete",
+    "count": 2
+  },
+  {
+    "prompt": "Are you lost?",
+    "target": "Zu galdu zaude",
+    "count": 1
+  },
+  {
+    "prompt": "The cow is alive and well.",
+    "target": "Behia bizirik eta ondo dago",
+    "count": 1
+  },
+  {
+    "prompt": "How is the cow?",
+    "target": "Nola dago behia",
+    "count": 3
+  },
+  {
+    "prompt": "The cows are not standing.",
+    "target": "Behiak ez daude zutik",
+    "count": 1
+  },
+  {
+    "prompt": "We were sitting, but now we are standing.",
+    "target": "Gu eserita geunden baina orain zutik gaude",
+    "count": 1
+  },
+  {
+    "prompt": "Why was the mouse standing?",
+    "target": "Zergatik sagua zutik zegoen",
+    "count": 1
+  },
+  {
+    "prompt": "We are tired.",
+    "target": "Gu nekatu gaude",
+    "count": 1
+  },
+  {
+    "prompt": "How is the pig? The pig is tired.",
+    "target": "Nola txerria dago Txerria nekatu dago",
+    "count": 1
+  },
+  {
+    "prompt": "You are afraid, because you are lost.",
+    "target": "Zu beldur zara galdu zaudelako",
+    "count": 1
+  },
+  {
+    "prompt": "They are happy, because we are happy.",
+    "target": "Haiek pozik daude gu pozik gaudelako",
+    "count": 1
+  },
+  {
+    "prompt": "We are standing, because there are no chairs.",
+    "target": "Gu zutik gaude ez daudelako aulkirik",
+    "count": 1
+  },
+  {
+    "prompt": "They are angry, because there is no money.",
+    "target": "Haiek haserre daude ez dagoelako dirurik",
+    "count": 1
+  },
+  {
+    "prompt": "I am sitting, because I am tired.",
+    "target": "Ni eserita nago nekatu nagoelako",
+    "count": 1
+  },
+  {
+    "prompt": "The pigs are not standing, because they are tired.",
+    "target": "Txerriak ez daude zutik nekatu daudelako",
+    "count": 1
+  },
+  {
+    "prompt": "We are happy, because we are not sick.",
+    "target": "Gu pozik gaude gaixorik ez gaudelako",
+    "count": 1
+  },
+  {
+    "prompt": "My wife is not bored, because she is busy.",
+    "target": "Nire emaztea ez da aspertua lanpetu dagoelako",
+    "count": 1
+  },
+  {
+    "prompt": "He is smiling, because I am excited.",
+    "target": "Hura irribarre dago ni animatuta nagoelako",
+    "count": 1
+  },
+  {
+    "prompt": "I am sad, because my cat is dead.",
+    "target": "Ni triste nago nire katua hilda dagoelako",
+    "count": 2
+  },
+  {
+    "prompt": "The fish are laughing, because you are wet.",
+    "target": "Arrainak barrez dago bustia zaudelako",
+    "count": 2
+  },
+  {
+    "prompt": "Our uncle is laughing, because we are excited.",
+    "target": "Gure osaba barrez dago gu animatuta gaudelako",
+    "count": 1
+  },
+  {
+    "prompt": "Itziar’s teacher is calm.",
+    "target": "Itziaren irakaslea lasai dago",
+    "count": 1
+  },
+  {
+    "prompt": "I am crying, because I am lost.",
+    "target": "Ni negarrez nago ni galdu nagoelako",
+    "count": 1
+  },
+  {
+    "prompt": "I am smiling, because you are happy.",
+    "target": "Ni irribarre nago zu pozik zaudelako",
+    "count": 1
+  },
+  {
+    "prompt": "The students were worried, because they were lost.",
+    "target": "Ikasleak kezkatuta zeuden haiek galdu zeudelako",
+    "count": 1
+  },
+  {
+    "prompt": "I was weak, because I was tired.",
+    "target": "Ni ahul nengoen ni nekatu nengoelako",
+    "count": 3
+  },
+  {
+    "prompt": "You were cold, because you were wet",
+    "target": "Zu hotza zeunden zu bustia zeundelako",
+    "count": 1
+  },
+  {
+    "prompt": "You all were nice, because you all were tired.",
+    "target": "Zuek jator zeundeten zuek nekatu zeundetelako",
+    "count": 1
+  },
+  {
+    "prompt": "The bird was thirsty, because it was hot.",
+    "target": "Txoria egarri zegoen hura beroa zegoelako",
+    "count": 2
+  },
+  {
+    "prompt": "The housewives were slow because they were tired.",
+    "target": "Etxekoandreak motelak zeuden haiek nekatu zeudelako",
+    "count": 1
+  },
+  {
+    "prompt": "You all are long, because you all are snakes.",
+    "target": "Zuek luzeak zarete zuek sugeak zaretelako",
+    "count": 1
+  },
+  {
+    "prompt": "She is here, because she is my son’s girlfriend.",
+    "target": "Hura hemen dago hura nire semearen neskalaguna delako",
+    "count": 1
+  },
+  {
+    "prompt": "We are green, because we are turtles.",
+    "target": "Gu berdeak gara gu dortokak garelako",
+    "count": 2
+  },
+  {
+    "prompt": "We are poor, because we are students.",
+    "target": "Gu pobreak gara gu ikasleak garelako",
+    "count": 2
+  },
+  {
+    "prompt": "They are white, because they are sheep.",
+    "target": "Haiek zuriak dira haiek ardiak direlako",
+    "count": 1
+  },
+  {
+    "prompt": "They are big, because they are horses.",
+    "target": "Haiek handiak dira haiek zaldiak direlako",
+    "count": 1
+  },
+  {
+    "prompt": "I am tall, because I am a man.",
+    "target": "Ni altua naiz ni gizona naizelako",
+    "count": 1
+  },
+  {
+    "prompt": "He was in the church, because he was the priest.",
+    "target": "Hura elizan zegoen hura apaiza zelako",
+    "count": 2
+  },
+  {
+    "prompt": "The police officer was there, because the strangers were dead.",
+    "target": "Polizia han zegoen arrotzak hilda zirelako",
+    "count": 1
+  },
+  {
+    "prompt": "The mice were relaxed because the owls were old.",
+    "target": "Saguak lasai zeuden hontzak zaharrak zirelako",
+    "count": 1
+  },
+  {
+    "prompt": "You were hungry, because you were poor.",
+    "target": "Zu gose zinen zu pobrea zinelako",
+    "count": 2
+  },
+  {
+    "prompt": "We were always tired, because we were new parents.",
+    "target": "Gu beti nekatu geunden gu guraso berriak ginelako",
+    "count": 1
+  },
+  {
+    "prompt": "I was small, because I was a child.",
+    "target": "Ni txikia nintzen ni umea nintzelako",
+    "count": 1
+  },
+  {
+    "prompt": "You were busy because you were the driver.",
+    "target": "Zu lanpetua zeunden zu gidaria zinelako",
+    "count": 1
+  },
+  {
+    "prompt": "I was pretty, because I was young.",
+    "target": "Ni polita nintzen ni gaztea nintzelako",
+    "count": 1
+  },
+  {
+    "prompt": "It is cloudy and cool today.",
+    "target": "Hodeitsu eta hoztua dago gaur",
+    "count": 2
+  },
+  {
+    "prompt": "There is good weather today.",
+    "target": "Badago eguraldi ona gaur",
+    "count": 1
+  },
+  {
+    "prompt": "There are three white clouds in the sky.",
+    "target": "Badaude hiru hodei zuriak zeruan",
+    "count": 1
+  },
+  {
+    "prompt": "Look! There are black clouds.",
+    "target": "Begira Badaude hodei beltzak",
+    "count": 1
+  },
+  {
+    "prompt": "It was cloudy, but warm yesterday.",
+    "target": "Hodeitsu zegoen baina epela atzo",
+    "count": 3
+  },
+  {
+    "prompt": "It is cold, wet and cloudy today.",
+    "target": "Hotza bustia eta hodeitsu dago",
+    "count": 1
+  },
+  {
+    "prompt": "There was bad weather yesterday.",
+    "target": "Bazegoen eguraldi txarra zegoen atzo",
+    "count": 1
+  },
+  {
+    "prompt": "There is a storm in San Sebastian.",
+    "target": "Badago ekaitza Donostian",
+    "count": 1
+  },
+  {
+    "prompt": "The snow is very pretty.",
+    "target": "Elurra oso polita dago",
+    "count": 2
+  },
+  {
+    "prompt": "The lake is frozen.",
+    "target": "Lakua izoztuta dago",
+    "count": 2
+  },
+  {
+    "prompt": "The river is not frozen.",
+    "target": "Ibaia ez dago izoztuta",
+    "count": 1
+  },
+  {
+    "prompt": "There is a bad storm today.",
+    "target": "Badago ekaitz txarra gaur",
+    "count": 1
+  },
+  {
+    "prompt": "It was very rainy, foggy and windy yesterday.",
+    "target": "Oso euritsua lainotsua eta haizetsua zegoen atzo",
+    "count": 1
+  },
+  {
+    "prompt": "It is only fog.",
+    "target": "Laino bakarra da",
+    "count": 1
+  },
+  {
+    "prompt": "The temperature and humidity are high.",
+    "target": "Tenperatura eta hezetasuna altuak daude",
+    "count": 4
+  },
+  {
+    "prompt": "It was humid yesterday.",
+    "target": "Hezea zegoen atzo",
+    "count": 1
+  },
+  {
+    "prompt": "It is not humid today.",
+    "target": "Gaur ez dago hezerik",
+    "count": 1
+  },
+  {
+    "prompt": "It is only two degrees centigrade. It is cold.",
+    "target": "Bi gradu zentigraduak dago Hotz dago",
+    "count": 1
+  },
+  {
+    "prompt": "It is not hot, but the humidity is high.",
+    "target": "Ez da beroa baina hezetasuna altua dago",
+    "count": 1
+  },
+  {
+    "prompt": "It is so so. Not sunny, not rainy. It is cloudy",
+    "target": "Beraz dago Ez eguzkitsua ez euritsua Hodeitsua dago",
+    "count": 1
+  },
+  {
+    "prompt": "Thirty eight tourists are going to Irun today.",
+    "target": "Hogeita zortzi turista doaz gaur Irunera",
+    "count": 1
+  },
+  {
+    "prompt": "There are forty seven students are in the school.",
+    "target": "Badaude berrogeita zazpi ikasle eskolan",
+    "count": 1
+  },
+  {
+    "prompt": "It is only twenty five degrees centigrade. It is not hot.",
+    "target": "Bakarrik hogeita bost gradu zentigradu da Ez da beroa",
+    "count": 2
+  },
+  {
+    "prompt": "Twenty degrees centigrade is nice.",
+    "target": "Hogei gradu zentigraduak jatora da",
+    "count": 2
+  },
+  {
+    "prompt": "There are sixty eight tables in the market.",
+    "target": "Badaude hirurogeita zortzi mahai merkatuan",
+    "count": 1
+  },
+  {
+    "prompt": "Forty chickens plus thirty owls are seventy birds.",
+    "target": "Berrogei oilo gehi hogeita hamar hontz hirurogeita hamar txori dira",
+    "count": 1
+  },
+  {
+    "prompt": "Forty three times two is eighty six.",
+    "target": "Berrogeita hiru bider bi laurogeita sei dira",
+    "count": 1
+  },
+  {
+    "prompt": "There are sixty chickens in the house.",
+    "target": "Badaude hirurogei oilo etxean",
+    "count": 1
+  },
+  {
+    "prompt": "Thirty three time three is ninety nine.",
+    "target": "Hogeita hamahiru bider hiru laurogeita hemeretzi dira",
+    "count": 1
+  },
+  {
+    "prompt": "There are three hundred and sixty five days in a year.",
+    "target": "Urtean hirurehun eta hirurogeita bost egun daude",
+    "count": 2
+  },
+  {
+    "prompt": "One hundred times two is two hundred.",
+    "target": "Ehun bider bi berrehun da",
+    "count": 2
+  },
+  {
+    "prompt": "How many cows are there? Four hundred and six.",
+    "target": "Zenbat behi daude Laurehun eta sei",
+    "count": 3
+  },
+  {
+    "prompt": "There are one hundred and one dogs.",
+    "target": "Badaude ehun eta bat txakur",
+    "count": 1
+  },
+  {
+    "prompt": "There are five hundred students in the school.",
+    "target": "Badaude bostehun ikasle eskolan",
+    "count": 1
+  },
+  {
+    "prompt": "There are two hundred and twenty two owls in the store.",
+    "target": "Badaude berrehun eta hogeita bi hontza dendan",
+    "count": 2
+  },
+  {
+    "prompt": "There are nine hundred shoes in the store.",
+    "target": "Badaude bederatziehun zapata dendan",
+    "count": 2
+  },
+  {
+    "prompt": "There are two thousand two hundred and ten fish.",
+    "target": "Badaude bi mila berrehun eta hamar arrain",
+    "count": 2
+  },
+  {
+    "prompt": "Ten times one hundred million are one billion.",
+    "target": "Hamar bider ehun milioi mila milioi dira",
+    "count": 1
+  },
+  {
+    "prompt": "Three thousand persons were sick yesterday.",
+    "target": "Hiru mila lagun gaixo zeuden atzo",
+    "count": 1
+  },
+  {
+    "prompt": "Mother’s day is in May.",
+    "target": "Amaren eguna maiatzean da",
+    "count": 3
+  },
+  {
+    "prompt": "In March it is Spring.",
+    "target": "Martxoan udaberria da",
+    "count": 1
+  },
+  {
+    "prompt": "In April it is windy.",
+    "target": "Apirilean haizetsua da",
+    "count": 2
+  },
+  {
+    "prompt": "April is the fourth month.",
+    "target": "Apirila laugarren hilabetea da",
+    "count": 1
+  },
+  {
+    "prompt": "There are twelve months in a year",
+    "target": "Badaude hamabi hilabete urtean",
+    "count": 1
+  },
+  {
+    "prompt": "Spring is windy and wet.",
+    "target": "Udaberria haizetsua eta bustia da",
+    "count": 1
+  },
+  {
+    "prompt": "In March the grass is wet.",
+    "target": "Martxoan belarra bustia dago",
+    "count": 1
+  },
+  {
+    "prompt": "Spring is a season of the year.",
+    "target": "Udaberria urteko urtaro bat da",
+    "count": 1
+  },
+  {
+    "prompt": "Father’s day is in March.",
+    "target": "Aitaren eguna martxoan da",
+    "count": 1
+  },
+  {
+    "prompt": "July is the seventh month.",
+    "target": "Uztaila zazpigarren hilabetea da",
+    "count": 1
+  },
+  {
+    "prompt": "August is the eighth month.",
+    "target": "Abuztua zortzigarren hilabetea da",
+    "count": 1
+  },
+  {
+    "prompt": "Summer is after spring.",
+    "target": "Uda udaberriaren ondoren dator",
+    "count": 3
+  },
+  {
+    "prompt": "Saint James day is in July.",
+    "target": "Done Jakue eguna uztailean da",
+    "count": 1
+  },
+  {
+    "prompt": "June is the sixth month.",
+    "target": "Ekaina seigarren hilabetea da",
+    "count": 1
+  },
+  {
+    "prompt": "July is after June.",
+    "target": "Uztaila ekainaren ondoren dator",
+    "count": 2
+  },
+  {
+    "prompt": "Summer is hot and dry",
+    "target": "Uda beroa eta lehorra da",
+    "count": 1
+  },
+  {
+    "prompt": "In July and August, students are not in school.",
+    "target": "Uztailean eta abuztuan ikasleak ez daude eskolan",
+    "count": 1
+  },
+  {
+    "prompt": "Autumn is after Summer.",
+    "target": "Udazkena udaren ondoren dator",
+    "count": 1
+  },
+  {
+    "prompt": "October is after September.",
+    "target": "Urria irailaren ondoren dator",
+    "count": 1
+  },
+  {
+    "prompt": "November is after October.",
+    "target": "Azaroa urriaren ondoren dator",
+    "count": 3
+  },
+  {
+    "prompt": "In September, students are in school.",
+    "target": "Irailean ikasleak Eskolan daude",
+    "count": 2
+  },
+  {
+    "prompt": "November is the eleventh month.",
+    "target": "Azaroa hamaikagarren hilabetea da",
+    "count": 1
+  },
+  {
+    "prompt": "Autumn is not hot and not cold. It is cool.",
+    "target": "Udazkena ez da beroa eta ez hotza Hoztua da",
+    "count": 1
+  },
+  {
+    "prompt": "October is the tenth month.",
+    "target": "Urria hamargarren hilabetea da",
+    "count": 1
+  },
+  {
+    "prompt": "February is the second month.",
+    "target": "Otsaila bigarren hilabetea da",
+    "count": 2
+  },
+  {
+    "prompt": "In January, it is cold.",
+    "target": "Urrian hotza da",
+    "count": 3
+  },
+  {
+    "prompt": "Winter is very cold here",
+    "target": "Negua oso hotza da hemen",
+    "count": 1
+  },
+  {
+    "prompt": "In January the snow is white.",
+    "target": "Urtarrilean elurra zuria da",
+    "count": 1
+  },
+  {
+    "prompt": "Spring is between winter and summer.",
+    "target": "Udaberria neguan eta uda artean dago",
+    "count": 1
+  },
+  {
+    "prompt": "Tomorrow is Friday, not Tuesday.",
+    "target": "Bihar ostirala da ez asteartea",
+    "count": 1
+  },
+  {
+    "prompt": "There are four weeks in a month.",
+    "target": "Badaude batean lau aste hilabete",
+    "count": 1
+  },
+  {
+    "prompt": "Today is Monday",
+    "target": "Gaur astelehena da",
+    "count": 1
+  },
+  {
+    "prompt": "Tomorrow is Tuesday.",
+    "target": "Bihar asteartea da",
+    "count": 1
+  },
+  {
+    "prompt": "Saturday is the sixth day of the week.",
+    "target": "Larunbata asteko seigarren eguna da",
+    "count": 1
+  },
+  {
+    "prompt": "Tuesday is the second day of the week.",
+    "target": "Asteartea asteko bigarren eguna da",
+    "count": 1
+  },
+  {
+    "prompt": "Thursday is not day five.",
+    "target": "Osteguna ez da bost egun",
+    "count": 1
+  },
+  {
+    "prompt": "You are walking in the park.",
+    "target": "Zu parkean zabiltza",
+    "count": 2
+  },
+  {
+    "prompt": "You normally walk in the park, but today you are walking on the plaza.",
+    "target": "Zu normalean parkean ibiltzen zara baina gaur zu plazan zoaz",
+    "count": 2
+  },
+  {
+    "prompt": "We are now walking in Irun.",
+    "target": "Gu orain Irunen gabiltza",
+    "count": 3
+  },
+  {
+    "prompt": "You all are walking on the bridge.",
+    "target": "Zuek zubian zabiltzate",
+    "count": 1
+  },
+  {
+    "prompt": "Our grandmothers are walking in the station.",
+    "target": "Gure amonak geltokian dabiltza",
+    "count": 1
+  },
+  {
+    "prompt": "I usually walk on the beach, but today I am walking in the forest.",
+    "target": "Ni normalean hondartzan ibiltzen naiz baina gaur ni basoan nabil",
+    "count": 1
+  },
+  {
+    "prompt": "My sister is walking on the beach.",
+    "target": "Nire arreba hondartzan dabil",
+    "count": 1
+  },
+  {
+    "prompt": "We are walking in the airport.",
+    "target": "Gu aireportuan gabiltza",
+    "count": 1
+  },
+  {
+    "prompt": "On Friday, my cousins were walking in Madrid.",
+    "target": "Ostiralean nire lehengusuak Madrilen zebiltzan",
+    "count": 1
+  },
+  {
+    "prompt": "You were walking in the snow in February.",
+    "target": "Zu elurran ibili zinen Otsailean",
+    "count": 3
+  },
+  {
+    "prompt": "In January, my boyfriend was walking in Italy.",
+    "target": "Urtarrilean nire mutillaguna Italian zebilen",
+    "count": 1
+  },
+  {
+    "prompt": "In April, we were walking in Vitoria.",
+    "target": "Apirilean gu Gasteizen genbiltzan",
+    "count": 1
+  },
+  {
+    "prompt": "On Wednesday, we were walking in the airport.",
+    "target": "Asteazkenean gu aireportuan genbiltzan",
+    "count": 1
+  },
+  {
+    "prompt": "On Thursday, you all were walking in San Sebastian.",
+    "target": "Ostegunean zuek Donostian zenbiltzaten",
+    "count": 1
+  },
+  {
+    "prompt": "In May, my nieces were walking in Santiago.",
+    "target": "Maiatzean nire ilobak Santiagon zebiltzan",
+    "count": 1
+  },
+  {
+    "prompt": "The police officer is going to Bilbao by ferry.",
+    "target": "Polizia Bilbora joango da ferryz",
+    "count": 2
+  },
+  {
+    "prompt": "The ferry is slow in August.",
+    "target": "Ferrya motela da abuztuan",
+    "count": 1
+  },
+  {
+    "prompt": "The cook is going to the stores of Bilbao by truck.",
+    "target": "Sukaldaria kamioiz joango da Bilboko dendetara",
+    "count": 1
+  },
+  {
+    "prompt": "My son  is going to school by bicycle.",
+    "target": "Nire semea eskolara doa bizikletaz",
+    "count": 1
+  },
+  {
+    "prompt": "They are going to Vitoria by taxi.",
+    "target": "Haiek Gasteizera doaz taxiz",
+    "count": 1
+  },
+  {
+    "prompt": "We are coming from the mountains by horse.",
+    "target": "Gu zaldiz mendietatik gatoz",
+    "count": 1
+  },
+  {
+    "prompt": "The socks were made by hand in December.",
+    "target": "Galtzerdiak eskuz egiten ziren abenduan",
+    "count": 1
+  },
+  {
+    "prompt": "Mikel’s feet are also big.",
+    "target": "Mikelen oinak ere handiak dira",
+    "count": 2
+  },
+  {
+    "prompt": "We are coming from the forest and going to the river on foot.",
+    "target": "Gu basotik gatoz eta ibaira goaz oinez",
+    "count": 1
+  },
+  {
+    "prompt": "The nurse is going to the mountain on foot.",
+    "target": "Erizaina mendira doa oinez",
+    "count": 2
+  },
+  {
+    "prompt": "The book is in Basque",
+    "target": "Liburua euskaraz dago",
+    "count": 2
+  },
+  {
+    "prompt": "English is not the language of Basque country.",
+    "target": "Ingelesa ez da Euskal Herriko hizkuntza",
+    "count": 1
+  },
+  {
+    "prompt": "The book is in English.",
+    "target": "Liburua ingelesez dago",
+    "count": 1
+  },
+  {
+    "prompt": "The trousers were made by machine.",
+    "target": "Prakak makinaz egiten ziren",
+    "count": 1
+  },
+  {
+    "prompt": "The machines are in the store.",
+    "target": "Makinak dendan daude",
+    "count": 1
+  },
+  {
+    "prompt": "Basque is the language of Basque country.",
+    "target": "Euskara da Euskal Herriko hizkuntza",
+    "count": 1
+  },
+  {
+    "prompt": "The airplane is twenty minutes late.",
+    "target": "Hegazkina hogei minutu berandu da",
+    "count": 1
+  },
+  {
+    "prompt": "The train is early.",
+    "target": "Trena goiz da",
+    "count": 1
+  },
+  {
+    "prompt": "The train is three hours late.",
+    "target": "Trena hiru ordu berandu da",
+    "count": 2
+  },
+  {
+    "prompt": "Sorry it is late.",
+    "target": "Barkatu berandu da",
+    "count": 2
+  },
+  {
+    "prompt": "Is the airplane on time?",
+    "target": "Garaiz hegazkin dago",
+    "count": 1
+  },
+  {
+    "prompt": "What time is it?",
+    "target": "Zer ordu da",
+    "count": 2
+  },
+  {
+    "prompt": "The bus is on time.",
+    "target": "Autobusa garaiz doa",
+    "count": 1
+  },
+  {
+    "prompt": "How late is the train?",
+    "target": "Zenbat berandu da trena",
+    "count": 1
+  },
+  {
+    "prompt": "There is a lot of time.",
+    "target": "Denbora asko dago",
+    "count": 1
+  },
+  {
+    "prompt": "Is the bus early?",
+    "target": "Autobusa goiz da",
+    "count": 1
+  },
+  {
+    "prompt": "It is two o’clock.",
+    "target": "Ordu biak dira",
+    "count": 2
+  },
+  {
+    "prompt": "It is three and a quarter.",
+    "target": "Hiru eta laurdenak dira",
+    "count": 2
+  },
+  {
+    "prompt": "The teacher is coming at six thirty.",
+    "target": "Irakaslea sei eta erdietan dator",
+    "count": 1
+  },
+  {
+    "prompt": "It is five o’clock.",
+    "target": "Bostak dira",
+    "count": 1
+  },
+  {
+    "prompt": "It is three o’clock already.",
+    "target": "Hirurak dira dagoeneko",
+    "count": 1
+  },
+  {
+    "prompt": "The bus is coming at five thirty.",
+    "target": "Autobusa bost eta erdietan dator",
+    "count": 1
+  },
+  {
+    "prompt": "At one o’clock my friend is coming.",
+    "target": "Ordu batean nire laguna dator",
+    "count": 2
+  },
+  {
+    "prompt": "It is now seven thirty.",
+    "target": "Zortzi eta erdiak dira orain",
+    "count": 3
+  },
+  {
+    "prompt": "Twelve o’clock is noon.",
+    "target": "Hamabiak eguerdia dira",
+    "count": 3
+  },
+  {
+    "prompt": "Midnight is also twelve o’clock.",
+    "target": "Gauerdia ere hamabiak dira",
+    "count": 1
+  },
+  {
+    "prompt": "It is eleven o’clock.",
+    "target": "Hamaikak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Mikel's sister is coming at eight fifteen.",
+    "target": "Mikelen arreba zortzi hamabostetan dator",
+    "count": 1
+  },
+  {
+    "prompt": "It is twelve o’clock.",
+    "target": "Hamabiak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The dresses are straight ahead.",
+    "target": "Soinekoak zuzen daude",
+    "count": 2
+  },
+  {
+    "prompt": "The toilet is upstairs.",
+    "target": "Komuna goian dago",
+    "count": 1
+  },
+  {
+    "prompt": "The turtle is near the bridge.",
+    "target": "Dortoka zubitik gertu dago",
+    "count": 2
+  },
+  {
+    "prompt": "The forest is far from the airport.",
+    "target": "Basoa aireportutik urrun dago",
+    "count": 2
+  },
+  {
+    "prompt": "The bank is near the church.",
+    "target": "Bankua elizatik gertu dago",
+    "count": 2
+  },
+  {
+    "prompt": "The school is on the corner.",
+    "target": "Eskola izkinan dago",
+    "count": 1
+  },
+  {
+    "prompt": "A kilometer is one thousand meters.",
+    "target": "Kilometro bat mila metro da",
+    "count": 1
+  },
+  {
+    "prompt": "The farmhouse is far from the beach.",
+    "target": "Baserria hondartzatik urrun dago",
+    "count": 1
+  },
+  {
+    "prompt": "Do you all like it? Is it be pleasing to you all?",
+    "target": "Zuei gustatzen al zaizue",
+    "count": 1
+  },
+  {
+    "prompt": "I was interested in cars.",
+    "target": "Niri kotxeak interesatu zaizkit",
+    "count": 1
+  },
+  {
+    "prompt": "We were not interested in movie theaters.",
+    "target": "Guri zineak ez zaizkigu interesatu",
+    "count": 1
+  },
+  {
+    "prompt": "We were interested in trucks.",
+    "target": "Guri kamioiak interesatu zaizkigu",
+    "count": 2
+  },
+  {
+    "prompt": "I was not  interested in mice.",
+    "target": "Niri saguak ez zaizkit interesatu",
+    "count": 1
+  },
+  {
+    "prompt": "You are not interested in bus stations.",
+    "target": "Zuri autobus geltokiak ez zaizkizu interesatzen",
+    "count": 1
+  },
+  {
+    "prompt": "They are the same to you.",
+    "target": "Zuri berdin dira zaizkizu",
+    "count": 1
+  },
+  {
+    "prompt": "Erdara is not spoken here.",
+    "target": "Erdara ez da hemen hitz egiten",
+    "count": 2
+  },
+  {
+    "prompt": "Who is Ainhoa? I do not know",
+    "target": "Nor da Ainhoa Nik ez dakit",
+    "count": 1
+  },
+  {
+    "prompt": "Who are they? I do not know them.",
+    "target": "Nortzuk dira Nik ez dakizkit",
+    "count": 1
+  },
+  {
+    "prompt": "The stranger is waking up.",
+    "target": "Arrotza esnatzen ari da",
+    "count": 2
+  },
+  {
+    "prompt": "Snow was falling.",
+    "target": "Elurra erortzen ari zen",
+    "count": 1
+  },
+  {
+    "prompt": "The child is singing.",
+    "target": "Umea kantatzen ari du",
+    "count": 1
+  },
+  {
+    "prompt": "The turtles are arriving by bus.",
+    "target": "Dortokak autobusez iristen ari dira",
+    "count": 2
+  },
+  {
+    "prompt": "Why are the drivers walking?",
+    "target": "Zergatik gidariak ibiltzen ari dira",
+    "count": 1
+  },
+  {
+    "prompt": "Look, dogs are falling from the sky.",
+    "target": "Begira txakurrak hodeietatik erortzen ari dira",
+    "count": 1
+  },
+  {
+    "prompt": "They are coming by horse.",
+    "target": "Haiek zaldiak etortzen ari dira",
+    "count": 2
+  },
+  {
+    "prompt": "You all are helping the tourist.",
+    "target": "Zuek turistari laguntzen ari zarete",
+    "count": 2
+  },
+  {
+    "prompt": "They are speaking.",
+    "target": "Haiek hitz egiten ari dira",
+    "count": 1
+  },
+  {
+    "prompt": "The teachers are doing it by hand.",
+    "target": "Irakasleak eskuz egiten ari dira",
+    "count": 1
+  },
+  {
+    "prompt": "We are helping the teacher.",
+    "target": "Gu irakasleari laguntzen ari gara",
+    "count": 1
+  },
+  {
+    "prompt": "What are you all doing?",
+    "target": "Zer zuek egiten ari zarete",
+    "count": 1
+  },
+  {
+    "prompt": "I am dancing",
+    "target": "Ni dantzan ari naiz",
+    "count": 1
+  },
+  {
+    "prompt": "We were speaking and walking.",
+    "target": "Gu hitz egiten eta ibiltzen ginen",
+    "count": 1
+  },
+  {
+    "prompt": "The cows were helping the goats.",
+    "target": "Behiak ahuntzei laguntzen ari ziren",
+    "count": 1
+  },
+  {
+    "prompt": "What are you playing?",
+    "target": "Zer zu jolasten ari zara",
+    "count": 1
+  },
+  {
+    "prompt": "We were waiting at the station.",
+    "target": "Gu geltokian itxaroten ari ginen",
+    "count": 1
+  },
+  {
+    "prompt": "The drivers are sleeping.",
+    "target": "Gidariak lo egiten ari dira",
+    "count": 1
+  },
+  {
+    "prompt": "You are going to Germany.",
+    "target": "Zu alemaniara joaten ari zara",
+    "count": 1
+  },
+  {
+    "prompt": "I am smiling.",
+    "target": "Ni irribarre egiten ari naiz",
+    "count": 3
+  },
+  {
+    "prompt": "I am working today.",
+    "target": "Gaur ni lan egiten ari naiz",
+    "count": 1
+  },
+  {
+    "prompt": "The tourist was not smiling",
+    "target": "Turista ez zen irribarre egiten",
+    "count": 1
+  },
+  {
+    "prompt": "The snake is going to the park.",
+    "target": "Sugea parkera joaten ari da",
+    "count": 1
+  },
+  {
+    "prompt": "The cook is working in the hotel.",
+    "target": "Sukaldaria hotelean lan egiten ari da",
+    "count": 1
+  },
+  {
+    "prompt": "What were you playing with?",
+    "target": "Zerekin zu ari zinen jolasten",
+    "count": 1
+  },
+  {
+    "prompt": "The priest is also going to the store to buy bread.",
+    "target": "Apaiza ere dendara doa ogia erostera",
+    "count": 2
+  },
+  {
+    "prompt": "The grandmother is going inside to close the window.",
+    "target": "Amona barrura doa leihoa ixtera",
+    "count": 1
+  },
+  {
+    "prompt": "The tourist is going to San Sebastian to see the church.",
+    "target": "Turista Donostiara doa eliza ikustera",
+    "count": 2
+  },
+  {
+    "prompt": "They are going to the beach to play.",
+    "target": "Haiek hondartzara jolastera doaz",
+    "count": 1
+  },
+  {
+    "prompt": "The son is going outside to play.",
+    "target": "Semea kanpora doa jolastera",
+    "count": 1
+  },
+  {
+    "prompt": "I am going to school to learn Basque.",
+    "target": "Ni eskolara noa euskara ikastera",
+    "count": 1
+  },
+  {
+    "prompt": "The mouse is going to Spain to kill the owl.",
+    "target": "Sagua Espainiara doa hontza hiltzera",
+    "count": 1
+  },
+  {
+    "prompt": "You all are eating the yellow cheese.",
+    "target": "Zuek gazta horia jaten ari zarete",
+    "count": 2
+  },
+  {
+    "prompt": "I am eating the rice.",
+    "target": "Ni arroza jaten ari naiz",
+    "count": 2
+  },
+  {
+    "prompt": "Corn and beans are vegetables.",
+    "target": "Artoa eta babarrunak barazkiak dira",
+    "count": 1
+  },
+  {
+    "prompt": "Why are you cooking the pork?",
+    "target": "Zergatik zuk egosten duzu txerria",
+    "count": 1
+  },
+  {
+    "prompt": "The sausage is not white.",
+    "target": "Txistorra ez da zuria",
+    "count": 1
+  },
+  {
+    "prompt": "Breakfast is not ready yet.",
+    "target": "Gosaria ez dago oraindik prest",
+    "count": 2
+  },
+  {
+    "prompt": "I am hungry. When is breakfast?",
+    "target": "Ni gose naiz Noiz da gosaria",
+    "count": 2
+  },
+  {
+    "prompt": "Is the soup ready?",
+    "target": "Zopa prest al dago",
+    "count": 1
+  },
+  {
+    "prompt": "Dinner is ready.",
+    "target": "Afaria prest dago",
+    "count": 1
+  },
+  {
+    "prompt": "Today, the cooks are eating lunch in the park.",
+    "target": "Gaur sukaldariak bazkaltzen ari dira parkean",
+    "count": 1
+  },
+  {
+    "prompt": "The wine is also sweet.",
+    "target": "Ardoa ere gozoa da",
+    "count": 1
+  },
+  {
+    "prompt": "The pepper is spicy.",
+    "target": "Piperra mina da",
+    "count": 2
+  },
+  {
+    "prompt": "The vinegar is sour",
+    "target": "Ozpina garratza da",
+    "count": 1
+  },
+  {
+    "prompt": "Where is the pepper?",
+    "target": "Non dago piperra",
+    "count": 1
+  },
+  {
+    "prompt": "Salt is salty.",
+    "target": "Gatza gazia da",
+    "count": 1
+  },
+  {
+    "prompt": "The lemons are sour.",
+    "target": "Limoiak garratzak dira",
+    "count": 1
+  },
+  {
+    "prompt": "The fish is spicy.",
+    "target": "Arraina mina da",
+    "count": 1
+  }
+]
